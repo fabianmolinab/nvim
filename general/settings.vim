@@ -3,14 +3,17 @@ let mapleader = " "
 
 set encoding=utf-8
 set mouse=a "this enable the mouse compatibility
-set clipboard=unnamedplus "to set the main clipboard to vim. It needs xclip o xcel. Other value is unnamed
+set clipboard=unnamed "to set the main clipboard to vim. It needs xclip o xcel. Other value is unnamed
+"set clipboard=unnamedplus 
 set noerrorbells "this disable the error bells because is very annoying
 set noshowmode
+set nolist
 
 "to set the tabs
 set sw=2 "this set the tabs are 2 spaces
 set expandtab
 set smartindent "this saves work to you to indent your code
+set breakindent 
 
 "Shoe line numbers. When you enable the number line it have space at the left.
 "I want the less space as possible.
@@ -19,7 +22,6 @@ set rnu
 set numberwidth=1 
 
 "I don't like the wrapped lines :v
-set nowrap
 
 "I HATE the f*cking swap files and I don't want the backup files
 set noswapfile
