@@ -10,6 +10,7 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'mhartington/oceanic-next'
 Plug 'wojciechkepka/bogster'
 Plug 'franbach/miramare'
+Plug 'ntk148v/vim-horizon'
 
 "visual
 Plug 'vim-airline/vim-airline'

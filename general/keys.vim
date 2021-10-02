@@ -30,7 +30,7 @@ nnoremap <C-\> :split<CR>:ter<CR>:resize 15<CR>
 "Plugs
 map <Leader>nt :NERDTreeFind<CR>
 map <Leader>nc :NERDTreeClose<CR>
-map <Leader>p :Files<CR>
+map <Leader>f :Files<CR>
 map <Leader>ag :Ag<CR>
 
 " tmux navigator
@@ -56,3 +56,8 @@ nnoremap <leader>sp :sp<CR>
 
 " clear search results
 nnoremap <silent> // :noh<CR>
+
+"Copy and Pase
+noremap <Leader>c "*y
+noremap <Leader>p "*p
+
