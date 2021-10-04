@@ -25,3 +25,5 @@ source ~/.config/nvim/plug-settings/vim-dev-icons.vim
 source ~/.config/nvim/plug-settings/vimspector.vim
 source ~/.config/nvim/plug-settings/vim-clang-format.vim
 source ~/.config/nvim/plug-settings/vim-go.vim
+source ~/.config/nvim/plug-settings/closetag.vim
+source ~/.config/nvim/plug-settings/neoformat.vim
