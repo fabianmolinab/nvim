@@ -6,7 +6,6 @@ set mouse=a "this enable the mouse compatibility
 set clipboard=unnamed "to set the main clipboard to vim. It needs xclip o xcel. Other value is unnamed
 "set clipboard=unnamedplus 
 set noerrorbells "this disable the error bells because is very annoying
-set noshowmode
 set nolist
 
 "to set the tabs
@@ -19,7 +18,7 @@ set breakindent
 "I want the less space as possible.
 set number
 set rnu
-set numberwidth=1 
+set numberwidth=2 
 
 "I don't like the wrapped lines :v
 
@@ -42,3 +41,4 @@ highlight ColoColumn ctermbg=0 guibg=lightgrey
 set splitbelow
 set splitright
 
+set noshowmode
