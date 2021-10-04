@@ -56,8 +56,3 @@ nnoremap <leader>sp :sp<CR>
 
 " clear search results
 nnoremap <silent> // :noh<CR>
-
-"Copy and Pase
-noremap <Leader>c "*y
-noremap <Leader>p "*p
-
