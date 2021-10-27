@@ -1,7 +1,7 @@
 "Use F5 to refresh your editor with the config file that you specify here
 nmap <F5> :source ~/.config/nvim/init.vim<CR>
 vmap <F5> :source ~/.config/nvim/init.vim<CR>
-
+ 
 "disable the arrow keys to navigate. This is very useful when you want to
 "adapt to 'hjkl'
 noremap <up> <nop>
@@ -30,7 +30,7 @@ nnoremap <C-\> :split<CR>:ter<CR>:resize 15<CR>
 "Plugs
 map <Leader>nt :NERDTreeFind<CR>
 map <Leader>nc :NERDTreeClose<CR>
-map <Leader>f :Files<CR>
+map <Leader>f :GFiles<CR>
 map <Leader>ag :Ag<CR>
 
 " tmux navigator
@@ -41,8 +41,8 @@ nnoremap <silent> <C-l> :TmuxNavigateRight<CR>
 
 " Move to the next buffer
 " Move to the prevoius buffer
-nnoremap <tab> :bnext<CR>
-nnoremap <s-tab> :bprevious<CR>
+nnoremap <Leader>b :bnext<CR>
+"nnoremap <Leader><s-tab> :bprevious<CR>
 
 " Close the current buffer
 "create a new tab

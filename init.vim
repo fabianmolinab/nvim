@@ -8,7 +8,7 @@ source ~/.config/nvim/general/keys.vim
 
 "Theme
 source ~/.config/nvim/general/colors.vim
-source ~/.config/nvim/themes/horizon.vim
+source ~/.config/nvim/themes/ayu.vim
 
 "Import plugin settings
 source ~/.config/nvim/plug-settings/airline.vim
@@ -27,3 +27,4 @@ source ~/.config/nvim/plug-settings/vim-clang-format.vim
 source ~/.config/nvim/plug-settings/vim-go.vim
 source ~/.config/nvim/plug-settings/closetag.vim
 source ~/.config/nvim/plug-settings/neoformat.vim
+source ~/.config/nvim/plug-settings/markdown.vim
