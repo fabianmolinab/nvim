@@ -27,6 +27,8 @@ Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-lua/plenary.nvim'
 
 "Functionality
 Plug 'preservim/tagbar'
@@ -35,7 +37,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'cespare/vim-toml'
 Plug 'mbbill/undotree'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'puremourning/vimspector'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'alvan/vim-closetag'
@@ -47,6 +48,8 @@ Plug 'christoomey/vim-tmux-navigator'
 
 "code modification
 Plug 'scrooloose/nerdcommenter'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
@@ -57,6 +60,7 @@ Plug 'sirver/ultisnips'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neovim/nvim-lspconfig'
 
 "----------------TSX---------------------------
 Plug 'ianks/vim-tsx'
