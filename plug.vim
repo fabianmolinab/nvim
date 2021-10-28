@@ -48,8 +48,8 @@ Plug 'christoomey/vim-tmux-navigator'
 
 "code modification
 Plug 'scrooloose/nerdcommenter'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
