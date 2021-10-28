@@ -41,8 +41,8 @@ nnoremap <silent> <C-l> :TmuxNavigateRight<CR>
 
 " Move to the next buffer
 " Move to the prevoius buffer
-nnoremap <Leader>b :bnext<CR>
-"nnoremap <Leader><s-tab> :bprevious<CR>
+nnoremap <tab> :bnext<CR>
+nnoremap <s-tab> :bprevious<CR>
 
 " Close the current buffer
 "create a new tab

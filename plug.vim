@@ -65,7 +65,10 @@ Plug 'neovim/nvim-lspconfig'
 "----------------TSX---------------------------
 Plug 'ianks/vim-tsx'
 
-"-------Format code
+"--------------Style components---------------
+Plug 'styled-components/vim-styled-components'
+
+"------------- Format Code
 Plug 'sbdchd/neoformat'
 
 call plug#end()
