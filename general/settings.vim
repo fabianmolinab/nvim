@@ -42,3 +42,7 @@ set splitbelow
 set splitright
 
 set noshowmode
+
+"Habilita el Buffer para archivos grandes de JSX
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear

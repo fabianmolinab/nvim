@@ -4,6 +4,7 @@
 		"markdown",
 		"python",
 		"javascript",
+		"javascriptreact",
 		"typescript",
 		"typescriptreact",
 		"xml",
@@ -21,5 +22,12 @@
 	"javascript.format.semicolons": "insert",
 	"vetur.format.options.tabSize": 2,
 	"prettier.tslintIntegration": true,
-	"prettier.eslintIntegration": true
+	"prettier.eslintIntegration": true,
+	"eslint.autoFixOnSave": true,
+	"eslint.filestypes": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact"
+	]
 }

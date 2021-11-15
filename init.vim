@@ -28,3 +28,4 @@ source ~/.config/nvim/plug-settings/vim-go.vim
 source ~/.config/nvim/plug-settings/closetag.vim
 source ~/.config/nvim/plug-settings/neoformat.vim
 source ~/.config/nvim/plug-settings/markdown.vim
+source ~/.config/nvim/plug-settings/rainbow.vim
