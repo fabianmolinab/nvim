@@ -21,6 +21,9 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
 
+"ESC
+imap jj <Esc>
+
 "Terminal
 vnoremap <c-t> :split<CR>:ter<CR>:resize 15<CR>
 nnoremap <c-t> :split<CR>:ter<CR>:resize 15<CR>

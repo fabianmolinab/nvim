@@ -23,7 +23,6 @@ Plug 'peitalin/vim-jsx-typescript',
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 Plug 'yggdroot/indentline'
-Plug 'frazrepo/vim-rainbow'
 
 "Git integration
 Plug 'mhinz/vim-signify'
