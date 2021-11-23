@@ -74,4 +74,8 @@ Plug 'styled-components/vim-styled-components'
 "------------- Format Code
 Plug 'sbdchd/neoformat'
 Plug 'mattn/emmet-vim'
+Plug 'heavenshell/vim-jsdoc', {
+      \'for':['javascript','javascript.jsx','typescript'],
+      \'do':'make install'
+\}
 call plug#end()
