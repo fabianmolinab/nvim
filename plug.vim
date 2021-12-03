@@ -41,7 +41,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'cespare/vim-toml'
 Plug 'mbbill/undotree'
 Plug 'puremourning/vimspector'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 
@@ -72,10 +71,10 @@ Plug 'ianks/vim-tsx'
 Plug 'styled-components/vim-styled-components'
 
 "------------- Format Code
-Plug 'sbdchd/neoformat'
 Plug 'mattn/emmet-vim'
 Plug 'heavenshell/vim-jsdoc', {
       \'for':['javascript','javascript.jsx','typescript'],
       \'do':'make install'
 \}
+Plug 'w0rp/ale'
 call plug#end()
