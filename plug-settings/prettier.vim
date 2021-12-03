@@ -12,6 +12,8 @@ let g:prettier#config#jsx_single_quote = true
 let g:prettier#config#prose_wrap = 'preserve'
 let g:prettier#config#quote_props = 'as-needed'
 let g:prettier#config#semi = true
+let g:prettier#config#parser=''
 
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
-nnoremap <leader>p :Prettier<CR>
+nmap <Leader>py <Plug>(Prettier)
+
