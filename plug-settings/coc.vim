@@ -159,11 +159,3 @@ let g:coc_global_extensions = ['coc-explorer', 'coc-json', 'coc-snippets', 'coc-
 " List all presets
 nnoremap <space>el :CocList explPresets<CR>
 
-"node modules 
-if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
-  let g:coc_global_extensions += ['coc-prettier']
-endif
-
-if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
-  let g:coc_global_extensions += ['coc-eslint']
-endif

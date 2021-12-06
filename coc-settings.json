@@ -20,12 +20,5 @@
 	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
 	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
 	"javascript.format.semicolons": "insert",
-	"vetur.format.options.tabSize": 2,
-	"eslint.autoFixOnSave": true,
-	"eslint.filestypes": [
-		"javascript",
-		"javascriptreact",
-		"typescript",
-		"typescriptreact"
-	]
+	"vetur.format.options.tabSize": 2
 }
