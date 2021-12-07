@@ -27,7 +27,6 @@ Plug 'yggdroot/indentline'
 "Git integration
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -38,9 +37,7 @@ Plug 'preservim/tagbar'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'cespare/vim-toml'
 Plug 'mbbill/undotree'
-Plug 'puremourning/vimspector'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 
@@ -60,17 +57,16 @@ Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neovim/nvim-lspconfig'
 
-"----------------TSX---------------------------
-Plug 'ianks/vim-tsx'
-
 "--------------Style components---------------
 Plug 'styled-components/vim-styled-components'
 
 "------------- Format Code
-Plug 'mattn/emmet-vim'
 Plug 'heavenshell/vim-jsdoc', {
       \'for':['javascript','javascript.jsx','typescript'],
       \'do':'make install'
 \}
+
+"------------ Eslint and Prettier
 Plug 'w0rp/ale'
+
 call plug#end()
