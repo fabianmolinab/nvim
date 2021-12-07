@@ -19,6 +19,5 @@
 	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true,
 	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
 	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
-	"javascript.format.semicolons": "insert",
-	"vetur.format.options.tabSize": 2
+	"javascript.format.semicolons": "insert"
 }
