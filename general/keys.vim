@@ -33,7 +33,6 @@ nnoremap <C-\> :split<CR>:ter<CR>:resize 15<CR>
 "Plugs
 map <Leader>nt :NERDTreeFind<CR>
 map <Leader>nc :NERDTreeClose<CR>
-map <Leader>f :GFiles<CR>
 map <Leader>ag :Ag<CR>
 
 " tmux navigator
