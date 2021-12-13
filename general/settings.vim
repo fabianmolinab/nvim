@@ -18,7 +18,7 @@ set breakindent
 "I want the less space as possible.
 set number
 set rnu
-set numberwidth=2 
+set numberwidth=4 
 
 "I don't like the wrapped lines :v
 
@@ -34,8 +34,6 @@ set ignorecase
 
 "set the cursorline and a column
 set cursorline
-set colorcolumn=120
-highlight ColoColumn ctermbg=0 guibg=lightgrey
 
 "this sets the directions of the splits
 set splitbelow

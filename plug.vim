@@ -11,6 +11,7 @@ Plug 'mhartington/oceanic-next'
 Plug 'wojciechkepka/bogster'
 Plug 'franbach/miramare'
 Plug 'ntk148v/vim-horizon'
+Plug 'markvincze/panda-vim'
 
 "visual
 Plug 'vim-airline/vim-airline'
@@ -22,7 +23,6 @@ Plug 'pangloss/vim-javascript',
 Plug 'peitalin/vim-jsx-typescript',
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
-Plug 'yggdroot/indentline'
 
 "Git integration
 Plug 'mhinz/vim-signify'
