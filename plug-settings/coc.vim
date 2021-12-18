@@ -154,7 +154,7 @@ let g:coc_explorer_global_presets = {
 \   },
 \ }
 
-let g:coc_global_extensions = ['coc-explorer', 'coc-json', 'coc-snippets', 'coc-vimlsp', 'coc-emmet', 'coc-html', 'coc-css', 'coc-tsserver', 'coc-clangd', 'coc-pyright']
+let g:coc_global_extensions = ['coc-explorer', 'coc-json', 'coc-snippets', 'coc-vimlsp', 'coc-emmet', 'coc-html', 'coc-css', 'coc-tsserver']
 
 " List all presets
 nnoremap <space>el :CocList explPresets<CR>

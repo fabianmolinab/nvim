@@ -15,6 +15,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'lilydjwg/colorizer'
 Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript',
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 
