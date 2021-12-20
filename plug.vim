@@ -26,7 +26,6 @@ Plug 'preservim/nerdtree'
 "Git integration
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
-Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
 
 

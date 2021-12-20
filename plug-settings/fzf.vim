@@ -4,4 +4,6 @@ let g:fzf_preview_window = 'right:40%'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_use_caching = 0
 
-map <Leader>f :GFiles<CR>
+map <Leader>f :Files<CR>
+map <Leader>st :GFiles?<CR>
+map <Leader>ls :Commits<CR>
