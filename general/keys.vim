@@ -21,7 +21,7 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
 
-"ESC
+"ESC mode insert
 imap jj <Esc>
 
 "Terminal
@@ -58,3 +58,17 @@ nnoremap <leader>sp :sp<CR>
 
 " clear search results
 nnoremap <silent> // :noh<CR>
+
+"fzf
+map <Leader>f :Files<CR>
+map <Leader>st :GFiles?<CR>
+map <Leader>ls :Commits<CR>
+
+"Signify Permite ver los cambios del archivo
+
+nmap <leader>gj <plug>(signify-next-hunk)
+nmap <leader>gk <plug>(signify-prev-hunk)
+nmap <leader>gJ 9999<leader>gj
+nmap <leader>gK 9999<leader>gk
+
+
