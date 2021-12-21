@@ -28,12 +28,10 @@ Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
 
-
 "Functionality
 Plug 'preservim/tagbar'
 Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'mbbill/undotree'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 
@@ -45,7 +43,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-" post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'sirver/ultisnips'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
@@ -62,5 +59,8 @@ Plug 'heavenshell/vim-jsdoc', {
 
 "------------ Eslint and Prettier
 Plug 'w0rp/ale'
+
+"Testing
+Plug 'janko-m/vim-test'
 
 call plug#end()
