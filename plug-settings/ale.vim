@@ -1,8 +1,10 @@
 let g:ale_fixers = {
- \ 'javascript': ['eslint']
+ \ 'javascript': ['eslint'],
+ \ 'typescript': ['eslint']
  \ }
 let g:ale_linters = {
-\ 'javascript': ['standard']
+\ 'javascript': ['standard'],
+\ 'typescript': ['standard']
 \}
 
 let g:ale_sign_error = '❌'

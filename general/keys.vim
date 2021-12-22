@@ -33,7 +33,6 @@ nnoremap <C-\> :split<CR>:ter<CR>:resize 15<CR>
 "Plugs
 map <Leader>nt :NERDTreeFind<CR>
 map <Leader>nc :NERDTreeClose<CR>
-map <Leader>ag :Ag<CR>
 
 " tmux navigator
 nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
@@ -60,10 +59,10 @@ nnoremap <leader>sp :sp<CR>
 nnoremap <silent> // :noh<CR>
 
 "fzf
-map <Leader>f :Files<CR>
+map <Leader>ag :Files<CR>
 map <Leader>st :GFiles?<CR>
 map <Leader>ls :Commits<CR>
-
+map <Leader>f :GFiles<CR>
 "Signify Permite ver los cambios del archivo
 
 nmap <leader>gj <plug>(signify-next-hunk)
