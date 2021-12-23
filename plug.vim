@@ -44,7 +44,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-Plug 'sirver/ultisnips'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
