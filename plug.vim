@@ -58,7 +58,7 @@ Plug 'heavenshell/vim-jsdoc', {
 \}
 
 "------------ Eslint and Prettier
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
 
 "Testing
 Plug 'janko-m/vim-test'

@@ -9,7 +9,7 @@ set noerrorbells "this disable the error bells because is very annoying
 set nolist
 
 "to set the tabs
-set sw=2 "this set the tabs are 2 spaces
+set sw=2 "this se the tabs are 2 spaces
 set expandtab
 set smartindent "this saves work to you to indent your code
 set breakindent 
@@ -42,5 +42,5 @@ set splitright
 set noshowmode
 
 "Habilita el Buffer para archivos grandes de JSX
-"autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
-"autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
