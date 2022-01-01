@@ -64,10 +64,8 @@ map <Leader>st :GFiles?<CR>
 map <Leader>ls :Commits<CR>
 map <Leader>f :GFiles<CR>
 "Signify Permite ver los cambios del archivo
-
-nmap <leader>gj <plug>(signify-next-hunk)
-nmap <leader>gk <plug>(signify-prev-hunk)
-nmap <leader>gJ 9999<leader>gj
-nmap <leader>gK 9999<leader>gk
+" Jump between hunks
+nmap <Leader>gj <Plug>GitGutterNextHunk  "git next
+nmap <Leader>gk <Plug>GitGutterPrevHunk  "git previous
 
 

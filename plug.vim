@@ -25,7 +25,8 @@ Plug 'preservim/nerdtree'
 Plug 'nathanaelkane/vim-indent-guides'
 
 "Git integration
-Plug 'mhinz/vim-signify'
+Plug 'airblade/vim-gitgutter'
+"Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
 

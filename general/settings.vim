@@ -19,7 +19,7 @@ set breakindent
 set number
 set rnu
 set numberwidth=4 
-
+set signcolumn=yes
 "I don't like the wrapped lines :v
 
 "I HATE the f*cking swap files and I don't want the backup files
