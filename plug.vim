@@ -22,10 +22,10 @@ Plug 'pangloss/vim-javascript',
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
-"Plug 'nathanaelkane/vim-indent-guides'
+Plug 'nathanaelkane/vim-indent-guides'
 
 "Git integration
-"Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 "Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
@@ -36,7 +36,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
-Plug 'folke/todo-comments.nvim'
+"Plug 'folke/todo-comments.nvim'
 
 "tmux
 Plug 'benmills/vimux'
