@@ -22,7 +22,7 @@ Plug 'pangloss/vim-javascript',
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
-Plug 'nathanaelkane/vim-indent-guides'
+"Plug 'nathanaelkane/vim-indent-guides'
 
 "Git integration
 Plug 'airblade/vim-gitgutter'
