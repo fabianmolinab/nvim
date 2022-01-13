@@ -3,3 +3,4 @@
 
 #but no the file .gitignore
 !.gitignore
+!.zshrc
