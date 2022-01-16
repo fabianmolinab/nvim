@@ -6,8 +6,8 @@ source ~/.config/nvim/general/settings.vim
 source ~/.config/nvim/general/keys.vim
 
 "Theme
+source ~/.config/nvim/themes/onehalf.vim
 source ~/.config/nvim/general/colors.vim
-source ~/.config/nvim/themes/nord.vim
 
 "Import plugin settings
 source ~/.config/nvim/plug-settings/airline.vim

@@ -1,16 +1,16 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 "themes
-Plug 'ayu-theme/ayu-vim'
-Plug 'joshdick/onedark.vim'
-Plug 'kjwon15/vim-transparent'
-Plug 'wojciechkepka/bogster'
-Plug 'ntk148v/vim-horizon'
-Plug 'markvincze/panda-vim'
+"Plug 'ayu-theme/ayu-vim'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
-Plug 'arcticicestudio/nord-vim'
-Plug 'drewtempelmeyer/palenight.vim'
-Plug 'morhetz/gruvbox'
+Plug 'kjwon15/vim-transparent'
+"Plug 'wojciechkepka/bogster'
+"Plug 'ntk148v/vim-horizon'
+"Plug 'markvincze/panda-vim'
+"Plug 'sonph/onehalf', { 'rtp': 'vim' }
+"Plug 'arcticicestudio/nord-vim'
+"Plug 'drewtempelmeyer/palenight.vim'
+"Plug 'morhetz/gruvbox'
 
 "visual
 Plug 'vim-airline/vim-airline'
