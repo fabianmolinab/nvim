@@ -7,7 +7,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'ntk148v/vim-horizon'
 "Plug 'markvincze/panda-vim'
 "Plug 'sonph/onehalf', { 'rtp': 'vim' }
-"Plug 'arcticicestudio/nord-vim'
+Plug 'arcticicestudio/nord-vim'
 Plug 'drewtempelmeyer/palenight.vim'
 "Plug 'morhetz/gruvbox'
 "Plug 'Rigellute/shades-of-purple.vim'
