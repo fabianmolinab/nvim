@@ -69,10 +69,6 @@ map <Leader>f :GFiles<CR>
 nmap <Leader>gj <Plug>(GitGutterNextHunk)  "git next
 nmap <Leader>gk <Plug>(GitGutterPrevHunk)  "git previous
 
-"Plug test
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFiles<CR>
-
 "Plug Gina <GitPlug>
 nmap <leader>co :Gina compare<CR>
 nmap <leader>st :Gina status<CR>

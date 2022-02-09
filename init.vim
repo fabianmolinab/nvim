@@ -21,6 +21,5 @@ source ~/.config/nvim/plug-settings/vim-dev-icons.vim
 source ~/.config/nvim/plug-settings/closetag.vim
 source ~/.config/nvim/plug-settings/neoformat.vim
 source ~/.config/nvim/plug-settings/markdown.vim
-source ~/.config/nvim/plug-settings/vim-test.vim
 source ~/.config/nvim/plug-settings/indent.vim
 source ~/.config/nvim/plug-settings/blamer.vim
