@@ -72,3 +72,6 @@ nmap <Leader>gk <Plug>(GitGutterPrevHunk)  "git previous
 "Plug Gina <GitPlug>
 nmap <leader>co :Gina compare<CR>
 nmap <leader>st :Gina status<CR>
+nmap <leader>c :Gina commit<CR>
+nmap <leader>df :Gina diff<CR>
+nmap <leader>lg :Gina log<CR>
