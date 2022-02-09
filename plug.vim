@@ -30,6 +30,8 @@ Plug 'airblade/vim-gitgutter'
 "Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'lambdalisue/gina.vim'
+Plug 'APZelos/blamer.nvim'
 
 "Functionality
 Plug 'preservim/tagbar'

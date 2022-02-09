@@ -63,9 +63,16 @@ map <Leader>ag :Files<CR>
 map <Leader>st :GFiles?<CR>
 map <Leader>ls :Commits<CR>
 map <Leader>f :GFiles<CR>
+
 "Signify Permite ver los cambios del archivo
 " Jump between hunks
-nmap <Leader>gj <Plug>GitGutterNextHunk  "git next
-nmap <Leader>gk <Plug>GitGutterPrevHunk  "git previous
+nmap <Leader>gj <Plug>(GitGutterNextHunk)  "git next
+nmap <Leader>gk <Plug>(GitGutterPrevHunk)  "git previous
 
+"Plug test
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFiles<CR>
+nmap <silent> <leader>a :TestSuite<CR>
 
+"Plug Gina <GitPlug>
+nmap <leader>co :Gina compare<CR>
