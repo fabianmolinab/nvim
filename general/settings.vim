@@ -18,7 +18,7 @@ set breakindent
 "I want the less space as possible.
 set number
 set rnu
-set numberwidth=2 
+set numberwidth=2
 "I don't like the wrapped lines :v
 
 "I HATE the f*cking swap files and I don't want the backup files
