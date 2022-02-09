@@ -60,7 +60,7 @@ nnoremap <silent> // :noh<CR>
 
 "fzf
 map <Leader>ag :Files<CR>
-map <Leader>st :GFiles?<CR>
+map <Leader>a :GFiles?<CR>
 map <Leader>ls :Commits<CR>
 map <Leader>f :GFiles<CR>
 
@@ -72,7 +72,7 @@ nmap <Leader>gk <Plug>(GitGutterPrevHunk)  "git previous
 "Plug test
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFiles<CR>
-nmap <silent> <leader>a :TestSuite<CR>
 
 "Plug Gina <GitPlug>
 nmap <leader>co :Gina compare<CR>
+nmap <leader>st :Gina status<CR>
