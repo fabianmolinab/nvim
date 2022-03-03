@@ -2,7 +2,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 "themes
 "Plug 'ayu-theme/ayu-vim'
-Plug 'kjwon15/vim-transparent'
+"Plug 'kjwon15/vim-transparent'
 "Plug 'wojciechkepka/bogster'
 "Plug 'ntk148v/vim-horizon'
 "Plug 'markvincze/panda-vim'
@@ -13,6 +13,7 @@ Plug 'drewtempelmeyer/palenight.vim'
 "Plug 'Rigellute/shades-of-purple.vim'
 "Plug 'joshdick/onedark.vim'
 "Plug 'mhartington/oceanic-next'
+Plug 'franbach/miramare'
 
 "visual
 Plug 'vim-airline/vim-airline'
