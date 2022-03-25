@@ -7,6 +7,7 @@ set clipboard=unnamedplus "to set the main clipboard to vim. It needs xclip o xc
 "set clipboard=unnamedplus 
 set noerrorbells "this disable the error bells because is very annoying
 set nolist
+set cmdheight=1
 
 "to set the tabs
 set sw=2 "this se the tabs are 2 spaces
@@ -38,7 +39,7 @@ set cursorline
 set splitbelow
 set splitright
 
-set noshowmode
+"set noshowmode
 
 "Habilita el Buffer para archivos grandes de JSX
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart

@@ -16,8 +16,8 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'franbach/miramare'
 
 "visual
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'lilydjwg/colorizer'
 Plug 'sheerun/vim-polyglot'
