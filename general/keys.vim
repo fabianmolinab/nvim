@@ -63,7 +63,7 @@ map <Leader>ag :Files<CR>
 map <Leader>a :GFiles?<CR>
 map <Leader>ls :Commits<CR>
 map <Leader>f :GFiles<CR>
-
+map <Leader>b :Buffers<CR>
 "Signify Permite ver los cambios del archivo
 " Jump between hunks
 nmap <Leader>gj <Plug>(GitGutterNextHunk)  "git next
