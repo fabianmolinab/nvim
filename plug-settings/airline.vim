@@ -4,3 +4,4 @@ let g:airline_powerline_fonts = 0 " Change separetors to be triangles
 let g:airline_theme='miramare'
 let g:airline_section_z = airline#section#create(['windowswap','%3p%% ','linenr',':%3v'])
 let g:airline_skip_empty_sections = 1
+let g:airline#extensions#tabline#enabled = 0

@@ -39,7 +39,7 @@ set cursorline
 set splitbelow
 set splitright
 
-"set noshowmode
+set noshowmode
 
 "Habilita el Buffer para archivos grandes de JSX
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart

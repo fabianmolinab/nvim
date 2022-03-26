@@ -2,7 +2,7 @@
 source ~/.config/nvim/plug.vim
 
 "Import the general settings
-source ~/.config/nvim/general/status-line.vim
+"source ~/.config/nvim/general/status-line.vim
 source ~/.config/nvim/general/settings.vim
 source ~/.config/nvim/general/keys.vim
 
@@ -11,7 +11,7 @@ source ~/.config/nvim/themes/miramare.vim
 source ~/.config/nvim/general/colors.vim
 
 "Import plugin settings
-"source ~/.config/nvim/plug-settings/airline.vim
+source ~/.config/nvim/plug-settings/airline.vim
 source ~/.config/nvim/plug-settings/coc.vim
 source ~/.config/nvim/plug-settings/easy-motion.vim
 source ~/.config/nvim/plug-settings/emmet.vim

@@ -8,7 +8,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'markvincze/panda-vim'
 "Plug 'sonph/onehalf', { 'rtp': 'vim' }
 "Plug 'arcticicestudio/nord-vim' , { 'on':  'NERDTreeToggle' }
-Plug 'drewtempelmeyer/palenight.vim'
+"Plug 'drewtempelmeyer/palenight.vim'
 "Plug 'morhetz/gruvbox'
 "Plug 'Rigellute/shades-of-purple.vim'
 "Plug 'joshdick/onedark.vim'
@@ -16,8 +16,8 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'franbach/miramare'
 
 "visual
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'lilydjwg/colorizer'
 Plug 'sheerun/vim-polyglot'
@@ -40,7 +40,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'lambdalisue/gina.vim'
-Plug 'APZelos/blamer.nvim'
+"Plug 'APZelos/blamer.nvim'
 
 "Functionality
 Plug 'preservim/tagbar'
