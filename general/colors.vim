@@ -16,3 +16,5 @@ set background=dark
 hi CursorLineNR guifg=#ffcb6b
 set cursorline
 set cursorlineopt=number
+highlight Pmenu guifg=#dee1e4 guibg=none
+highlight PmenuSel guifg=#000 guibg=#5eacd3 
