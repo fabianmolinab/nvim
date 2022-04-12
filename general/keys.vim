@@ -58,12 +58,12 @@ nnoremap <leader>sp :sp<CR>
 " clear search results
 nnoremap <silent> // :noh<CR>
 
-"fzf
-map <Leader>ag :Files<CR>
-map <Leader>a :GFiles?<CR>
-map <Leader>ls :Commits<CR>
-map <Leader>f :GFiles<CR>
-nnoremap <Leader>b :Buffers<CR>
+"Telescope
+map <Leader>ag :Telescope find_files theme=dropdown<CR>
+map <Leader>a :Telescope live_grep theme=dropdown<CR>
+map <Leader>ls :Telescope git_commits theme=ivy<CR>
+map <Leader>f :Telescope git_files theme=dropdown<CR>
+map <Leader>b :Telescope buffers theme=dropdown<CR>
 
 "Signify Permite ver los cambios del archivo
 " Jump between hunks
