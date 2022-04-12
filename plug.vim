@@ -6,9 +6,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'wojciechkepka/bogster'
 "Plug 'ntk148v/vim-horizon'
 "Plug 'markvincze/panda-vim'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
+"Plug 'sonph/onehalf', { 'rtp': 'vim' }
 "Plug 'arcticicestudio/nord-vim' , { 'on':  'NERDTreeToggle' }
-"Plug 'drewtempelmeyer/palenight.vim'
+Plug 'drewtempelmeyer/palenight.vim'
 "Plug 'morhetz/gruvbox'
 "Plug 'Rigellute/shades-of-purple.vim'
 "Plug 'joshdick/onedark.vim'
