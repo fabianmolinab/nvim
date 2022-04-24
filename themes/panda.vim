@@ -1,1 +1,1 @@
-color panda
+colorscheme panda

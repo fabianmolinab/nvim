@@ -8,12 +8,13 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'markvincze/panda-vim'
 "Plug 'sonph/onehalf', { 'rtp': 'vim' }
 "Plug 'arcticicestudio/nord-vim' , { 'on':  'NERDTreeToggle' }
-Plug 'drewtempelmeyer/palenight.vim'
+"Plug 'drewtempelmeyer/palenight.vim'
 "Plug 'morhetz/gruvbox'
 "Plug 'Rigellute/shades-of-purple.vim'
 "Plug 'joshdick/onedark.vim'
 "Plug 'mhartington/oceanic-next'
 "Plug 'franbach/miramare'
+Plug 'sainnhe/sonokai'
 
 "visual
 Plug 'vim-airline/vim-airline'
