@@ -41,7 +41,6 @@ Plug 'heavenshell/vim-jsdoc', {
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'lambdalisue/gina.vim'
 "Plug 'APZelos/blamer.nvim'
 
 "Functionality
@@ -62,5 +61,6 @@ Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dense-analysis/ale'
 
 call plug#end()

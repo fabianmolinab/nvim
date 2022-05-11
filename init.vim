@@ -11,6 +11,7 @@ source ~/.config/nvim/themes/sonokai.vim
 source ~/.config/nvim/general/colors.vim
 
 "Import plugin settings
+source ~/.config/nvim/plug-settings/ale.vim
 source ~/.config/nvim/plug-settings/airline.vim
 source ~/.config/nvim/plug-settings/coc.vim
 source ~/.config/nvim/plug-settings/easy-motion.vim

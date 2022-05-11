@@ -1,5 +1,4 @@
-{
-	
+{	
 	"coc.preferences.formatOnSaveFiletypes": [
 		"json",
 		"markdown",
@@ -16,8 +15,6 @@
 	"coc.preferences.formatOnType": true,
 	"tsserver.formatOnType": true,
 	"eslint.autoFixOnSave": true,
-  "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],	
-	"prettier.disableSuccessMessage": true,
 	"json.format.enable": true,
 	"explorer.width": 30,
 	"explorer.icon.enableNerdfont": true,
