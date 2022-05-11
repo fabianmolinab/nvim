@@ -9,7 +9,7 @@ set background=dark
 
     hi SignColumn guibg=none
     hi CursorLineNR guibg=None
-    "highlight Normal guibg=none
+    highlight Normal guibg=none
     highlight LineNr guifg=#5eacd3
     highlight netrwDir guifg=#5eacd3
     highlight qfFileName guifg=#aed75f
@@ -17,7 +17,7 @@ hi CursorLineNR guifg=#ffcb6b
 set cursorline
 set cursorlineopt=number
 highlight Pmenu guifg=#dee1e4 guibg=none
-highlight PmenuSel guifg=#060606 guibg=#ffcb6b 
+highlight PmenuSel guifg=#060606 guibg=#E06C75 
 
 " TSX sintax
 " dark red
