@@ -69,10 +69,3 @@ map <Leader>b :Telescope buffers theme=dropdown<CR>
 " Jump between hunks
 nmap <Leader>gj <Plug>(GitGutterNextHunk)  "git next
 nmap <Leader>gk <Plug>(GitGutterPrevHunk)  "git previous
-
-"Plug Gina <GitPlug>
-nmap <leader>co :Gina compare<CR>
-nmap <leader>st :Gina status<CR>
-nmap <leader>c :Gina commit<CR>
-nmap <leader>df :Gina diff<CR>
-nmap <leader>lg :Gina log<CR>
