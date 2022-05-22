@@ -1,2 +1,2 @@
-let ayucolor="mirage"
+let ayucolor="dark"
 colorscheme ayu
