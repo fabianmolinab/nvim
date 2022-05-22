@@ -33,12 +33,12 @@ highlight Pmenu guifg=#dee1e4 guibg=none
 "hi tsxEqual guifg=#F99575
 
 " yellow
-hi tsxAttrib guifg=#F8BD7F cterm=italic
+"hi tsxAttrib guifg=#F8BD7F cterm=italic
 
 " light-grey
 "hi tsxTypeBraces guifg=#5eacd3 cterm=italic
 " dark-grey
-hi tsxTypes guifg=#5eacd3 cterm=italic
+"hi tsxTypes guifg=#5eacd3 cterm=italic
 
 "hi ReactState guifg=#C176A7 cterm=italic
 "hi ReactProps guifg=#D19A66 cterm=bold
