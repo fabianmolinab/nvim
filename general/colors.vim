@@ -9,7 +9,7 @@ set background=dark
 
     hi SignColumn guibg=none
     hi CursorLineNR guibg=None
-    highlight Normal guibg=none
+"    highlight Normal guibg=none
     highlight LineNr guifg=#5eacd3
     highlight netrwDir guifg=#5eacd3
     highlight qfFileName guifg=#aed75f
@@ -36,12 +36,12 @@ hi tsxEqual guifg=#F99575
 hi tsxAttrib guifg=#F8BD7F cterm=italic
 
 " light-grey
-hi tsxTypeBraces guifg=#999999
+hi tsxTypeBraces guifg=#5eacd3 cterm=italic
 " dark-grey
-hi tsxTypes guifg=#666666
+hi tsxTypes guifg=#5eacd3 cterm=italic
 
 hi ReactState guifg=#C176A7 cterm=italic
-hi ReactProps guifg=#D19A66
+hi ReactProps guifg=#D19A66 cterm=bold
 hi ApolloGraphQL guifg=#CB886B
 hi Events ctermfg=204 guifg=#56B6C2
 hi ReduxKeywords ctermfg=204 guifg=#C678DD

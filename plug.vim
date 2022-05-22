@@ -2,7 +2,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 "themes
 "Plug 'ayu-theme/ayu-vim'
-"Plug 'kjwon15/vim-transparent'
+Plug 'kjwon15/vim-transparent'
 "Plug 'wojciechkepka/bogster'
 "Plug 'ntk148v/vim-horizon'
 "Plug 'markvincze/panda-vim'
@@ -43,6 +43,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
 "Plug 'APZelos/blamer.nvim'
 
+
 "Functionality
 Plug 'preservim/tagbar'
 "Plug 'junegunn/fzf.vim'
@@ -50,6 +51,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'easymotion/vim-easymotion'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
+Plug 'jbgutierrez/vim-better-comments'
 
 "tmux
 Plug 'benmills/vimux'
@@ -63,4 +65,5 @@ Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 Plug 'github/copilot.vim'
+
 call plug#end()
