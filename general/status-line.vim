@@ -1,5 +1,5 @@
 " status bar colors
-au InsertEnter * hi statusline guifg=black guibg=#d7afff ctermfg=black ctermbg=magenta
+au InsertEnter * hi statusline guifg=black guibg=#f07078 ctermfg=black ctermbg=magenta
 au InsertLeave * hi statusline guifg=black guibg=#8fbfdc ctermfg=black ctermbg=cyan
 hi statusline guifg=black guibg=#8fbfdc ctermfg=black ctermbg=cyan
 
@@ -48,7 +48,7 @@ set statusline+=%#LineNr#
 set statusline+=\ %f
 set statusline+=%=                                       " Right Side
 set statusline+=%{StatuslineGit()}
-set statusline+=%2*\ col:\ %02v\                         " Colomn number
+"set statusline+=%2*\ col:\ %02v\                         " Colomn number
 set statusline+=%1*\ \ %02l/%L\ (%3p%%)\              " Line number / total lines, percentage of document
 set statusline+=%0*\ %{toupper(g:currentmode[mode()])}\  " The current mode
 

@@ -17,7 +17,7 @@ hi CursorLineNR guifg=#ffcb6b
 set cursorline
 set cursorlineopt=number
 highlight Pmenu guifg=#dee1e4 guibg=none
-"highlight PmenuSel guifg=#060606 guibg=#E06C75 
+"highlight PmenuSel guifg=#060606 guibg=#F99575
 
 " TSX sintax
 " dark red
