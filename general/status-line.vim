@@ -45,10 +45,10 @@ set statusline=
 set statusline+=%0*\ %n\                                 " Buffer number
 "set statusline+=%1*\ %<%F%m%r%h%w\                       " File path, modified, readonly, helpfile, preview
 set statusline+=%#LineNr#
-set statusline+=\ %f
+set statusline+=\ %t
 set statusline+=%=                                       " Right Side
 set statusline+=%{StatuslineGit()}
-"set statusline+=%2*\ col:\ %02v\                         " Colomn number
+"set statusline+=%2*\ col:\ %02v\                         " Column number
 set statusline+=%1*\ \ %02l/%L\ (%3p%%)\              " Line number / total lines, percentage of document
 set statusline+=%0*\ %{toupper(g:currentmode[mode()])}\  " The current mode
 
