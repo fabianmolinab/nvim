@@ -23,4 +23,4 @@ source ~/.config/nvim/plug-settings/vim-dev-icons.vim
 source ~/.config/nvim/plug-settings/closetag.vim
 "source ~/.config/nvim/plug-settings/indent.vim
 source ~/.config/nvim/plug-settings/blamer.vim
-source ~/.config/nvim/plug-settings/copilot.vim
+"source ~/.config/nvim/plug-settings/copilot.vim
