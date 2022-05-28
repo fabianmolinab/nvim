@@ -33,7 +33,7 @@ highlight Pmenu guifg=#dee1e4 guibg=none
 "hi tsxEqual guifg=#F99575
 
 " yellow
-"hi tsxAttrib guifg=#F8BD7F cterm=italic
+hi tsxAttrib guifg=#F8BD7F cterm=italic
 
 " light-grey
 "hi tsxTypeBraces guifg=#5eacd3 cterm=italic

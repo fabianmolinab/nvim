@@ -21,12 +21,12 @@ set pumheight=10
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
-"if has("nvim-0.5.0") || has("patch-8.1.1564")
+if has("nvim-0.5.0") || has("patch-8.1.1564")
   " Recently vim can merge signcolumn and number column into one
-"  set signcolumn=number
-"else
-"  set signcolumn=yes
-"endif
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
 
 "Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
@@ -154,7 +154,7 @@ let g:coc_explorer_global_presets = {
 \   },
 \ }
 
-let g:coc_global_extensions = ['coc-explorer', 'coc-json', 'coc-snippets', 'coc-emmet', 'coc-html', 'coc-css', 'coc-tsserver']
+let g:coc_global_extensions = ['coc-explorer', 'coc-json', 'coc-snippets', 'coc-emmet', 'coc-html', 'coc-css', 'coc-tsserver'] 
 
 " List all presets
 nnoremap <space>el :CocList explPresets<CR>
