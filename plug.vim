@@ -27,6 +27,7 @@ Plug 'lilydjwg/colorizer'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 "Plug 'nathanaelkane/vim-indent-guides'
+Plug 'ap/vim-buftabline'
 
 "Programming tecnologies
 Plug 'leafgarland/typescript-vim'
@@ -44,7 +45,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
 "Plug 'APZelos/blamer.nvim'
-
+Plug 'rbong/vim-flog'
 
 "Functionality
 Plug 'preservim/tagbar'
