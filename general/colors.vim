@@ -19,7 +19,7 @@ set cursorlineopt=number
 
 "Menu autocompletado
 highlight Pmenu guifg=#dee1e4 guibg=none
-highlight PmenuSel guifg=#F99575 guibg=#010101
+highlight PmenuSel guibg=#2DC3DA guifg=#010101
 
 "Coc Error Color
 hi! CocErrorSign guifg=#F66B0E
@@ -27,8 +27,8 @@ hi! CocErrorSign guifg=#F66B0E
 " TSX sintax
 " dark red
 hi tsxTagName guifg=#F66B0E
-hi tsxComponentName guifg=#E06C75
-hi tsxCloseComponentName guifg=#F66B0E 
+hi tsxComponentName guifg=#2DC3DA cterm=italic
+hi tsxCloseComponentName guifg=#2DC3DA cterm=italic
 
 " orange
 hi tsxCloseString guifg=#F99575

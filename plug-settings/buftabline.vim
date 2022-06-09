@@ -1,3 +1,4 @@
+
 hi BufTabLineCurrent guibg=#2DC3DA guifg=#252524
 
 hi BufTabLineActive guifg=#2DC3DA guibg=none
@@ -6,10 +7,9 @@ hi BufTabLineHidden guifg=#FFF guibg=none
 
 hi BufTabLineFill guibg=none
 
-hi BufTabLineModifiedCurrent guibg=#D3DA2D guifg=#252524
+hi BufTabLineModifiedCurrent guibg=#DF366B guifg=#FFF
 
-hi BufTabLineModifiedActive guibg=#D3DA2D guifg=#252524 
+hi BufTabLineModifiedActive guibg=#DF366B guifg=#FFF
 
-hi BufTabLineModifiedHidden guifg=#D3DA2D
-
+hi BufTabLineModifiedHidden guifg=#DF366B
 
