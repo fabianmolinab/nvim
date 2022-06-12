@@ -19,37 +19,37 @@ set cursorlineopt=number
 
 "Menu autocompletado
 highlight Pmenu guifg=#dee1e4 guibg=none
-highlight PmenuSel guibg=#2DC3DA guifg=#010101
+"highlight PmenuSel guibg=#C14A4A guifg=#dee1e4
 
 "Coc Error Color
 hi! CocErrorSign guifg=#F66B0E
 
 " TSX sintax
 " dark red
-hi tsxTagName guifg=#F66B0E
-hi tsxComponentName guifg=#2DC3DA cterm=italic
-hi tsxCloseComponentName guifg=#2DC3DA cterm=italic
+"hi tsxTagName guifg=#F9F871
+"hi tsxComponentName guifg=#2DC3DA cterm=italic
+"hi tsxCloseComponentName guifg=#2DC3DA cterm=italic
 
 " orange
-hi tsxCloseString guifg=#F99575
-hi tsxCloseTag guifg=#F99575
-hi tsxCloseTagName guifg=#F99575
-hi tsxAttributeBraces guifg=#2DC3DA
-hi tsxEqual guifg=#F99575
+"hi tsxCloseString guifg=#F99575
+"hi tsxCloseTag guifg=#F99575
+"hi tsxCloseTagName guifg=#F9F871
+"hi tsxAttributeBraces guifg=#2DC3DA
+"hi tsxEqual guifg=#84EEA2
 
 " yellow
-hi tsxAttrib guifg=#F8BD7F cterm=italic
+"hi tsxAttrib guifg=#2DC3DA cterm=italic
 
 " light-grey
-hi tsxTypeBraces guifg=#2DC3DA cterm=italic
+"hi tsxTypeBraces guifg=#2DC3DA cterm=italic
 " dark-grey
-hi tsxTypes guifg=#2DC3DA cterm=italic
+"hi tsxTypes guifg=#2DC3DA cterm=italic
 
-hi ReactState guifg=#C176A7 cterm=italic
-hi ReactProps guifg=#D19A66 cterm=bold
-hi ApolloGraphQL guifg=#CB886B
-hi Events ctermfg=204 guifg=#2DC3DA
-hi ReduxKeywords ctermfg=204 guifg=#C678DD
-hi ReduxHooksKeywords ctermfg=204 guifg=#C176A7
-hi WebBrowser ctermfg=204 guifg=#2DC3DA
-hi ReactLifeCycleMethods ctermfg=204 guifg=#D19A66
+"hi ReactState guifg=#C176A7 cterm=italic
+"hi ReactProps guifg=#D19A66 cterm=bold
+"hi ApolloGraphQL guifg=#CB886B
+"hi Events ctermfg=204 guifg=#2DC3DA
+"hi ReduxKeywords ctermfg=204 guifg=#C678DD
+"hi ReduxHooksKeywords ctermfg=204 guifg=#C176A7
+"hi WebBrowser ctermfg=204 guifg=#2DC3DA
+"hi ReactLifeCycleMethods ctermfg=204 guifg=#D19A66

@@ -7,9 +7,9 @@ hi BufTabLineHidden guifg=#FFF guibg=none
 
 hi BufTabLineFill guibg=none
 
-hi BufTabLineModifiedCurrent guibg=#DF366B guifg=#FFF
+hi BufTabLineModifiedCurrent guibg=#C14A4A  guifg=#FFF
 
-hi BufTabLineModifiedActive guibg=#DF366B guifg=#FFF
+hi BufTabLineModifiedActive guibg=#C14A4A guifg=#FFF
 
-hi BufTabLineModifiedHidden guifg=#DF366B
+hi BufTabLineModifiedHidden guifg=#C14A4A
 

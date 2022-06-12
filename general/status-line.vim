@@ -1,5 +1,5 @@
 " status bar colors
-au InsertEnter * hi statusline guifg=white guibg=#DF366B ctermfg=white ctermbg=magenta
+au InsertEnter * hi statusline guifg=white guibg=#C14A4A ctermfg=white ctermbg=magenta
 au InsertLeave * hi statusline guifg=black guibg=#2DC3DA ctermfg=black ctermbg=cyan
 hi statusline guifg=black guibg=#2DC3DA ctermfg=black ctermbg=cyan
 

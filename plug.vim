@@ -14,8 +14,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'joshdick/onedark.vim'
 "Plug 'mhartington/oceanic-next'
 "Plug 'franbach/miramare'
-Plug 'sainnhe/sonokai'
-"Plug 'sainnhe/gruvbox-material'
+"Plug 'sainnhe/sonokai'
+Plug 'sainnhe/gruvbox-material'
 
 
 "visual
