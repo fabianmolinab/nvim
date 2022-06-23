@@ -26,7 +26,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'lilydjwg/colorizer'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
-"Plug 'nathanaelkane/vim-indent-guides'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ap/vim-buftabline'
 
 "Programming tecnologies
@@ -67,6 +67,5 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
-"Plug 'github/copilot.vim'
 
 call plug#end()
