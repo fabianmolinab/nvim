@@ -26,15 +26,15 @@ hi! CocErrorSign guifg=#F66B0E
 
 " TSX sintax
 " dark red
-"hi tsxTagName guifg=#F9F871
+"hi tsxTagName guifg=#84EEA2
 "hi tsxComponentName guifg=#2DC3DA cterm=italic
 "hi tsxCloseComponentName guifg=#2DC3DA cterm=italic
 
 " orange
 "hi tsxCloseString guifg=#F99575
-"hi tsxCloseTag guifg=#F99575
-"hi tsxCloseTagName guifg=#F9F871
-"hi tsxAttributeBraces guifg=#2DC3DA
+"hi tsxCloseTag guifg=#84EEA2
+"hi tsxCloseTagName guifg=#84EEA2
+hi tsxAttributeBraces guifg=#C14A4A
 "hi tsxEqual guifg=#84EEA2
 
 " yellow
@@ -45,8 +45,8 @@ hi! CocErrorSign guifg=#F66B0E
 " dark-grey
 "hi tsxTypes guifg=#2DC3DA cterm=italic
 
-"hi ReactState guifg=#C176A7 cterm=italic
-"hi ReactProps guifg=#D19A66 cterm=bold
+hi ReactState guifg=#C14A4A cterm=italic
+hi ReactProps guifg=#D19A66 cterm=bold
 "hi ApolloGraphQL guifg=#CB886B
 "hi Events ctermfg=204 guifg=#2DC3DA
 "hi ReduxKeywords ctermfg=204 guifg=#C678DD
