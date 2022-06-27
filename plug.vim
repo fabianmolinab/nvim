@@ -1,10 +1,8 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 "themes
-"Plug 'ayu-theme/ayu-vim'
 "Plug 'kjwon15/vim-transparent'
-"Plug 'wojciechkepka/bogster'
-"Plug 'ntk148v/vim-horizon'
+"Plug 'ayu-theme/ayu-vim'
 "Plug 'markvincze/panda-vim'
 "Plug 'sonph/onehalf', { 'rtp': 'vim' }
 "Plug 'arcticicestudio/nord-vim' , { 'on':  'NERDTreeToggle' }
@@ -14,8 +12,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'joshdick/onedark.vim'
 "Plug 'mhartington/oceanic-next'
 "Plug 'franbach/miramare'
-"Plug 'sainnhe/sonokai'
-Plug 'sainnhe/gruvbox-material'
+Plug 'sainnhe/sonokai'
+"Plug 'sainnhe/gruvbox-material'
+"Plug 'sainnhe/edge'
 
 
 "visual
@@ -30,7 +29,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ap/vim-buftabline'
 
 "Programming tecnologies
-Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components'
