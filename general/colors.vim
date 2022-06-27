@@ -27,23 +27,23 @@ hi! CocErrorSign guifg=#F66B0E
 " TSX sintax
 " dark red
 hi tsxTagName guifg=#84EEA2
-hi tsxComponentName guifg=#2DC3DA cterm=italic
-hi tsxCloseComponentName guifg=#2DC3DA cterm=italic
+"hi tsxComponentName guifg=#2DC3DA cterm=italic
+hi tsxCloseComponentName guifg=#84EEA2 cterm=italic
 
 " orange
 hi tsxCloseString guifg=#F99575
 hi tsxCloseTag guifg=#84EEA2
-"hi tsxCloseTagName guifg=#84EEA2
+hi tsxCloseTagName guifg=#84EEA2
 hi tsxAttributeBraces guifg=#C14A4A
-"hi tsxEqual guifg=#84EEA2
+hi tsxEqual guifg=#84EEA2
 
 " yellow
-hi tsxAttrib guifg=#2DC3DA cterm=italic
+"hi tsxAttrib guifg=#2DC3DA cterm=italic
 
 " light-grey
-hi tsxTypeBraces guifg=#2DC3DA cterm=italic
+"hi tsxTypeBraces guifg=#2DC3DA cterm=italic
 " dark-grey
-hi tsxTypes guifg=#2DC3DA cterm=italic
+"hi tsxTypes guifg=#2DC3DA cterm=italic
 
 hi ReactState guifg=#C14A4A cterm=italic
 hi ReactProps guifg=#D19A66 cterm=bold

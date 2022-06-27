@@ -43,7 +43,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
 "Plug 'APZelos/blamer.nvim'
-Plug 'rbong/vim-flog'
+Plug 'rbong/vim-flog'  "Git Log 
 
 "Functionality
 Plug 'preservim/tagbar'
@@ -52,7 +52,8 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'easymotion/vim-easymotion'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
-Plug 'jbgutierrez/vim-better-comments'
+Plug 'jbgutierrez/vim-better-comments' "Resaltado de better comments
+Plug 'psliwka/vim-smoothie'  "Scrolling smooth
 
 "tmux
 Plug 'benmills/vimux'
