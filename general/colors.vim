@@ -26,16 +26,16 @@ hi! CocErrorSign guifg=#F66B0E
 
 " TSX sintax
 " dark red
-hi tsxTagName guifg=#84EEA2
+"hi tsxTagName guifg=#84EEA2
 "hi tsxComponentName guifg=#2DC3DA cterm=italic
-hi tsxCloseComponentName guifg=#84EEA2 cterm=italic
+"hi tsxCloseComponentName guifg=#84EEA2 cterm=italic
 
 " orange
-hi tsxCloseString guifg=#F99575
-hi tsxCloseTag guifg=#84EEA2
-hi tsxCloseTagName guifg=#84EEA2
-hi tsxAttributeBraces guifg=#C14A4A
-hi tsxEqual guifg=#84EEA2
+"hi tsxCloseString guifg=#F99575
+"hi tsxCloseTag guifg=#84EEA2
+"hi tsxCloseTagName guifg=#84EEA2
+"hi tsxAttributeBraces guifg=#C14A4A
+"hi tsxEqual guifg=#84EEA2
 
 " yellow
 "hi tsxAttrib guifg=#2DC3DA cterm=italic
