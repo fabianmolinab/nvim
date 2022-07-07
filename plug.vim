@@ -2,18 +2,16 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 "themes
 Plug 'kjwon15/vim-transparent'
-Plug 'ayu-theme/ayu-vim'
+"Plug 'ayu-theme/ayu-vim'
 "Plug 'markvincze/panda-vim'
 "Plug 'sonph/onehalf', { 'rtp': 'vim' }
-"Plug 'arcticicestudio/nord-vim' , { 'on':  'NERDTreeToggle' }
+Plug 'arcticicestudio/nord-vim' , { 'on':  'NERDTreeToggle' }
 "Plug 'drewtempelmeyer/palenight.vim'
 "Plug 'morhetz/gruvbox'
-"Plug 'Rigellute/shades-of-purple.vim'
 "Plug 'joshdick/onedark.vim'
 "Plug 'franbach/miramare'
 "Plug 'sainnhe/sonokai'
 "Plug 'sainnhe/gruvbox-material'
-"Plug 'sainnhe/edge'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 "visual
@@ -27,7 +25,8 @@ Plug 'sheerun/vim-polyglot' "Paquetes de coloración de sintaxis de lenguajes
 " Web developer sintax
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'pangloss/vim-javascript'
-"Plug 'peitalin/vim-jsx-typescript'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'maxmellon/vim-jsx-pretty'
 "Plug 'heavenshell/vim-jsdoc', {
 "      \'for':['javascript','javascript.jsx','typescript'],
