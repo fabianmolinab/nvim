@@ -3,9 +3,10 @@ call plug#begin('~/.local/share/nvim/plugged')
 "themes
 Plug 'kjwon15/vim-transparent'
 "Plug 'ayu-theme/ayu-vim'
+Plug 'ntk148v/vim-horizon'
 "Plug 'markvincze/panda-vim'
 "Plug 'sonph/onehalf', { 'rtp': 'vim' }
-Plug 'arcticicestudio/nord-vim' , { 'on':  'NERDTreeToggle' }
+"Plug 'arcticicestudio/nord-vim' , { 'on':  'NERDTreeToggle' }
 "Plug 'drewtempelmeyer/palenight.vim'
 "Plug 'morhetz/gruvbox'
 "Plug 'joshdick/onedark.vim'
@@ -26,7 +27,7 @@ Plug 'sheerun/vim-polyglot' "Paquetes de coloración de sintaxis de lenguajes
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'peitalin/vim-jsx-typescript'
+"Plug 'peitalin/vim-jsx-typescript'
 Plug 'maxmellon/vim-jsx-pretty'
 "Plug 'heavenshell/vim-jsdoc', {
 "      \'for':['javascript','javascript.jsx','typescript'],

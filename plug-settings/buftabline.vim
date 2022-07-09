@@ -1,15 +1,15 @@
 
-hi BufTabLineCurrent guibg=#88C0D0 guifg=#252524
+hi BufTabLineCurrent guibg=#B88977 guifg=black
 
-hi BufTabLineActive guifg=#88C0D0 guibg=none
+hi BufTabLineActive guifg=#B88977 guibg=none
 
 hi BufTabLineHidden guifg=#FFF guibg=none
 
 hi BufTabLineFill guibg=none
 
-hi BufTabLineModifiedCurrent guibg=#BF616A guifg=#000
+hi BufTabLineModifiedCurrent guibg=#abcac2 guifg=black
 
-hi BufTabLineModifiedActive guibg=#BF616A guifg=#000
+hi BufTabLineModifiedActive guibg=#abcac2 guifg=black
 
-hi BufTabLineModifiedHidden guifg=#BF616A
+hi BufTabLineModifiedHidden guifg=#abcac2
 

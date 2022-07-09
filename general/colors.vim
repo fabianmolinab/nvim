@@ -5,10 +5,10 @@ highlight link JavaIdentifier NONE
 "adjust python highlight
 "let g:python_highlight_all = 1
 set termguicolors
-set background=dark
+"set background=dark
 
     hi SignColumn guibg=none
-    hi CursorLineNR guibg=None
+    hi CursorLineNR guibg=none
     "highlight Normal guibg=none
     highlight LineNr guifg=#677693
     highlight netrwDir guifg=#677693
@@ -16,13 +16,13 @@ set background=dark
 hi CursorLineNR guifg=#F99575
 set cursorline
 set cursorlineopt=number
-
+ 
 "Menu autocompletado
 highlight Pmenu guifg=#dee1e4 guibg=none
-"highlight PmenuSel guibg=#C14A4A guifg=#dee1e4
+highlight PmenuSel guibg=#FAB795 guifg=black
 
 "Coc Error Color
-hi! CocErrorSign guifg=#F66B0E
+hi! CocErrorSign guifg=#9D2B25
 
 " TSX sintax
 " dark red
