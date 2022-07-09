@@ -26,7 +26,7 @@ Plug 'sheerun/vim-polyglot' "Paquetes de coloración de sintaxis de lenguajes
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'peitalin/vim-jsx-typescript'
+"Plug 'peitalin/vim-jsx-typescript'
 Plug 'maxmellon/vim-jsx-pretty'
 "Plug 'heavenshell/vim-jsdoc', {
 "      \'for':['javascript','javascript.jsx','typescript'],

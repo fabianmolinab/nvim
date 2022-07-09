@@ -14,8 +14,8 @@ function! s:check_back_space() abort
 endfunction
 
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
+    \ "Modified"  : "~",
+    \ "Staged"    : "+",
     \ "Untracked" : "✭",
     \ "Renamed"   : "➜",
     \ "Unmerged"  : "═",
