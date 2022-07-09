@@ -10,10 +10,10 @@ set background=dark
     hi SignColumn guibg=none
     hi CursorLineNR guibg=None
     "highlight Normal guibg=none
-    highlight LineNr guifg=#2DC3DA
-    highlight netrwDir guifg=#2DC3DA
+    highlight LineNr guifg=#677693
+    highlight netrwDir guifg=#677693
     highlight qfFileName guifg=#aed75f
-hi CursorLineNR guifg=#ffcb6b
+hi CursorLineNR guifg=#F99575
 set cursorline
 set cursorlineopt=number
 
