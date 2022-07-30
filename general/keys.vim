@@ -69,3 +69,7 @@ map <Leader>b :Telescope buffers theme=dropdown<CR>
 " Jump between hunks
 nmap <Leader>gj <Plug>(GitGutterNextHunk)  "git next
 nmap <Leader>gk <Plug>(GitGutterPrevHunk)  "git previous
+
+"Git diff keys 
+nmap <Leader>df :DiffviewOpen<CR>
+nmap <Leader>dx :DiffviewClose<CR>
