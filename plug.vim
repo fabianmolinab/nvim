@@ -10,8 +10,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'morhetz/gruvbox'
 "Plug 'joshdick/onedark.vim'
 "Plug 'franbach/miramare'
- Plug 'sainnhe/sonokai'
-"Plug 'sainnhe/gruvbox-material'
+"Plug 'sainnhe/sonokai'
+Plug 'sainnhe/gruvbox-material'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 "visual
@@ -40,6 +40,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
 "Plug 'APZelos/blamer.nvim'
 Plug 'rbong/vim-flog'  "Git Log 
+Plug 'sindrets/diffview.nvim' "Git Diff
 
 "Functionality
 Plug 'preservim/nerdtree'
@@ -62,6 +63,6 @@ Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'dense-analysis/ale' "Configuración de ESLINT
+"Plug 'dense-analysis/ale' "Configuración de ESLINT
 
 call plug#end()

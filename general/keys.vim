@@ -30,6 +30,9 @@ nnoremap <c-t> :split<CR>:ter<CR>:resize 15<CR>
 vnoremap <C-\> :split<CR>:ter<CR>:resize 15<CR>
 nnoremap <C-\> :split<CR>:ter<CR>:resize 15<CR>
 
+" Easy Motion
+noremap f <Plug>(easymotion-s2)
+
 "Plugs
 map <Leader>nt :NERDTreeFind<CR>
 map <Leader>nc :NERDTreeClose<CR>
