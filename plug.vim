@@ -2,7 +2,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 "themes
 "Plug 'kjwon15/vim-transparent'
-"Plug 'ayu-theme/ayu-vim'
+Plug 'ayu-theme/ayu-vim'
 "Plug 'markvincze/panda-vim'
 "Plug 'sonph/onehalf', { 'rtp': 'vim' }
 "Plug 'arcticicestudio/nord-vim' , { 'on':  'NERDTreeToggle' }
@@ -11,7 +11,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'joshdick/onedark.vim'
 "Plug 'franbach/miramare'
 "Plug 'sainnhe/sonokai'
-Plug 'sainnhe/gruvbox-material'
+"Plug 'sainnhe/gruvbox-material'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 "visual
@@ -20,7 +20,7 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'lilydjwg/colorizer'
-Plug 'sheerun/vim-polyglot' "Paquetes de coloración de sintaxis de lenguajes
+"Plug 'sheerun/vim-polyglot' "Paquetes de coloración de sintaxis de lenguajes
 
 " Web developer sintax
 Plug 'cakebaker/scss-syntax.vim'
@@ -51,7 +51,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'easymotion/vim-easymotion'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
-Plug 'jbgutierrez/vim-better-comments' "Resaltado de better comments
+"Plug 'jbgutierrez/vim-better-comments' "Resaltado de better comments
 
 "tmux
 Plug 'benmills/vimux'
@@ -62,7 +62,23 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'dense-analysis/ale' "Configuración de ESLINT
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dense-analysis/ale' "Configuración de ESLINT
+
+"LSP 
+if has("nvim")
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'williamboman/nvim-lsp-installer' "Instalador sencillo de servers
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'hrsh7th/cmp-buffer'
+  Plug 'hrsh7th/cmp-path'
+  Plug 'hrsh7th/cmp-cmdline'
+  Plug 'hrsh7th/nvim-cmp'
+endif
+
+Plug 'nvim-lua/completion-nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "Sintaxis de arbol para los lenguajes 
+
+Plug 'nvim-treesitter/playground' "Muestra los keys de los lenguajes
 
 call plug#end()

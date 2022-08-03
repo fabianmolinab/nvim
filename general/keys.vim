@@ -76,3 +76,5 @@ nmap <Leader>gk <Plug>(GitGutterPrevHunk)  "git previous
 "Git diff keys 
 nmap <Leader>df :DiffviewOpen<CR>
 nmap <Leader>dx :DiffviewClose<CR>
+
+
