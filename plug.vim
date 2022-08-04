@@ -2,7 +2,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 "themes
 "Plug 'kjwon15/vim-transparent'
-Plug 'ayu-theme/ayu-vim'
+"Plug 'ayu-theme/ayu-vim'
 "Plug 'markvincze/panda-vim'
 "Plug 'sonph/onehalf', { 'rtp': 'vim' }
 "Plug 'arcticicestudio/nord-vim' , { 'on':  'NERDTreeToggle' }
@@ -10,13 +10,11 @@ Plug 'ayu-theme/ayu-vim'
 "Plug 'morhetz/gruvbox'
 "Plug 'joshdick/onedark.vim'
 "Plug 'franbach/miramare'
-"Plug 'sainnhe/sonokai'
+Plug 'sainnhe/sonokai'
 "Plug 'sainnhe/gruvbox-material'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 "visual
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'lilydjwg/colorizer'
@@ -26,12 +24,7 @@ Plug 'lilydjwg/colorizer'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
-"Plug 'peitalin/vim-jsx-typescript'
 Plug 'maxmellon/vim-jsx-pretty'
-"Plug 'heavenshell/vim-jsdoc', {
-"      \'for':['javascript','javascript.jsx','typescript'],
-"      \'do':'make install'
-"\}
 Plug 'styled-components/vim-styled-components'
 
 "Git integration
@@ -63,22 +56,20 @@ Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'dense-analysis/ale' "Configuración de ESLINT
+"Plug 'dense-analysis/ale' "Configuración de ESLINT
 
 "LSP 
 if has("nvim")
   Plug 'neovim/nvim-lspconfig'
   Plug 'williamboman/nvim-lsp-installer' "Instalador sencillo de servers
+  Plug 'folke/lsp-colors.nvim' " Colores para LSP
+  Plug 'onsails/lspkind-nvim' "Menu customizado de sugerencias cmp-lsp
   Plug 'hrsh7th/cmp-nvim-lsp'
   Plug 'hrsh7th/cmp-buffer'
-  Plug 'hrsh7th/cmp-path'
-  Plug 'hrsh7th/cmp-cmdline'
   Plug 'hrsh7th/nvim-cmp'
 endif
 
-Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "Sintaxis de arbol para los lenguajes 
 
-Plug 'nvim-treesitter/playground' "Muestra los keys de los lenguajes
 
 call plug#end()

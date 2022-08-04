@@ -3,6 +3,7 @@ set completeopt=menu,menuone,noselect
 lua <<EOF
   -- Setup nvim-cmp.
   local cmp = require'cmp'
+  local lspkind = require'lspkind'
 
   cmp.setup({
     snippet = {
@@ -15,10 +16,19 @@ lua <<EOF
       --end,
     },
     window = {
-      -- completion = cmp.config.window.bordered(),
-      -- documentation = cmp.config.window.bordered(),
+      --cmp.config.window.bordered(),
+      documentation = cmp.config.window.bordered(),
     },
-    mapping = cmp.mapping.preset.insert({
+    formatting = {
+      format = lspkind.cmp_format({with_text = false, maxwidth = 50})
+    },
+    sources = {
+      {name = 'path'},
+      {name = 'nvim_lsp', keyword_length = 3},
+      {name = 'buffer', keyword_length = 3},
+      {name = 'luasnip', keyword_length = 2},
+    },
+   mapping = cmp.mapping.preset.insert({
 
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -26,6 +36,8 @@ lua <<EOF
      -- ['<TAB>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+
+      --- Tab tigger seleccion 
       ['<Tab>'] = cmp.mapping(function(fallback)
 	  if cmp.visible() then
 	     cmp.select_next_item()
@@ -43,6 +55,7 @@ lua <<EOF
 	  end
 	, { 'i', 'c' }),
     }),
+
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
       { name = 'vsnip' }, -- For vsnip users.
@@ -81,20 +94,5 @@ lua <<EOF
     })
   })
 
-
---Icons 
-local devicons = require('nvim-web-devicons')
-cmp.register_source('devicons', {
-  complete = function(self, params, callback)
-    local items = {}
-    for _, icon in pairs(devicons.get_icons()) do
-      table.insert(items, {
-        label = icon.icon .. '  ' .. icon.name,
-        insertText = icon.icon,
-        filterText = icon.name,
-      })
-    end
-    callback({ items = items })
-  end,
-})
+  vim.cmd [[highlight! default link CmpItemKind CmpItemMenuDefault]]
 EOF
