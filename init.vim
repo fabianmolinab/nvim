@@ -28,4 +28,6 @@ source ~/.config/nvim/plug-settings/blamer.vim
 source ~/.config/nvim/plug-settings/lsp.vim
 source ~/.config/nvim/plug-settings/treesitter.vim
 source ~/.config/nvim/plug-settings/nvim-cmp.vim
+source ~/.config/nvim/plug-settings/lspkind.lua
+source ~/.config/nvim/plug-settings/web-devicons.vim
 

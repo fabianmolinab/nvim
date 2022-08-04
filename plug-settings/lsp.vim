@@ -1,5 +1,6 @@
-
 lua << EOF
+--LSP Instaler
+
 require("nvim-lsp-installer").setup( {
    automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
     ui = {
@@ -37,7 +38,9 @@ local lsp_flags = {
   debounce_text_changes = 150,
 }
 
+---Config Servers
 --Typescript, Javascript, JSX, TSX 
+
 require('lspconfig')['tsserver'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
@@ -91,8 +94,6 @@ require('lspconfig')['html'].setup {
 
 --Vim Server
 require('lspconfig')['vimls'].setup{}
-
---- LSP colors
 
 require("lsp-colors").setup({
   Error = "#db4b4b",

@@ -73,6 +73,7 @@ lua <<EOF
       { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
     }, {
       { name = 'buffer' },
+      { max_item_count = 10 },
     })
   })
 
