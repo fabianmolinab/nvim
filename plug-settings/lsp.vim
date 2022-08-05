@@ -1,5 +1,6 @@
 lua << EOF
 --LSP Instaler
+local nvim_lsp = require('lspconfig')
 
 require("nvim-lsp-installer").setup( {
    automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
@@ -38,7 +39,17 @@ local lsp_flags = {
   debounce_text_changes = 150,
 }
 
----Config Servers
+--Format files 
+local on_attach = function(client, bufnr)
+  if client.server_capabilities.documentFormattingProvider then
+    vim.api.nvim_command [[augroup Format]]
+    vim.api.nvim_command [[autocmd! * <buffer>]]
+    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
+    vim.api.nvim_command [[augroup END]]
+  end
+end
+
+--Config Servers
 --Typescript, Javascript, JSX, TSX 
 
 require('lspconfig')['tsserver'].setup{
@@ -95,6 +106,41 @@ require('lspconfig')['html'].setup {
 --Vim Server
 require('lspconfig')['vimls'].setup{}
 
+--ESLINT Server Config
+require('lspconfig')['eslint'].setup{
+    capabilities = capabilities,
+    handlers = handlers,
+    on_attach = on_attach,
+    settings = {
+    codeAction = {
+      disableRuleComment = {
+        enable = true,
+        location = "separateLine"
+      },
+      showDocumentation = {
+        enable = true
+      }
+    },
+    codeActionOnSave = {
+      enable = true,
+      mode = "all"
+    },
+    format = true,
+    nodePath = "",
+    onIgnoredFiles = "off",
+    packageManager = "npm",
+    quiet = false,
+    rulesCustomizations = {},
+    run = "onType",
+    useESLintClass = false,
+    validate = "on",
+    workingDirectory = {
+      mode = "location"
+    }
+  }
+}
+
+--LSP Colors
 require("lsp-colors").setup({
   Error = "#db4b4b",
   Warning = "#e0af68",
@@ -138,8 +184,15 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
+-- Errors hover LSP
+vim.diagnostic.config({
+  virtual_text = false
+})
+
+-- Show line diagnostics automatically in hover window
+vim.o.updatetime = 250
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
 local lspconfig = require("lspconfig")
-
 
 EOF

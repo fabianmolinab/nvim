@@ -24,10 +24,10 @@ source ~/.config/nvim/plug-settings/vim-dev-icons.vim
 source ~/.config/nvim/plug-settings/closetag.vim
 "source ~/.config/nvim/plug-settings/indent.vim
 source ~/.config/nvim/plug-settings/blamer.vim
-
-source ~/.config/nvim/plug-settings/lsp.vim
+source ~/.config/nvim/plug-settings/web-devicons.vim
 source ~/.config/nvim/plug-settings/treesitter.vim
+
+"LSP
+source ~/.config/nvim/plug-settings/lsp.vim
 source ~/.config/nvim/plug-settings/nvim-cmp.vim
 source ~/.config/nvim/plug-settings/lspkind.lua
-source ~/.config/nvim/plug-settings/web-devicons.vim
-

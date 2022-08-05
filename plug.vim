@@ -62,11 +62,13 @@ Plug 'mattn/emmet-vim'
 if has("nvim")
   Plug 'neovim/nvim-lspconfig'
   Plug 'williamboman/nvim-lsp-installer' "Instalador sencillo de servers
-  Plug 'folke/lsp-colors.nvim' " Colores para LSP
-  Plug 'onsails/lspkind-nvim' "Menu customizado de sugerencias cmp-lsp
-  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'hrsh7th/cmp-nvim-lsp' "AutoSugerencias
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/nvim-cmp'
+  Plug 'hrsh7th/cmp-path'
+  Plug 'hrsh7th/cmp-cmdline'
+  Plug 'onsails/lspkind-nvim' "Menu customizado de sugerencias cmp-lsp con iconos
+  Plug 'folke/lsp-colors.nvim' " Colores para LSP
 endif
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "Sintaxis de arbol para los lenguajes 
