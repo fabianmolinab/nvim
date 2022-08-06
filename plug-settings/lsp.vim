@@ -131,7 +131,6 @@ require('lspconfig')['eslint'].setup{
   }
 }
 
-
 --LSP Colors
 require("lsp-colors").setup({
   Error = "#db4b4b",

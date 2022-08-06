@@ -69,6 +69,10 @@ if has("nvim")
   Plug 'hrsh7th/cmp-cmdline'
   Plug 'onsails/lspkind-nvim' "Menu customizado de sugerencias cmp-lsp con iconos
   Plug 'folke/lsp-colors.nvim' " Colores para LSP
+
+  " For luasnip users.
+  Plug 'L3MON4D3/LuaSnip'
+  Plug 'saadparwaiz1/cmp_luasnip'
 endif
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "Sintaxis de arbol para los lenguajes 
