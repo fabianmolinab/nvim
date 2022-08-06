@@ -47,4 +47,6 @@ autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 " set filetypes as typescriptreact
 "autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
-"au! BufRead,BufNewFile *.astro set filetype=astro
+autocmd BufRead,BufNewFile *.astro set filetype=astro
+
+autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx EslintFixAll
