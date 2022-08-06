@@ -39,16 +39,6 @@ local lsp_flags = {
   debounce_text_changes = 150,
 }
 
---Format files 
-local on_attach = function(client, bufnr)
-  if client.server_capabilities.documentFormattingProvider then
-    vim.api.nvim_command [[augroup Format]]
-    vim.api.nvim_command [[autocmd! * <buffer>]]
-    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
-    vim.api.nvim_command [[augroup END]]
-  end
-end
-
 --Config Servers
 --Typescript, Javascript, JSX, TSX 
 
@@ -110,6 +100,7 @@ require('lspconfig')['vimls'].setup{}
 require('lspconfig')['eslint'].setup{
     capabilities = capabilities,
     handlers = handlers,
+    filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'pandoc', 'astro' },
     on_attach = on_attach,
     settings = {
     codeAction = {
@@ -139,6 +130,7 @@ require('lspconfig')['eslint'].setup{
     }
   }
 }
+
 
 --LSP Colors
 require("lsp-colors").setup({
