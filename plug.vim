@@ -55,7 +55,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'dense-analysis/ale' "Configuración de ESLINT
 
 "LSP 
