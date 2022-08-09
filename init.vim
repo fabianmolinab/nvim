@@ -7,7 +7,7 @@ source ~/.config/nvim/general/settings.vim
 source ~/.config/nvim/general/keys.vim
 
 "Theme
-source ~/.config/nvim/themes/sonokai.vim
+source ~/.config/nvim/themes/catppuccin.lua
 source ~/.config/nvim/general/colors.vim
 
 "Import plugin settings
