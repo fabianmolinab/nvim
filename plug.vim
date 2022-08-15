@@ -1,10 +1,11 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 "themes
-"Plug 'kjwon15/vim-transparent'
+Plug 'kjwon15/vim-transparent'
+"Plug 'ntk148v/vim-horizon'
 "Plug 'ayu-theme/ayu-vim'
 "Plug 'markvincze/panda-vim'
-"Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 "Plug 'arcticicestudio/nord-vim' , { 'on':  'NERDTreeToggle' }
 "Plug 'drewtempelmeyer/palenight.vim'
 "Plug 'morhetz/gruvbox'
@@ -12,7 +13,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'franbach/miramare'
 "Plug 'sainnhe/sonokai'
 "Plug 'sainnhe/gruvbox-material'
-Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+"Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 "visual
 Plug 'ryanoasis/vim-devicons'
