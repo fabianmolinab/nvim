@@ -96,6 +96,8 @@ require('lspconfig')['html'].setup {
 --Vim Server
 require('lspconfig')['vimls'].setup{}
 
+require('lspconfig')['sumneko_lua'].setup{}
+
 --ESLINT Server Config
 require('lspconfig')['eslint'].setup{
     capabilities = capabilities,

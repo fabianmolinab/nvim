@@ -31,3 +31,4 @@ source ~/.config/nvim/plug-settings/gitsigns.lua
 source ~/.config/nvim/plug-settings/lsp.vim
 source ~/.config/nvim/plug-settings/nvim-cmp.vim
 source ~/.config/nvim/plug-settings/lspkind.lua
+
