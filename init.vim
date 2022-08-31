@@ -26,6 +26,7 @@ source ~/.config/nvim/plug-settings/blamer.vim
 source ~/.config/nvim/plug-settings/web-devicons.vim
 source ~/.config/nvim/plug-settings/treesitter.vim
 source ~/.config/nvim/plug-settings/gitsigns.lua
+source ~/.config/nvim/plug-settings/nerdtree.vim
 
 "LSP
 source ~/.config/nvim/plug-settings/lsp.vim

@@ -14,6 +14,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'sainnhe/sonokai'
 "Plug 'sainnhe/gruvbox-material'
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+"Plug 'wuelnerdotexe/vim-enfocado'
 
 "visual
 Plug 'ryanoasis/vim-devicons'
