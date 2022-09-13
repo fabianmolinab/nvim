@@ -133,6 +133,21 @@ require('lspconfig')['eslint'].setup{
   }
 }
 
+--- StyleLint Config
+require('lspconfig')['stylelint_lsp'].setup{
+
+  filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'css', 'scss', 'less','astro'},
+  capabilities = capabilities,
+  handlers = handlers,
+  on_attach = on_attach, 
+  settings = {
+      autoFixOnSave = true,
+      autoFixOnFormat = true,
+      validateOnType = true      
+      -- other settings...
+    }
+}
+
 --LSP Colors
 require("lsp-colors").setup({
   Error = "#db4b4b",
