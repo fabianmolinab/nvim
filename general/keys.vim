@@ -62,10 +62,10 @@ nnoremap <leader>sp :sp<CR>
 nnoremap <silent> // :noh<CR>
 
 "Telescope
-map <Leader>ag :Telescope find_files theme=dropdown<CR>
+map <Leader>f :Telescope find_files theme=dropdown<CR>
 map <Leader>a :Telescope live_grep theme=dropdown<CR>
 map <Leader>ls :Telescope git_commits theme=ivy<CR>
-map <Leader>f :Telescope git_files theme=dropdown<CR>
+map <Leader>ag :Telescope git_files theme=dropdown<CR>
 map <Leader>b :Telescope buffers theme=dropdown<CR>
 
 "Signify Permite ver los cambios del archivo
