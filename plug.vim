@@ -33,7 +33,7 @@ Plug 'styled-components/vim-styled-components'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
-"Plug 'APZelos/blamer.nvim'
+Plug 'APZelos/blamer.nvim'
 Plug 'rbong/vim-flog'  "Git Log 
 Plug 'sindrets/diffview.nvim' "Git Diff
 
