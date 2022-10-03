@@ -7,7 +7,7 @@ source ~/.config/nvim/general/settings.vim
 source ~/.config/nvim/general/keys.vim
 
 "Theme
-source ~/.config/nvim/themes/ayu.vim
+source ~/.config/nvim/themes/gruvboxMaterial.vim
 source ~/.config/nvim/general/colors.vim
 
 "Import plugin settings
@@ -27,6 +27,7 @@ source ~/.config/nvim/plug-settings/web-devicons.vim
 source ~/.config/nvim/plug-settings/treesitter.vim
 source ~/.config/nvim/plug-settings/gitsigns.lua
 source ~/.config/nvim/plug-settings/nerdtree.vim
+source ~/.config/nvim/plug-settings/todo-comments.lua
 
 "LSP
 source ~/.config/nvim/plug-settings/lsp.vim

@@ -77,4 +77,4 @@ nmap <Leader>gk <Plug>(GitGutterPrevHunk)  "git previous
 nmap <Leader>df :DiffviewOpen<CR>
 nmap <Leader>dx :DiffviewClose<CR>
 
-
+nmap <Leader>td :TodoTelescope<CR>
