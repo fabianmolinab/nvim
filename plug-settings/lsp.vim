@@ -148,6 +148,12 @@ require('lspconfig')['stylelint_lsp'].setup{
     }
 }
 
+--JSON Lenguaje
+require('lspconfig')['jsonls'].setup{
+  on_attach = on_attach,
+  flags = lsp_flags,
+}
+
 --LSP Colors
 require("lsp-colors").setup({
   Error = "#db4b4b",

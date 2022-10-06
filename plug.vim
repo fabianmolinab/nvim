@@ -11,8 +11,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'morhetz/gruvbox'
 "Plug 'joshdick/onedark.vim'
 "Plug 'franbach/miramare'
-"Plug 'sainnhe/sonokai'
-Plug 'sainnhe/gruvbox-material'
+Plug 'sainnhe/sonokai'
+"Plug 'sainnhe/gruvbox-material'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 "visual
