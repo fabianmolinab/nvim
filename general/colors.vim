@@ -13,7 +13,7 @@ set termguicolors
     highlight LineNr guifg=#677693
     highlight netrwDir guifg=#677693
     highlight qfFileName guifg=#aed75f
-hi CursorLineNR guifg=#F99575
+"hi CursorLineNR guifg=#F99575
 set cursorline
 set cursorlineopt=number
  
