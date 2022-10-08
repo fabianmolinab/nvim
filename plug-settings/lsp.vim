@@ -2,6 +2,11 @@ lua << EOF
 --LSP Instaler
 local nvim_lsp = require('lspconfig')
 
+-- Set up completion using nvim_cmp with LSP source
+local capabilities = require('cmp_nvim_lsp').update_capabilities(
+  vim.lsp.protocol.make_client_capabilities()
+)
+
 require("nvim-lsp-installer").setup( {
    automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
     ui = {
@@ -43,12 +48,14 @@ local lsp_flags = {
 --Typescript, Javascript, JSX, TSX 
 
 require('lspconfig')['tsserver'].setup{
+    capabilities = capabilities,
     on_attach = on_attach,
     flags = lsp_flags,
 }
 
 --Astro server
 require('lspconfig')['astro'].setup {
+  capabilities = capabilities,
   on_attach = on_attach,
   flags = lsp_flags,
 }
@@ -192,11 +199,6 @@ local protocol = require'vim.lsp.protocol'
     'ﬦ', -- Operator
     '', -- TypeParameter
   }
-
--- Set up completion using nvim_cmp with LSP source
-local capabilities = require('cmp_nvim_lsp').update_capabilities(
-  vim.lsp.protocol.make_client_capabilities()
-)
 
 -- Errors hover LSP
 vim.diagnostic.config({

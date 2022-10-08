@@ -15,13 +15,14 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'sainnhe/gruvbox-material'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 Plug 'wuelnerdotexe/vim-enfocado'
+"Plug 'rose-pine/neovim', {'as': 'rose-pine'}
 
 "visual
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'lilydjwg/colorizer'
+Plug 'lilydjwg/colorizer' "Codigo de colores 
 
-" Web developer sintax
+"Web developer sintax
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
@@ -29,11 +30,10 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components'
 
 "Git integration
-Plug 'lewis6991/gitsigns.nvim'
+Plug 'lewis6991/gitsigns.nvim' "Cambios de git al archivo de lado
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'APZelos/blamer.nvim'
-Plug 'rbong/vim-flog'  "Git Log 
+"Plug 'APZelos/blamer.nvim'
 Plug 'sindrets/diffview.nvim' "Git Diff
 
 "Tabs
@@ -43,12 +43,10 @@ Plug 'nvim-lualine/lualine.nvim'
 "Functionality
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ap/vim-buftabline' "BufferLinne
 Plug 'preservim/tagbar'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'easymotion/vim-easymotion'
-Plug 'alvan/vim-closetag'
-Plug 'tpope/vim-surround'
+Plug 'tpope/vim-surround' 
 Plug 'folke/todo-comments.nvim' "Todo comments
 
 "tmux

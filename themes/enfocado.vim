@@ -1,16 +1,13 @@
-let g:enfocado_style = 'neon'
+let g:enfocado_style = 'nature'
 let g:enfocado_plugins = [
   \ 'bufferline',
   \ 'cmp',
-  \ 'fern',
-  \ 'fzf',
   \ 'gitsigns',
-  \ 'glyph-palette',
-  \ 'illuminate',
-  \ 'indent-blankline',
   \ 'lsp',
-  \ 'matchup',
-  \ 'packer',
-  \ 'visual-multi'
+  \ 'telescope',
+  \ 'neerdtree',
+  \ 'plug',
+  \ 'treesitter',
+  \ 'todo-commets',
   \ ]
 colorscheme enfocado 

@@ -19,7 +19,7 @@ set cursorlineopt=number
  
 "Menu autocompletado
 highlight Pmenu guifg=#dee1e4 guibg=none
-highlight PmenuSel guibg=#FAB795 guifg=black
+"highlight PmenuSel guibg=#FAB795 guifg=black
 
 "Coc Error Color
 "hi! CocErrorSign guifg=#9D2B25
