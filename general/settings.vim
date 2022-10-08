@@ -50,3 +50,6 @@ autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 autocmd BufRead,BufNewFile *.astro set filetype=astro
 
 autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.astro EslintFixAll
+
+" Configure pum/win height.
+set pumheight=6 cmdwinheight=6
