@@ -7,6 +7,8 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 require("nvim-lsp-installer").setup( {
    automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
     ui = {
@@ -202,7 +204,9 @@ local protocol = require'vim.lsp.protocol'
 
 -- Errors hover LSP
 vim.diagnostic.config({
-  virtual_text = false
+  underline = true,
+  virtual_text = false,
+  update_in_insert = true
 })
 
 -- Show line diagnostics automatically in hover window

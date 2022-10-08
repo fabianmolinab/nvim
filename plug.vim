@@ -79,6 +79,7 @@ if has("nvim")
 endif
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "Sintaxis de arbol para los lenguajes 
+Plug 'windwp/nvim-ts-autotag'
 
 
 call plug#end()
