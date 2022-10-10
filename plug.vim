@@ -21,9 +21,9 @@ Plug 'wuelnerdotexe/vim-enfocado'
 Plug 'ryanoasis/vim-devicons' "iconos webs
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'lilydjwg/colorizer' "Codigo de colores 
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 "Web developer sintaxis
-
 "Plug 'cakebaker/scss-syntax.vim'
 "Plug 'pangloss/vim-javascript'
 "Plug 'HerringtonDarkholme/yats.vim'

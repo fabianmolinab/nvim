@@ -2,7 +2,6 @@
 source ~/.config/nvim/plug.vim
 
 "Import the general settings
-"source ~/.config/nvim/general/status-line.vim
 source ~/.config/nvim/general/settings.vim
 source ~/.config/nvim/general/keys.vim
 
@@ -25,6 +24,7 @@ source ~/.config/nvim/plug-settings/web-devicons.vim
 source ~/.config/nvim/plug-settings/treesitter.vim
 source ~/.config/nvim/plug-settings/gitsigns.lua
 source ~/.config/nvim/plug-settings/nerdtree.vim
+source ~/.config/nvim/plug-settings/indent.lua
 source ~/.config/nvim/plug-settings/todo-comments.lua
 
 "LSP
