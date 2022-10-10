@@ -33,8 +33,8 @@ nnoremap <C-\> :split<CR>:ter<CR>:resize 15<CR>
 noremap f <Plug>(easymotion-s2)
 
 "Plugs
-map <Leader>nt :NERDTreeFind<CR>
-map <Leader>nc :NERDTreeClose<CR>
+map <Leader>nt :NvimTreeOpen<CR>
+map <Leader>nc :NvimTreeClose<CR>
 
 " tmux navigator
 nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>

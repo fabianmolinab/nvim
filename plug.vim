@@ -14,14 +14,13 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'sainnhe/sonokai'
 "Plug 'sainnhe/gruvbox-material'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
-Plug 'wuelnerdotexe/vim-enfocado'
-"Plug 'rose-pine/neovim', {'as': 'rose-pine'}
+"Plug 'wuelnerdotexe/vim-enfocado'
+Plug 'rose-pine/neovim', {'as': 'rose-pine'}
 
 "Visual
-Plug 'ryanoasis/vim-devicons' "iconos webs
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'lilydjwg/colorizer' "Codigo de colores 
-Plug 'lukas-reineke/indent-blankline.nvim'
+"Plug 'lukas-reineke/indent-blankline.nvim'
 
 "Web developer sintaxis
 "Plug 'cakebaker/scss-syntax.vim'
@@ -35,16 +34,14 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'lewis6991/gitsigns.nvim' "Cambios de git al archivo de lado
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'APZelos/blamer.nvim' "
+"Plug 'APZelos/blamer.nvim' "
 
 "Tabs
 Plug 'akinsho/bufferline.nvim', {'tags': 'v2.*'}
 Plug 'nvim-lualine/lualine.nvim'
 
 "Functionality
-Plug 'preservim/nerdtree' "Barra de busqueda de archivos
-Plug 'Xuyuanp/nerdtree-git-plugin' "Plugin nerdtree para mostrar los cambios en los archivos
-Plug 'preservim/tagbar'
+Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-telescope/telescope.nvim' "Plugin de busqueda
 Plug 'easymotion/vim-easymotion' 
 Plug 'tpope/vim-surround' 
@@ -57,9 +54,8 @@ Plug 'christoomey/vim-tmux-navigator'
 "code modification
 Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
-Plug 'jiangmiao/auto-pairs'
+Plug 'windwp/nvim-autopairs' "auto parentesis y corchetes
 Plug 'mattn/emmet-vim'
-"Plug 'dense-analysis/ale' "Configuración de ESLINT
 
 "LSP 
 if has("nvim")

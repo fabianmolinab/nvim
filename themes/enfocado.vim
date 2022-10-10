@@ -9,5 +9,6 @@ let g:enfocado_plugins = [
   \ 'plug',
   \ 'treesitter',
   \ 'todo-commets',
+  \ 'nvim-tree.lua',
   \ ]
 colorscheme enfocado 
