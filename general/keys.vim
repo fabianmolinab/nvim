@@ -9,19 +9,18 @@ noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 
-"With the arrow keys you can resize your splits
+"Las fechas reasignan el ancho y alto de la ventana
 nnoremap <silent> <right> :vertical resize +5<CR>
 nnoremap <silent> <left> :vertical resize -5<CR>
 nnoremap <silent> <up> :resize +5<CR>
 nnoremap <silent> <down> :resize -5<CR>
 
-"with leader w you save the file if it have a name set. The second command
-"open your config file
+"Configuración archivos
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
 
-"ESC mode insert
+"Salir del modo Insert
 imap jj <Esc>
 
 "Terminal
@@ -58,7 +57,7 @@ nnoremap <leader>t :tabe<CR>
 nnoremap <leader>vs :vsp<CR>
 nnoremap <leader>sp :sp<CR>
 
-" clear search results
+" Limpiar los resultados de busqueda
 nnoremap <silent> // :noh<CR>
 
 "Telescope
@@ -68,13 +67,5 @@ map <Leader>ls :Telescope git_commits theme=ivy<CR>
 map <Leader>ag :Telescope git_files theme=dropdown<CR>
 map <Leader>b :Telescope buffers theme=dropdown<CR>
 
-"Signify Permite ver los cambios del archivo
-" Jump between hunks
-nmap <Leader>gj <Plug>(GitGutterNextHunk)  "git next
-nmap <Leader>gk <Plug>(GitGutterPrevHunk)  "git previous
-
-"Git diff keys 
-nmap <Leader>df :DiffviewOpen<CR>
-nmap <Leader>dx :DiffviewClose<CR>
-
+"Todo Busqueda telescope
 nmap <Leader>td :TodoTelescope<CR>

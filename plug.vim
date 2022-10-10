@@ -1,6 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
-"themes
+"Temas
 "Plug 'kjwon15/vim-transparent'
 "Plug 'ntk148v/vim-horizon'
 "Plug 'ayu-theme/ayu-vim'
@@ -17,35 +17,36 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'wuelnerdotexe/vim-enfocado'
 "Plug 'rose-pine/neovim', {'as': 'rose-pine'}
 
-"visual
-Plug 'ryanoasis/vim-devicons'
+"Visual
+Plug 'ryanoasis/vim-devicons' "iconos webs
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'lilydjwg/colorizer' "Codigo de colores 
 
-"Web developer sintax
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'styled-components/vim-styled-components'
+"Web developer sintaxis
 
-"Git integration
+"Plug 'cakebaker/scss-syntax.vim'
+"Plug 'pangloss/vim-javascript'
+"Plug 'HerringtonDarkholme/yats.vim'
+"Plug 'maxmellon/vim-jsx-pretty'
+"Plug 'styled-components/vim-styled-components'
+
+"Git integracion
+
 Plug 'lewis6991/gitsigns.nvim' "Cambios de git al archivo de lado
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
-"Plug 'APZelos/blamer.nvim'
-Plug 'sindrets/diffview.nvim' "Git Diff
+Plug 'APZelos/blamer.nvim' "
 
 "Tabs
 Plug 'akinsho/bufferline.nvim', {'tags': 'v2.*'}
 Plug 'nvim-lualine/lualine.nvim'
 
 "Functionality
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'preservim/nerdtree' "Barra de busqueda de archivos
+Plug 'Xuyuanp/nerdtree-git-plugin' "Plugin nerdtree para mostrar los cambios en los archivos
 Plug 'preservim/tagbar'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'easymotion/vim-easymotion'
+Plug 'nvim-telescope/telescope.nvim' "Plugin de busqueda
+Plug 'easymotion/vim-easymotion' 
 Plug 'tpope/vim-surround' 
 Plug 'folke/todo-comments.nvim' "Todo comments
 
@@ -79,7 +80,8 @@ if has("nvim")
 endif
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "Sintaxis de arbol para los lenguajes 
-Plug 'windwp/nvim-ts-autotag'
+
+Plug 'windwp/nvim-ts-autotag' "auto tag para html
 
 
 call plug#end()
