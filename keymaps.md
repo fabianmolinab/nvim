@@ -1,53 +1,138 @@
-## Comandos por defecto de nvim 
+## Comandos por defecto de nvim
 
-### Generales modo(Normal)
+H => Moverse hacia la parte superior de la pantalla
 
-jj => Salir del modo insert
-f => Busqueda de palabra dentro del archivo x2
-Tab => Siguiente buffer
-shift + Tab => Buffer anterior
-leader + t => Nuevo archivo o buffer
+M => Moverse hacia el centro de la pantalla
 
-control + l => cambiar pestaña activa a la derecha 
-control + h => cambiar pestaña activa a la izquierda
+L => Moverse hacia la parte inferio de la pantalla
+
+w => Hacia el inicio de la siguiente palabra
+
+W => Salta el inicio de la siguiente palabra(con puntuación)
+
+e => Salta hacia el final de la palabra
+
+E => Salta hacia el final de la palabra(con puntuación)
+
+b => regresar al inicio de la palabra
+
+B => regresar al inicio de la palabra(con puntuación)
+
+0 => salta al inicio de la linea 
+
+$ => salta al final de la linea
+
+gg => salta hacia la primera linea del documento
+
+G => ir a la ultima linea del documento
+
+Ctrl + e => mover la pantalla hacia abajo una linea
+
+Ctrl + y => mover la pantalla una linea arriba
+
+Ctrl + b => retroceder una pantalla
+
+Ctrl + f => avanzar una pantalla
+
+Ctrl + d => cursor a media pantalla
+
+Ctrl + u => retroceder cursor media pantalla
+
+
+## Modo Insertar
+
+I => insertar al comienzo de la linea
+
+a => despues del cursor 
+
+A => insertar al final de la linea
+
+o => insertar una nueva linea por debajo
+
+O => insetar una nueva linea encima de la linea actual
+
+## Modo Editar
+
+r => remplazar
+
+r - reemplazar un carácter
+
+R - reemplazar más de un carácter, hasta que se presione ESC.
+
+J - juntar siguiente línea con la actual
+
+gJ - une la línea de abajo a la actual sin espacio entre ellas
+
+gwip - párrafo de reflujo
+
+g~ - cambiar caso a movimiento
+
+gu - cambiar a minúsculas hasta movimiento
+
+gU - cambiar a mayúsculas hasta el movimiento
+
+cc - cambiar (reemplazar) toda la línea
+
+ciw - cambiar (reemplazar) palabra completa
+
+cw or ce - cambiar (reemplazar) una palabra
+
+s - eliminar carácter y reemplazar texto
+
+S - eliminar línea y reemplazar texto (igual que el comando cc)
+
+xp - transponer dos letras (suprimir y pegar)
+
+u - deshacer
+
+
+### Atajos personalizados
+
+**jj** => Salir del modo insert
+
+**f** => Busqueda de palabra dentro del archivo x2
+**<br>Tab** => Siguiente buffer
+**<br>shift + Tab** => Buffer anterior
+**<br>leader + t** => Nuevo archivo o buffer
+**<br>control + l** => cambiar pestaña activa a la derecha
+**<br>control + h** => cambiar pestaña activa a la izquierda
 
 ### Archivos y pestañas
 
-leader + w => Guardado de archivos
-leader + q => Cerrar archivos
-leader + Q => Cerrar archivos sin guardar
-leader + qq => Cerrar pestaña actual
+**leader + w** => Guardado de archivos
+<br>**leader + q** => Cerrar archivos
+<br>**leader + Q** => Cerrar archivos sin guardar
+<br>**leader + qq** => Cerrar pestaña actual
 
-leader + nt => Abre barra del busqueda de archivos
-leader + nc => Cierra barar de busqueda
+**leader + nt** => Abre barra del busqueda de archivos
+<br>**leader + nc** => Cierra barar de busqueda
 
-leader + vs => nuevo split de la pantalla actual en vertical 
-leader + sp => nuevo split de la pantalla actual en horizontal
+**leader + vs** => nuevo split de la pantalla actual en vertical
+<br>**leader + sp** => nuevo split de la pantalla actual en horizontal
 
-### Busqueda 
+### Busqueda
 
 / => Busqueda de palabras o frases
-// => Limpiar los resultado de busqueda
+<br>// => Limpiar los resultado de busqueda
 
-leader + f => Buscar archvos 
-leader + a => Buscar palabras
-leader + ag => Buscar archivos de git
-leader + ls => Lista de commits
-leader + b => Lista de buffers
-leader + td => Lista de TODOS Comments
+**leader + f** => Buscar archvos
+**<br>leader + a** => Buscar palabras
+**<br>leader + ag** => Buscar archivos de git
+**<br>leader + ls** => Lista de commits
+**<br>leader + b** => Lista de buffers
+**<br>leader + td** => Lista de TODOS Comments
 
-#git
+### git
 
-:g => Acceder a los cambios del repositorio
-:g + [codigoGit] => ejecutar cualquier commando en git
-
+**:g** => Acceder a los cambios del repositorio
+**<br>:g + [codigoGit]** => ejecutar cualquier commando en git
 
 ### Comentarios (NERD Commenter)
 
-[selección] leader + cc => Comentar lineas enteras
-[selección] leader + ci  => Comentar lineas de manera individual
-[selección] leader + cs => Comentar lineas en grupo
+**[selección] leader + cc** => Comentar lineas enteras
+**<br>[selección] leader + ci** => Comentar lineas de manera individual
+**<br>[selección] leader + cs** => Comentar lineas en grupo
 
 ### Terminal
 
-control + t => Abir terminal
+**control + t** => Abir terminal
