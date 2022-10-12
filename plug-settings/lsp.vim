@@ -201,18 +201,17 @@ local protocol = require'vim.lsp.protocol'
     'ﬦ', -- Operator
     '', -- TypeParameter
   }
-
+--
 -- Errors hover LSP
-vim.diagnostic.config({
-  underline = true,
-  virtual_text = false,
-  update_in_insert = true
-})
+--vim.diagnostic.config({
+--  underline = true,
+--  virtual_text = false,
+--  update_in_insert = true
+--})
 
 -- Show line diagnostics automatically in hover window
-vim.o.updatetime = 250
-vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+--vim.o.updatetime = 250
+--vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
-local lspconfig = require("lspconfig")
 
 EOF
