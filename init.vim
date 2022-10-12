@@ -6,7 +6,7 @@ source ~/.config/nvim/general/settings.vim
 source ~/.config/nvim/general/keys.vim
 
 "Theme
-source ~/.config/nvim/themes/rosepine.lua
+source ~/.config/nvim/themes/enfocado.vim
 source ~/.config/nvim/general/colors.vim
 
 "Import plugin settings
@@ -16,7 +16,6 @@ source ~/.config/nvim/plug-settings/emmet.vim
 source ~/.config/nvim/plug-settings/telescope.vim
 "source ~/.config/nvim/plug-settings/tagbar.vim
 source ~/.config/nvim/plug-settings/vim-dev-icons.vim
-source ~/.config/nvim/plug-settings/closetag.vim
 source ~/.config/nvim/plug-settings/web-devicons.vim
 source ~/.config/nvim/plug-settings/treesitter.vim
 ""source ~/.config/nvim/plug-settings/nerdtree.vim

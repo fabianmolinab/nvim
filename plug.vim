@@ -14,8 +14,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'sainnhe/sonokai'
 "Plug 'sainnhe/gruvbox-material'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
-"Plug 'wuelnerdotexe/vim-enfocado'
-Plug 'rose-pine/neovim', {'as': 'rose-pine'}
+Plug 'wuelnerdotexe/vim-enfocado'
+"Plug 'rose-pine/neovim', {'as': 'rose-pine'}
 
 "Visual
 Plug 'kyazdani42/nvim-web-devicons'
