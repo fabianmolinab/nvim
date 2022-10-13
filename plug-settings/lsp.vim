@@ -39,6 +39,8 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
+    vim.keymap.set('n', '<leader>r', vim.diagnostic.setloclist, bufopts)
+    vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, bufopts)
   end
 
 local lsp_flags = {
@@ -201,18 +203,20 @@ local protocol = require'vim.lsp.protocol'
     'ﬦ', -- Operator
     '', -- TypeParameter
   }
---
+
 -- Errors hover LSP
---vim.diagnostic.config({
---  underline = true,
---  virtual_text = false,
---  update_in_insert = true
---})
+vim.diagnostic.config({
+  underline = true,
+  virtual_text = false,
+  update_in_insert = false
+})
 
 -- Show line diagnostics automatically in hover window
---vim.o.updatetime = 250
+vim.o.updatetime = 250
 --vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
 -- Signos de errores 
+--[[
   local signs = { Error = "●", Warn = "●", Info = "●", Hint = "●" }
 
   for type, icon in pairs(signs) do
@@ -236,6 +240,6 @@ local protocol = require'vim.lsp.protocol'
     update_in_insert = false,
     severity_sort = true,
   })
-
+  ]]
 
 EOF

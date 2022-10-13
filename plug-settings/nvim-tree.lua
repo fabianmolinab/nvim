@@ -15,7 +15,7 @@ require("nvim-tree").setup({
       },
     },
   },
- renderer = {
+  renderer = {
     highlight_opened_files = "none",
     icons = {
       show = {
@@ -38,16 +38,12 @@ require("nvim-tree").setup({
           arrow_open = "",
           arrow_closed = "",
         },
-        git = {
-          unstaged = "✗",
-          staged = "✓",
-          unmerged = "",
-          renamed = "➜",
-          untracked = "★",
-          deleted = "",
-          ignored = "◌",
-        },
       }
+    }
+  },
+  actions = {
+    open_file = {
+      quit_on_open = true,
     }
   }
 })
