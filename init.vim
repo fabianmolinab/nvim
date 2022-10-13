@@ -32,5 +32,5 @@ source ~/.config/nvim/plug-settings/lualine.lua
 source ~/.config/nvim/plug-settings/autopairs.lua
 
 source ~/.config/nvim/plug-settings/gitsigns.lua
-"source ~/.config/nvim/plug-settings/indent.lua
+source ~/.config/nvim/plug-settings/indent.lua
 source ~/.config/nvim/plug-settings/todo-comments.lua

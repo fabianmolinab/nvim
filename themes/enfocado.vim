@@ -1,4 +1,4 @@
-let g:enfocado_style = 'neon'
+let g:enfocado_style = 'nature'
 let g:enfocado_plugins = [
   \ 'bufferline',
   \ 'cmp',
@@ -9,6 +9,7 @@ let g:enfocado_plugins = [
   \ 'plug',
   \ 'treesitter',
   \ 'todo-commets',
-  \ 'nvim-tree.lua',
+  \ 'tree',
+  \ 'indent-blankline',
   \ ]
 colorscheme enfocado 

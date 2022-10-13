@@ -20,7 +20,7 @@ Plug 'wuelnerdotexe/vim-enfocado'
 "Visual
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'lilydjwg/colorizer' "Codigo de colores 
-"Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 "Web developer sintaxis
 "Plug 'cakebaker/scss-syntax.vim'
