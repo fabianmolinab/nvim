@@ -17,14 +17,16 @@ require("nvim-tree").setup({
   },
   renderer = {
     highlight_opened_files = "none",
+    highlight_git = true,
     icons = {
+      webdev_colors = true,
+      git_placement = 'before',
       show = {
         file = true,
         folder = true,
         folder_arrow = true,
         git = true,
       },
-
       glyphs = {
         default = "",
         symlink = "",
@@ -37,6 +39,15 @@ require("nvim-tree").setup({
           symlink_open = "",
           arrow_open = "",
           arrow_closed = "",
+        },
+         git = {
+           unstaged = "M",
+           staged = "A",
+           unmerged = "",
+           renamed = "R",
+           untracked = "U",
+           deleted = "D",
+           ignored = "◌",
         },
       }
     }

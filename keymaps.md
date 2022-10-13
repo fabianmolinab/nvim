@@ -90,6 +90,10 @@ u - deshacer
 
 **jj** => Salir del modo insert
 
+**K** => Mostrar Documentación
+**<br>leader + le** => Mostrar errores 
+**<br>leader + er** => Mostrar errores en menú
+
 **f** => Busqueda de palabra dentro del archivo x2
 **<br>Tab** => Siguiente buffer
 **<br>shift + Tab** => Buffer anterior
@@ -97,15 +101,36 @@ u - deshacer
 **<br>control + l** => cambiar pestaña activa a la derecha
 **<br>control + h** => cambiar pestaña activa a la izquierda
 
+### Archivos de buscador Tree
+
+**leader + nt** => Abre barra del busqueda de archivos
+
+**leader + nc** => Cierra barra de busqueda
+
+a => Crear archivo nuevo
+
+r => Renombrar Archivo
+
+d => Borrar Archivo
+
+c => Copiar Archivo
+
+x => Cortar Archivo
+
+p => Pegar Archivo
+
+q => Cerrar Tree
+
+f => Filtrar archivos
+
+F => Cancelar filtrado
+
 ### Archivos y pestañas
 
 **leader + w** => Guardado de archivos
 <br>**leader + q** => Cerrar archivos
 <br>**leader + Q** => Cerrar archivos sin guardar
 <br>**leader + qq** => Cerrar pestaña actual
-
-**leader + nt** => Abre barra del busqueda de archivos
-<br>**leader + nc** => Cierra barar de busqueda
 
 **leader + vs** => nuevo split de la pantalla actual en vertical
 <br>**leader + sp** => nuevo split de la pantalla actual en horizontal
@@ -132,6 +157,7 @@ u - deshacer
 **[selección] leader + cc** => Comentar lineas enteras
 **<br>[selección] leader + ci** => Comentar lineas de manera individual
 **<br>[selección] leader + cs** => Comentar lineas en grupo
+**<br>[selección] leader + cu** => Descomentar
 
 ### Terminal
 

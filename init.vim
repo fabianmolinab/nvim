@@ -14,11 +14,8 @@ source ~/.config/nvim/general/colors.vim
 source ~/.config/nvim/plug-settings/easy-motion.vim
 source ~/.config/nvim/plug-settings/emmet.vim
 source ~/.config/nvim/plug-settings/telescope.vim
-"source ~/.config/nvim/plug-settings/tagbar.vim
-source ~/.config/nvim/plug-settings/vim-dev-icons.vim
 source ~/.config/nvim/plug-settings/web-devicons.vim
 source ~/.config/nvim/plug-settings/treesitter.vim
-""source ~/.config/nvim/plug-settings/nerdtree.vim
 
 "LSP
 source ~/.config/nvim/plug-settings/lsp.vim

@@ -39,8 +39,8 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
-    vim.keymap.set('n', '<leader>r', vim.diagnostic.setloclist, bufopts)
-    vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, bufopts)
+    vim.keymap.set('n', '<leader>le', vim.diagnostic.setloclist, bufopts)
+    vim.keymap.set('n', '<leader>er', vim.diagnostic.open_float, bufopts)
   end
 
 local lsp_flags = {
