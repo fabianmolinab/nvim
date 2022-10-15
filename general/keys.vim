@@ -69,3 +69,4 @@ map <Leader>b :Telescope buffers theme=dropdown<CR>
 
 "Todo Busqueda telescope
 nmap <Leader>td :TodoTelescope<CR>
+

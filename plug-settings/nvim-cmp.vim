@@ -4,15 +4,15 @@ lua <<EOF
   -- Setup nvim-cmp.
   local cmp = require'cmp'
   local lspkind = require'lspkind'
+  local luasnip = require'luasnip'
+  local cmp_buffer = require'cmp_buffer'
 
   cmp.setup({
+    performance = { debounce = 300, throttle = 40 },
     snippet = {
       -- REQUIRED - you must specify a snippet engine
       expand = function(args)
-        --vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
          require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-        -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-         --vim.fn["vsnip#anonymous"](args.body) -- For `ultisnips` users.
      end,
     },
     window = {
@@ -29,7 +29,6 @@ lua <<EOF
       {name = 'luasnip', keyword_length = 2},
     },
    mapping = cmp.mapping.preset.insert({
-
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
      -- ['<C-Space>'] = cmp.mapping.complete(),

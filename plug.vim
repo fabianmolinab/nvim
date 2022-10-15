@@ -60,7 +60,9 @@ Plug 'mattn/emmet-vim'
 "LSP 
 if has("nvim")
   Plug 'neovim/nvim-lspconfig'
-  Plug 'williamboman/nvim-lsp-installer' "Instalador sencillo de servers
+  Plug 'williamboman/mason.nvim'
+  Plug 'williamboman/mason-lspconfig.nvim'
+  "Plug 'williamboman/nvim-lsp-installer' "Instalador sencillo de servers
   Plug 'hrsh7th/cmp-nvim-lsp' "AutoSugerencias
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/nvim-cmp'
@@ -78,6 +80,9 @@ endif
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "Sintaxis de arbol para los lenguajes 
 
 Plug 'windwp/nvim-ts-autotag' "auto tag para html
+
+"Debug
+Plug 'mfussenegger/nvim-dap'
 
 
 call plug#end()

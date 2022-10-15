@@ -12,4 +12,11 @@ let g:enfocado_plugins = [
   \ 'tree',
   \ 'indent-blankline',
   \ ]
+augroup enfocado_customization
+  autocmd!
+    " your other autocmds...
+    autocmd ColorScheme enfocado ++nested highlight Type cterm=italic gui=italic
+    autocmd ColorScheme enfocado ++nested highlight TypeBuiltin cterm=italic gui=italic
+augroup END
+
 colorscheme enfocado 
