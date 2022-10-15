@@ -1,12 +1,14 @@
 " First list plugins to install
 source ~/.config/nvim/plug.vim
+"source ~/.config/nvim/general/status-line.vim
+
 
 "Import the general settings
 source ~/.config/nvim/general/settings.vim
 source ~/.config/nvim/general/keys.vim
 
 "Theme
-source ~/.config/nvim/themes/enfocado.vim
+source ~/.config/nvim/themes/rosepine.lua
 source ~/.config/nvim/general/colors.vim
 
 "Import plugin settings
