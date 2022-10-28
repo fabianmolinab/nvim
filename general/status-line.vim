@@ -1,7 +1,8 @@
 " status bar colors
-au InsertEnter * hi statusline guifg=black guibg=#DB635D ctermfg=black ctermbg=magenta
-au InsertLeave * hi statusline guifg=black guibg=#F09383 ctermfg=black ctermbg=cyan
-hi statusline guifg=black guibg=#F09383 ctermfg=black ctermbg=cyan
+au InsertEnter * hi statusline guifg=#878787 guibg=#474747
+au InsertLeave * hi statusline guifg=#878787 guibg=#282828
+
+hi statusline guifg=black guibg=#282828
 
 " Status line
 " default: set statusline=%f\ %h%w%m%r\ %=%(%l,%c%V\ %=\ %P%)

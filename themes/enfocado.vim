@@ -1,4 +1,4 @@
-let g:enfocado_style = 'neon'
+let g:enfocado_style = 'nature'
 let g:enfocado_plugins = [
   \ 'bufferline',
   \ 'cmp',
@@ -15,8 +15,8 @@ let g:enfocado_plugins = [
 augroup enfocado_customization
   autocmd!
     " your other autocmds...
-    autocmd ColorScheme enfocado ++nested highlight Type cterm=italic gui=italic
-    autocmd ColorScheme enfocado ++nested highlight TypeBuiltin cterm=italic gui=italic
+    autocmd ColorScheme enfocado ++nested highlight Type cterm=NONE gui=NONE
+    autocmd ColorScheme enfocado ++nested highlight TypeBuiltin cterm=NONE gui=NONE
 augroup END
 
 colorscheme enfocado 

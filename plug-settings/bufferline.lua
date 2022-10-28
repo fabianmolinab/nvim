@@ -11,8 +11,8 @@ require("bufferline").setup({
           separator = false
         }
       },
-      separator_style = 'thick',
-      max_name_length = 15,
+      --separator_style = 'thick',
+      max_name_length = 13,
       max_prefix_length = 13,
       tab_size = 15,
       diagnostics = 'nvim_lsp',
