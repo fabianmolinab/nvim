@@ -1,6 +1,5 @@
 #ignore all hiden files
 .*
-
 #but no the file .gitignore
 !.gitignore
 !.zshrc

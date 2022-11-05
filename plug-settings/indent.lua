@@ -1,5 +1,5 @@
 vim.cmd [[highlight IndentBlanklineIndent guifg=#2e3440 gui=nocombine]]
-vim.opt.list = true
+--vim.opt.list = true
 --vim.opt.listchars:append "eol:↴"
 
 require("indent_blankline").setup({

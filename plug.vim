@@ -13,8 +13,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'sainnhe/sonokai'
 "Plug 'sainnhe/gruvbox-material'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
-"Plug 'wuelnerdotexe/vim-enfocado'
-Plug 'rose-pine/neovim', {'as': 'rose-pine'}
+Plug 'wuelnerdotexe/vim-enfocado'
+"Plug 'rose-pine/neovim', {'as': 'rose-pine'}
 
 "Visual
 Plug 'kyazdani42/nvim-web-devicons'
@@ -45,6 +45,7 @@ Plug 'nvim-telescope/telescope.nvim' "Plugin de busqueda
 Plug 'easymotion/vim-easymotion' 
 Plug 'tpope/vim-surround' 
 Plug 'folke/todo-comments.nvim' "Todo comments
+Plug 'matze/vim-move' "Mover texto
 
 "tmux
 Plug 'benmills/vimux'
@@ -55,6 +56,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
 Plug 'windwp/nvim-autopairs' "auto parentesis y corchetes
 Plug 'mattn/emmet-vim'
+Plug 'jose-elias-alvarez/null-ls.nvim' "Prettier modification
 
 "LSP 
 if has("nvim")

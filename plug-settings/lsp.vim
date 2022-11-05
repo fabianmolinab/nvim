@@ -3,7 +3,7 @@ lua << EOF
 local nvim_lsp = require('lspconfig')
 
 -- Set up completion using nvim_cmp with LSP source
-local capabilities = require('cmp_nvim_lsp').update_capabilities(
+local capabilities = require('cmp_nvim_lsp').default_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
@@ -104,39 +104,11 @@ require('lspconfig')['vimls'].setup{}
 require('lspconfig')['sumneko_lua'].setup{}
 
 --ESLINT Server Config
-require('lspconfig')['eslint'].setup{
-    capabilities = capabilities,
-    handlers = handlers,
-    filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'pandoc', 'astro' },
+require("lspconfig").eslint.setup({
     on_attach = on_attach,
-    settings = {
-    codeAction = {
-      disableRuleComment = {
-        enable = true,
-        location = "separateLine"
-      },
-      showDocumentation = {
-        enable = true
-      }
-    },
-    codeActionOnSave = {
-      enable = true,
-      mode = "all"
-    },
-    format = true,
-    nodePath = "",
-    onIgnoredFiles = "off",
-    packageManager = "npm",
-    quiet = false,
-    rulesCustomizations = {},
-    run = "onType",
-    useESLintClass = false,
-    validate = "on",
-    workingDirectory = {
-      mode = "location"
-    }
-  }
-}
+    flags = lsp_flags,
+    settings = { format = false },
+})
 
 --- StyleLint Config
 require('lspconfig')['stylelint_lsp'].setup{
@@ -158,6 +130,13 @@ require('lspconfig')['jsonls'].setup{
   on_attach = on_attach,
   flags = lsp_flags,
 }
+
+-- Tailwind 
+ require("lspconfig").tailwindcss.setup({
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+ })
 
 --LSP Colors
 require("lsp-colors").setup({

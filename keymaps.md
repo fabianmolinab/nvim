@@ -18,7 +18,7 @@ b => regresar al inicio de la palabra
 
 B => regresar al inicio de la palabra(con puntuación)
 
-0 => salta al inicio de la linea 
+0 => salta al inicio de la linea
 
 $ => salta al final de la linea
 
@@ -38,12 +38,11 @@ Ctrl + d => cursor a media pantalla
 
 Ctrl + u => retroceder cursor media pantalla
 
-
 ## Modo Insertar
 
 I => insertar al comienzo de la linea
 
-a => despues del cursor 
+a => despues del cursor
 
 A => insertar al final de la linea
 
@@ -85,13 +84,12 @@ xp - transponer dos letras (suprimir y pegar)
 
 u - deshacer
 
-
 ### Atajos personalizados
 
 **jj** => Salir del modo insert
 
 **K** => Mostrar Documentación
-**<br>leader + le** => Mostrar errores 
+**<br>leader + le** => Mostrar errores
 **<br>leader + er** => Mostrar errores en menú
 
 **f** => Busqueda de palabra dentro del archivo x2
