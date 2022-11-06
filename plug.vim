@@ -1,8 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 "Temas
-"Plug 'kjwon15/vim-transparent'
-"Plug 'ntk148v/vim-horizon'
+Plug 'kjwon15/vim-transparent'
 "Plug 'ayu-theme/ayu-vim'
 "Plug 'markvincze/panda-vim'
 "Plug 'arcticicestudio/nord-vim' , { 'on':  'NERDTreeToggle' }
@@ -15,6 +14,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 Plug 'wuelnerdotexe/vim-enfocado'
 "Plug 'rose-pine/neovim', {'as': 'rose-pine'}
+"Plug 'sainnhe/everforest'
 
 "Visual
 Plug 'kyazdani42/nvim-web-devicons'
@@ -26,7 +26,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 "Plug 'pangloss/vim-javascript'
 "Plug 'HerringtonDarkholme/yats.vim'
 "Plug 'maxmellon/vim-jsx-pretty'
-"Plug 'styled-components/vim-styled-components'
+Plug 'styled-components/vim-styled-components'
 
 "Git integracion
 

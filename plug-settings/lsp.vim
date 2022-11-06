@@ -146,37 +146,6 @@ require("lsp-colors").setup({
   Hint = "#10B981"
 })
 
----Signos de diagnostico
-local protocol = require'vim.lsp.protocol'
-  --protocol.SymbolKind = { }
-  protocol.CompletionItemKind = {
-    '', -- Text
-    '', -- Method
-    '', -- Function
-    '', -- Constructor
-    '', -- Field
-    '', -- Variable
-    '', -- Class
-    'ﰮ', -- Interface
-    '', -- Module
-    '', -- Property
-    '', -- Unit
-    '', -- Value
-    '', -- Enum
-    '', -- Keyword
-    '﬌', -- Snippet
-    '', -- Color
-    '', -- File
-    '', -- Reference
-    '', -- Folder
-    '', -- EnumMember
-    '', -- Constant
-    '', -- Struct
-    '', -- Event
-    'ﬦ', -- Operator
-    '', -- TypeParameter
-  }
-
 -- Errors hover LSP
 vim.diagnostic.config({
   underline = true,
@@ -186,33 +155,5 @@ vim.diagnostic.config({
 
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250
---vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
-
--- Signos de errores 
---[[
-  local signs = { Error = "●", Warn = "●", Info = "●", Hint = "●" }
-
-  for type, icon in pairs(signs) do
-    local hl = "DiagnosticSign" .. type
-
-    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-  end
-
-  local vim_diagnostic = vim.diagnostic
-
-  vim_diagnostic.config({
-    virtual_text = { prefix = "▎" },
-    float = {
-      header = {
-        "Diagnostics",
-        "Title",
-      },
-      source = "always",
-      border = "single",
-    },
-    update_in_insert = false,
-    severity_sort = true,
-  })
-  ]]
 
 EOF

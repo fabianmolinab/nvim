@@ -19,8 +19,12 @@ lua <<EOF
       --cmp.config.window.bordered(),
       documentation = cmp.config.window.bordered(),
     },
+    completion = {  keyword_length = 1 },
     formatting = {
-      format = lspkind.cmp_format({with_text = false, maxwidth = 50})
+      fields = { "abbr", "kind" },
+      format = require("lspkind").cmp_format({
+        mode = "symbol_text",
+      }),
     },
     sources = {
       {name = 'path'},

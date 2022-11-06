@@ -23,7 +23,7 @@ highlight Pmenu guifg=#dee1e4 guibg=none
 
 " TSX sintax
 " dark red
-"hi tsxTagName guifg=#84EEA2
+hi tsxTagName guifg=#FAB795
 "hi tsxComponentName guifg=#2DC3DA cterm=italic
 "hi tsxCloseComponentName guifg=#84EEA2 cterm=italic
 
@@ -40,10 +40,10 @@ highlight Pmenu guifg=#dee1e4 guibg=none
 " light-grey
 "hi tsxTypeBraces guifg=#2DC3DA cterm=italic
 " dark-grey
-"hi tsxTypes guifg=#2DC3DA cterm=italic
+hi tsxTypes guifg=#2DC3DA cterm=italic
 
 "hi ReactState guifg=#C14A4A cterm=italic
-"hi ReactProps guifg=#D19A66 cterm=bold
+hi ReactProps guifg=#FAB795 
 ""hi ApolloGraphQL guifg=#CB886B
 "hi Events ctermfg=204 guifg=#2DC3DA
 "hi ReduxKeywords ctermfg=204 guifg=#C678DD
