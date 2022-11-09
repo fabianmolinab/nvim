@@ -1,18 +1,18 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 "Temas
-Plug 'kjwon15/vim-transparent'
+"Plug 'kjwon15/vim-transparent'
 "Plug 'ayu-theme/ayu-vim'
 "Plug 'markvincze/panda-vim'
-"Plug 'arcticicestudio/nord-vim' , { 'on':  'NERDTreeToggle' }
+"Plug 'arcticicestudio/nord-vim'  
 "Plug 'drewtempelmeyer/palenight.vim'
 "Plug 'morhetz/gruvbox'
 "Plug 'joshdick/onedark.vim'
 "Plug 'franbach/miramare'
 "Plug 'sainnhe/sonokai'
-"Plug 'sainnhe/gruvbox-material'
+Plug 'sainnhe/gruvbox-material'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
-Plug 'wuelnerdotexe/vim-enfocado'
+"Plug 'wuelnerdotexe/vim-enfocado'
 "Plug 'rose-pine/neovim', {'as': 'rose-pine'}
 "Plug 'sainnhe/everforest'
 
@@ -75,7 +75,6 @@ if has("nvim")
   " For luasnip users.
   Plug 'L3MON4D3/LuaSnip'
   Plug 'saadparwaiz1/cmp_luasnip'
-
 endif
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "Sintaxis de arbol para los lenguajes 
@@ -83,7 +82,5 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "Sintaxis de arbol p
 Plug 'windwp/nvim-ts-autotag' "auto tag para html
 
 "Debug
-Plug 'mfussenegger/nvim-dap'
-
-
+"Plug 'mfussenegger/nvim-dap'
 call plug#end()

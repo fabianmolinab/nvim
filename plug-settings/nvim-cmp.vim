@@ -19,7 +19,7 @@ lua <<EOF
       --cmp.config.window.bordered(),
       documentation = cmp.config.window.bordered(),
     },
-    completion = {  keyword_length = 1 },
+    completion = { keyword_length = 1 },
     formatting = {
       fields = { "abbr", "kind" },
       format = require("lspkind").cmp_format({
@@ -28,9 +28,9 @@ lua <<EOF
     },
     sources = {
       {name = 'path'},
-      {name = 'nvim_lsp', keyword_length = 3},
-      {name = 'buffer', keyword_length = 3},
-      {name = 'luasnip', keyword_length = 2},
+      {name = 'nvim_lsp' },
+      {name = 'buffer' },
+      {name = 'luasnip'},
     },
    mapping = cmp.mapping.preset.insert({
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),
