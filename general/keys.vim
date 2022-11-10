@@ -24,10 +24,15 @@ nnoremap <Leader>Q :q!<CR>
 imap jj <Esc>
 
 "Terminal
-vnoremap <c-t> :split<CR>:ter<CR>:resize 15<CR>
-nnoremap <c-t> :split<CR>:ter<CR>:resize 15<CR>
-vnoremap <C-\> :split<CR>:ter<CR>:resize 15<CR>
-nnoremap <C-\> :split<CR>:ter<CR>:resize 15<CR>
+"vnoremap <c-t> :split<CR>:ter<CR>:resize 15<CR>
+"nnoremap <c-t> :split<CR>:ter<CR>:resize 15<CR>
+"vnoremap <C-\> :split<CR>:ter<CR>:resize 15<CR>
+"nnoremap <C-\> :split<CR>:ter<CR>:resize 15<CR>
+
+tmap <esc> <C-\><C-n>
+
+nmap <c-t> <Plug>(NERDTermToggle)
+tmap <c-t> <Plug>(NERDTermToggle)
 
 " Easy Motion
 noremap f <Plug>(easymotion-s2)
@@ -61,12 +66,18 @@ nnoremap <leader>sp :sp<CR>
 nnoremap <silent> // :noh<CR>
 
 "Telescope
-map <Leader>f :Telescope find_files theme=dropdown<CR>
-map <Leader>a :Telescope live_grep theme=dropdown<CR>
-map <Leader>ls :Telescope git_commits theme=ivy<CR>
-map <Leader>ag :Telescope git_files theme=dropdown<CR>
-map <Leader>b :Telescope buffers theme=dropdown<CR>
+nnoremap <Leader>f <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <Leader>a <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <Leader>mf <cmd>lua require('telescope.builtin').marks()<cr>
+nnoremap <Leader>ls <cmd>lua require('telescope.builtin').git_commits()<cr>
+nnoremap <Leader>ag <cmd>lua require('telescope.builtin').git_files()<cr>
+nnoremap <Leader>of <cmd>lua require('telescope.builtin').oldfiles()<cr>
+nnoremap <Leader>b <cmd>lua require('telescope.builtin').buffers()<cr>
 
 "Todo Busqueda telescope
 nmap <Leader>td :TodoTelescope<CR>
+
+"Modo Visual indent
+vmap <silent> < <gv
+vmap <silent> > >gv
 

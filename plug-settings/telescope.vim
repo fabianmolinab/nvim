@@ -1,2 +1,22 @@
-lua require('telescope.builtin').buffers({ sort_lastused = true, ignore_current_buffer = true })
-
+lua << EOF
+require('telescope').setup {
+  defaults = {
+    layout_config = {
+      vertical = { width = 0.5}
+      }
+  },
+  pickers = {
+    find_files = {
+    },
+    oldfiles = {
+    },
+    live_grep = {
+    },
+    git_commits = {
+      theme = "ivy"
+    }
+  },
+  extensions = {
+  }
+} 
+EOF
