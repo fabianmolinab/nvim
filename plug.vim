@@ -33,6 +33,7 @@ Plug 'styled-components/vim-styled-components'
 Plug 'lewis6991/gitsigns.nvim' "Cambios de git al archivo de lado
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'sindrets/diffview.nvim'
 "Plug 'APZelos/blamer.nvim' "
 
 "Tabs

@@ -81,3 +81,6 @@ nmap <Leader>td :TodoTelescope<CR>
 vmap <silent> < <gv
 vmap <silent> > >gv
 
+"Git Diff View
+nnoremap <leader>df :DiffviewOpen<CR>
+nnoremap <leader>dx :DiffviewClose<CR>
