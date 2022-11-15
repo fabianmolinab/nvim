@@ -88,4 +88,8 @@ Plug 'windwp/nvim-ts-autotag' "auto tag para html
 
 "Debug
 "Plug 'mfussenegger/nvim-dap'
+
+"Discord
+Plug 'andweeb/presence.nvim'
+
 call plug#end()
