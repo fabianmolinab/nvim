@@ -7,7 +7,7 @@ let g:enfocado_plugins = [
   \ 'telescope',
   \ 'neerdtree',
   \ 'plug',
-  \ 'treesitter',
+  "\ 'treesitter',
   \ 'todo-commets',
   \ 'tree',
   \ 'indent-blankline',

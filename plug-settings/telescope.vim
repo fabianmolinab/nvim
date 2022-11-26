@@ -7,13 +7,18 @@ require('telescope').setup {
   },
   pickers = {
     find_files = {
+      theme = "dropdown"
     },
     oldfiles = {
+      theme = "ivy"
     },
     live_grep = {
     },
     git_commits = {
       theme = "ivy"
+    },
+    buffers = {
+      theme = "dropdown"
     }
   },
   extensions = {

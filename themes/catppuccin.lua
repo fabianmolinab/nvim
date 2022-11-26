@@ -2,7 +2,7 @@
 
 require("catppuccin").setup {
     flavour = "mocha",
-    --transparent_background = true,
+    transparent_background = true,
     highlight_overrides = {
     },
     styles = {
@@ -22,7 +22,7 @@ require("catppuccin").setup {
     integrations = {
         cmp = true,
         gitsigns = true,
-        --nvimtree = true,
+        nvimtree = true,
         --telescope = true,
         treesitter = true,
         indent_blankline = {

@@ -1,9 +1,9 @@
-vim.cmd [[highlight IndentBlanklineIndent guifg=#22262F ]]
---vim.opt.list = true
---vim.opt.listchars:append "eol:↴"
+--vim.cmd [[highlight IndentBlanklineIndent guifg=#22262F ]]
+vim.opt.list = true
+vim.opt.listchars:append "eol:↴"
 
 require("indent_blankline").setup({
-  use_treesitter = true,
+  use_treesitter = false,
   show_current_context = true,
   show_current_context_start = true,
   show_trailing_blankline_indent = false,
