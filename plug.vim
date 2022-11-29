@@ -12,9 +12,10 @@ Plug 'kjwon15/vim-transparent'
 "Plug 'sainnhe/sonokai'
 "Plug 'sainnhe/gruvbox-material'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
-Plug 'wuelnerdotexe/vim-enfocado'
+"Plug 'wuelnerdotexe/vim-enfocado'
 "Plug 'rose-pine/neovim', {'as': 'rose-pine'}
 "Plug 'sainnhe/everforest'
+Plug 'shaunsingh/nord.nvim'
 
 "Visual
 Plug 'kyazdani42/nvim-web-devicons'
@@ -22,12 +23,12 @@ Plug 'lilydjwg/colorizer' "Codigo de colores
 Plug 'lukas-reineke/indent-blankline.nvim'
 
 "Web developer sintaxis
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'maxmellon/vim-jsx-pretty'
+"Plug 'cakebaker/scss-syntax.vim'
+"Plug 'pangloss/vim-javascript'
+"Plug 'HerringtonDarkholme/yats.vim'
+"Plug 'maxmellon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components'
-Plug 'wuelnerdotexe/vim-astro'
+"Plug 'wuelnerdotexe/vim-astro'
 
 "Git integracion
 

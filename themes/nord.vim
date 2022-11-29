@@ -1,9 +1,14 @@
- let g:nord_italic = 1
- let g:nord_italic_comments = 1
- let g:nord_bold = 0
- let g:nord_underline = 1
- let g:nord_uniform_diff_background = 1
-" let g:nord_cursor_line_number_background = 1
-hi Normal guibg=#242933
+ let g:nord_italic = v:false
+ let g:nord_italic_comments = v:true
+ let g:nord_bold = v:false
+ let g:nord_underline = v:true
+ let g:nord_uniform_diff_background = v:true
+
+augroup nord_customization
+  autocmd!
+    " your other autocmds...
+    autocmd ColorScheme nord ++nested hi Normal guibg=#242933
+augroup END
+
 colorscheme nord
 
