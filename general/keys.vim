@@ -84,3 +84,11 @@ vmap <silent> > >gv
 "Git Diff View
 nnoremap <leader>df :DiffviewOpen<CR>
 nnoremap <leader>dx :DiffviewClose<CR>
+
+"Git Stage hunk 
+nnoremap <leader>hs :Gitsigns stage_hunk<CR>
+nnoremap <leader>hu :Gitsigns undo_stage_hunk<CR>
+
+"Git Stage lines
+vnoremap <leader>hs :Gitsigns stage_hunk<CR>
+nnoremap <leader>hu :Gitsigns undo_stage_hunk<CR>
