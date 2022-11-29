@@ -38,7 +38,7 @@ Plug 'sindrets/diffview.nvim'
 "Plug 'APZelos/blamer.nvim' "
 
 "Tabs
-Plug 'akinsho/bufferline.nvim', {'tags': 'v2.*'}
+"Plug 'akinsho/bufferline.nvim', {'tags': 'v2.*'}
 Plug 'nvim-lualine/lualine.nvim'
 
 "Functionality

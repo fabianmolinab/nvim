@@ -18,6 +18,8 @@ require('telescope').setup {
       theme = "ivy"
     },
     buffers = {
+      ignore_current_buffer = true,
+      sort_mru = true,
       theme = "dropdown"
     }
   },
