@@ -7,7 +7,7 @@ source ~/.config/nvim/general/settings.vim
 source ~/.config/nvim/general/keys.vim
 
 "Theme
-source ~/.config/nvim/themes/nord.vim
+source ~/.config/nvim/themes/nightfox.lua
 source ~/.config/nvim/general/colors.vim
 
 "Import plugin settings

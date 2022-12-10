@@ -1,7 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 "Temas
-Plug 'kjwon15/vim-transparent'
+"Plug 'kjwon15/vim-transparent'
 "Plug 'ayu-theme/ayu-vim'
 "Plug 'markvincze/panda-vim'
 "Plug 'arcticicestudio/nord-vim'  
@@ -14,8 +14,10 @@ Plug 'kjwon15/vim-transparent'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 "Plug 'wuelnerdotexe/vim-enfocado'
 "Plug 'rose-pine/neovim', {'as': 'rose-pine'}
-"Plug 'sainnhe/everforest'
-Plug 'shaunsingh/nord.nvim'
+"Plug 'shaunsingh/nord.nvim'
+"Plug 'lunarvim/horizon.nvim' #1
+Plug 'EdenEast/nightfox.nvim' "#2 
+"Plug 'rockerBOO/boo-colorscheme-nvim'
 
 "Visual
 Plug 'kyazdani42/nvim-web-devicons'
