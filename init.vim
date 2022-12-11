@@ -19,6 +19,7 @@ source ~/.config/nvim/plug-settings/web-devicons.vim
 source ~/.config/nvim/plug-settings/treesitter.vim
 
 "LSP
+source ~/.config/nvim/plug-settings/mason.lua
 source ~/.config/nvim/plug-settings/lsp.vim
 source ~/.config/nvim/plug-settings/nvim-cmp.vim
 source ~/.config/nvim/plug-settings/lspkind.lua

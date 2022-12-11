@@ -9,11 +9,6 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(
 
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-require("mason").setup()
-require("mason-lspconfig").setup( {
-   automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
-  })
-
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
@@ -43,12 +38,19 @@ local lsp_flags = {
 }
 
 --Config Servers
---Typescript, Javascript, JSX, TSX 
 
+--Typescript, Javascript, JSX, TSX 
 require('lspconfig')['tsserver'].setup{
     capabilities = capabilities,
     on_attach = on_attach,
     flags = lsp_flags,
+}
+
+--Go Server
+require'lspconfig'.gopls.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = lsp_flags
 }
 
 --Astro server
