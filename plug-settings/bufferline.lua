@@ -3,15 +3,7 @@ require("bufferline").setup({
    options = {
       buffer_close_icon = '',
       indicator = { icon = '', style = 'icon' },
-      offsets = {
-        {
-          filetype = 'fern',
-          text = 'FILE EXPLORER',
-          highlight = 'Title',
-          separator = false
-        }
-      },
-      --separator_style = 'thick',
+      separator_style = 'thick',
       max_name_length = 13,
       max_prefix_length = 13,
       tab_size = 15,
