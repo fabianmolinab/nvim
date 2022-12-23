@@ -13,22 +13,20 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'sainnhe/gruvbox-material'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 "Plug 'wuelnerdotexe/vim-enfocado'
-"Plug 'rose-pine/neovim', {'as': 'rose-pine'}
 "Plug 'shaunsingh/nord.nvim'
 "Plug 'lunarvim/horizon.nvim' #1
 Plug 'EdenEast/nightfox.nvim' "#2 
-"Plug 'rockerBOO/boo-colorscheme-nvim'
 
 "Visual
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'lilydjwg/colorizer' "Codigo de colores 
-Plug 'lukas-reineke/indent-blankline.nvim'
+"Plug 'lukas-reineke/indent-blankline.nvim'
 
 "Web developer sintaxis
-"Plug 'cakebaker/scss-syntax.vim'
+Plug 'cakebaker/scss-syntax.vim'
 "Plug 'pangloss/vim-javascript'
 "Plug 'HerringtonDarkholme/yats.vim'
-"Plug 'maxmellon/vim-jsx-pretty'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components'
 "Plug 'wuelnerdotexe/vim-astro'
 
@@ -75,7 +73,7 @@ if has("nvim")
   Plug 'hrsh7th/cmp-path'
   Plug 'hrsh7th/cmp-cmdline'
   Plug 'onsails/lspkind-nvim' "Menu customizado de sugerencias cmp-lsp con iconos
-  Plug 'folke/lsp-colors.nvim' " Colores para LSP
+  Plug 'folke/lsp-colors.nvim' "Colores para LSP
   Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 
   " For luasnip users.
@@ -93,7 +91,8 @@ Plug 'windwp/nvim-ts-autotag' "auto tag para html
 "Debug
 "Plug 'mfussenegger/nvim-dap'
 
-"Discord
+""Discord
 Plug 'andweeb/presence.nvim'
+
 
 call plug#end()
