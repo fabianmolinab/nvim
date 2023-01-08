@@ -4,7 +4,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'kjwon15/vim-transparent'
 "Plug 'ayu-theme/ayu-vim'
 "Plug 'markvincze/panda-vim'
-"Plug 'arcticicestudio/nord-vim'  
 "Plug 'drewtempelmeyer/palenight.vim'
 "Plug 'morhetz/gruvbox'
 "Plug 'joshdick/onedark.vim'
@@ -23,7 +22,7 @@ Plug 'kvrohit/mellow.nvim'
 "Visual
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'lilydjwg/colorizer' "Codigo de colores 
-"Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim' "Indicador de identado
 
 "Web developer sintaxis
 Plug 'cakebaker/scss-syntax.vim'
@@ -95,7 +94,7 @@ Plug 'windwp/nvim-ts-autotag' "auto tag para html
 "Plug 'mfussenegger/nvim-dap'
 
 ""Discord
-Plug 'andweeb/presence.nvim'
+"Plug 'andweeb/presence.nvim'
 
 
 call plug#end()
