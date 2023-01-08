@@ -1,6 +1,6 @@
- let g:nord_italic = v:true
- let g:nord_italic_comments = v:true
- let g:nord_bold = v:false
+ let g:nord_italic = v:false
+ let g:nord_italic_comments = v:false
+ let g:nord_bold = v:true
  let g:nord_underline = v:true
  let g:nord_uniform_diff_background = v:true
 
