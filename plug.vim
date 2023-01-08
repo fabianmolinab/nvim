@@ -16,6 +16,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'shaunsingh/nord.nvim'
 "Plug 'lunarvim/horizon.nvim' #1
 Plug 'EdenEast/nightfox.nvim' "#2 
+Plug 'kvrohit/mellow.nvim'
 
 "Visual
 Plug 'kyazdani42/nvim-web-devicons'
