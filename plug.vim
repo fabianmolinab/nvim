@@ -15,7 +15,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'wuelnerdotexe/vim-enfocado'
 "Plug 'shaunsingh/nord.nvim'
 "Plug 'lunarvim/horizon.nvim' #1
-Plug 'EdenEast/nightfox.nvim' "#2 
+"Plug 'EdenEast/nightfox.nvim' "#2 
+"Plug 'mcchrish/zenbones.nvim'
+"Plug 'rktjmp/lush.nvim'"require zenbones
 Plug 'kvrohit/mellow.nvim'
 
 "Visual
