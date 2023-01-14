@@ -31,7 +31,7 @@ lua <<EOF
       {name = 'nvim_lsp' },
       {name = 'buffer' },
       {name = 'luasnip'},
-      {name= 'cmp_tabnine'},
+     -- {name= 'cmp_tabnine'},
     },
    mapping = cmp.mapping.preset.insert({
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),

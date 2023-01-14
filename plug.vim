@@ -76,7 +76,7 @@ if has("nvim")
   Plug 'hrsh7th/cmp-cmdline'
   Plug 'onsails/lspkind-nvim' "Menu customizado de sugerencias cmp-lsp con iconos
   Plug 'folke/lsp-colors.nvim' "Colores para LSP
-  Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+  "Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 
   " For luasnip users.
   Plug 'L3MON4D3/LuaSnip'
