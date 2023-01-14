@@ -83,6 +83,7 @@ if has("nvim")
   Plug 'lukas-reineke/indent-blankline.nvim' "Indentacion
   Plug 'windwp/nvim-autopairs' "auto parentesis y corchetes
   Plug 'windwp/nvim-ts-autotag' "auto tag para html
+  Plug 'mrjones2014/nvim-ts-rainbow'
 
   "Sintaxis
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "Sintaxis de arbol para los lenguajes 
