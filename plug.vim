@@ -58,7 +58,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
 Plug 'mattn/emmet-vim'
-Plug 'jose-elias-alvarez/null-ls.nvim' "Prettier modification
+Plug 'jose-elias-alvarez/null-ls.nvim' "Config Prettier 
 
 "LSP 
 if has("nvim")
@@ -70,13 +70,14 @@ if has("nvim")
   Plug 'hrsh7th/nvim-cmp'
   Plug 'hrsh7th/cmp-path'
   Plug 'hrsh7th/cmp-cmdline'
-  Plug 'onsails/lspkind-nvim' "Menu customizado de sugerencias cmp-lsp con iconos
+  Plug 'onsails/lspkind-nvim' "Iconos del CMP
   Plug 'folke/lsp-colors.nvim' "Colores para LSP
   "Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' } "AutoCompletado Tabnine
   
-  "LuaSnip
+  "Snipets con LuaSnip
   Plug 'L3MON4D3/LuaSnip', {'tag': 'v<CurrentMajor>.*'}
   Plug 'saadparwaiz1/cmp_luasnip'
+  Plug 'rafamadriz/friendly-snippets'
 
   "Funcionalidades de editor
   Plug 'nvim-tree/nvim-tree.lua' "Menu lateral de carpetas y directorios
@@ -97,7 +98,6 @@ if has("nvim")
 endif
 
 "Terminal 
-
 Plug 'wuelnerdotexe/nerdterm'
 
 call plug#end()

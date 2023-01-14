@@ -1,7 +1,13 @@
 set completeopt=menu,menuone,noselect
 
 lua <<EOF
-  -- Setup nvim-cmp.
+
+  local has_words_before = function()
+    unpack = unpack or table.unpack
+    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+    return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+  end
+
   local cmp = require'cmp'
   local lspkind = require'lspkind'
   local luasnip = require'luasnip'
@@ -31,7 +37,7 @@ lua <<EOF
       {name = 'luasnip'},
      -- {name= 'cmp_tabnine'},
     },
-   mapping = cmp.mapping.preset.insert({
+   mapping = {
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
       ['<C-e>'] = cmp.mapping.abort(),
@@ -41,20 +47,25 @@ lua <<EOF
       ['<Tab>'] = cmp.mapping(function(fallback)
         if cmp.visible() then
           cmp.select_next_item()
-        return
-      end
-         fallback()
+        elseif luasnip.expand_or_jumpable() then 
+          luasnip.expand_or_jump()
+        elseif has_words_before() then 
+          cmp.complete()
+        else
+          fallback()
+        end
       end, { 'i', 'c' }),
 
       ['<S-Tab>'] = cmp.mapping(function(fallback)
         if cmp.visible() then
-          cmp.select_prev_item()
-        return
-      end
-        fallback()
-      end
-      , { 'i', 'c' }),
-    }),
+          cmp.select_prev_item() 
+        elseif luasnip.jumpable(-1) then
+          luasnip.jump(-1)
+        else 
+          fallback()
+        end
+      end, { 'i', 'c' }),
+    },
   })
 
   -- Set configuration for specific filetype.
