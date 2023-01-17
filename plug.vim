@@ -2,22 +2,18 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 "Temas
 "Plug 'kjwon15/vim-transparent'
-"Plug 'ayu-theme/ayu-vim'
-"Plug 'markvincze/panda-vim'
-"Plug 'drewtempelmeyer/palenight.vim'
 "Plug 'morhetz/gruvbox'
 "Plug 'joshdick/onedark.vim'
-"Plug 'franbach/miramare'
 "Plug 'sainnhe/sonokai'
 "Plug 'sainnhe/gruvbox-material'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 "Plug 'wuelnerdotexe/vim-enfocado'
 "Plug 'shaunsingh/nord.nvim'
 "Plug 'lunarvim/horizon.nvim' #1
-"Plug 'EdenEast/nightfox.nvim' "#2 
+Plug 'EdenEast/nightfox.nvim' "#2 
 "Plug 'mcchrish/zenbones.nvim'
 "Plug 'rktjmp/lush.nvim'"require zenbones
-Plug 'kvrohit/mellow.nvim'
+"Plug 'kvrohit/mellow.nvim'
 
 "Visual
 Plug 'kyazdani42/nvim-web-devicons' "Iconos
@@ -93,8 +89,10 @@ if has("nvim")
   "Plug 'andweeb/presence.nvim' "Mostrar actividad en Discord
 
   "Debuger
-  "Plug 'mfussenegger/nvim-dap'
-  
+  Plug 'mfussenegger/nvim-dap'
+  Plug 'rcarriga/nvim-dap-ui' 
+  "debuger go 
+  Plug 'leoluz/nvim-dap-go'
 endif
 
 "Terminal 
