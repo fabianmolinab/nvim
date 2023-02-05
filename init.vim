@@ -29,6 +29,7 @@ source ~/.config/nvim/plug-settings/nvim-tree.lua
 source ~/.config/nvim/plug-settings/bufferline.lua
 source ~/.config/nvim/plug-settings/lualine.lua
 source ~/.config/nvim/plug-settings/autopairs.lua
+source ~/.config/nvim/plug-settings/treesitter.lua
 
 source ~/.config/nvim/plug-settings/gitsigns.lua
 source ~/.config/nvim/plug-settings/indent.lua

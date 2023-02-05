@@ -1,4 +1,3 @@
-lua << EOF
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
   ensure_installed = { "lua", "vim", "astro", "html",},
@@ -34,4 +33,3 @@ require'nvim-treesitter.configs'.setup {
     max_file_line = nil
   }
 }
-EOF
