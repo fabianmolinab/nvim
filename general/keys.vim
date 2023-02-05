@@ -23,12 +23,6 @@ nnoremap <Leader>Q :q!<CR>
 "Salir del modo Insert
 imap jj <Esc>
 
-"Terminal
-"vnoremap <c-t> :split<CR>:ter<CR>:resize 15<CR>
-"nnoremap <c-t> :split<CR>:ter<CR>:resize 15<CR>
-"vnoremap <C-\> :split<CR>:ter<CR>:resize 15<CR>
-"nnoremap <C-\> :split<CR>:ter<CR>:resize 15<CR>
-
 tmap <esc> <C-\><C-n>
 
 nmap <c-t> <Plug>(NERDTermToggle)
@@ -55,6 +49,7 @@ nnoremap <s-tab> :bprevious<CR>
 " Close the current buffer
 "create a new tab
 nnoremap <leader>qq :bdelete<CR>
+nnoremap <leader>qb :bdelete!<CR>
 nnoremap <leader>t :tabe<CR>
 
 "vertical split
@@ -75,7 +70,7 @@ nnoremap <Leader>of <cmd>lua require('telescope.builtin').oldfiles()<cr>
 nnoremap <Leader>b <cmd>lua require('telescope.builtin').buffers()<cr>
 
 "Todo Busqueda telescope
-nmap <Leader>td :TodoTelescope<CR>
+nmap <leader>td :TodoTelescope<CR>
 
 "Modo Visual indent
 vmap <silent> < <gv
@@ -92,3 +87,12 @@ nnoremap <leader>hu :Gitsigns undo_stage_hunk<CR>
 "Git Stage lines
 vnoremap <leader>hs :Gitsigns stage_hunk<CR>
 nnoremap <leader>hu :Gitsigns undo_stage_hunk<CR>
+
+"Debuger
+nmap <leader>db :DapToggleBreakpoint<CR>    "breakpoint
+nmap <leader>dc :DapContinue<CR>  "Lanzar debugger
+nmap <leader>ds :DapTerminate<CR> "Detener debuger
+
+"Lanzar y cierra interfaz debugger
+nmap <leader>du :lua require("dapui").toggle()<CR>
+

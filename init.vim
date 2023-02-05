@@ -35,7 +35,7 @@ source ~/.config/nvim/plug-settings/gitsigns.lua
 source ~/.config/nvim/plug-settings/indent.lua
 source ~/.config/nvim/plug-settings/todo-comments.lua
 source ~/.config/nvim/plug-settings/null-ls.lua
-"source ~/.config/nvim/plug-settings/dap.lua
+source ~/.config/nvim/plug-settings/dap.lua
 "source ~/.config/nvim/plug-settings/presence.lua
 "source ~/.config/nvim/plug-settings/tab-nine.lua
 
