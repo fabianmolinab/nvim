@@ -13,7 +13,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'EdenEast/nightfox.nvim' "#2 
 "Plug 'mcchrish/zenbones.nvim'
 "Plug 'rktjmp/lush.nvim'"require zenbones
-"Plug 'kvrohit/mellow.nvim'
+Plug 'kvrohit/mellow.nvim'
+"Plug 'projekt0n/github-nvim-theme', { 'tag': 'v0.0.7' }
 
 "Visual
 Plug 'kyazdani42/nvim-web-devicons' "Iconos

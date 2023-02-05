@@ -4,11 +4,11 @@
  let g:nord_underline = v:true
  let g:nord_uniform_diff_background = v:true
 
-"augroup nord_customization
-  "autocmd!
+augroup nord_customization
+  autocmd!
     "" your other autocmds...
-    "autocmd ColorScheme nord ++nested hi Normal guibg=#242933
-"augroup END
+    autocmd ColorScheme nord ++nested hi Normal guibg=#242933
+augroup END
 
 colorscheme nord
 
