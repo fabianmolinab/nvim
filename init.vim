@@ -16,7 +16,6 @@ source ~/.config/nvim/plug-settings/easy-motion.vim
 source ~/.config/nvim/plug-settings/emmet.vim
 source ~/.config/nvim/plug-settings/telescope.vim
 source ~/.config/nvim/plug-settings/web-devicons.vim
-source ~/.config/nvim/plug-settings/treesitter.vim
 
 "LSP
 source ~/.config/nvim/plug-settings/mason.lua

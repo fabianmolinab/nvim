@@ -6,7 +6,18 @@ vim.g.loaded_netrwPlugin = 1
 
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
-  open_on_setup = true,
+  --disable_netrw = true, 
+  --hijack_netrw = true,
+  open_on_setup_file = true,
+  diagnostics = {
+    enable = true,
+    icons = {
+            hint = "",
+            info = "",
+            warning = "",
+            error = "",
+        },
+  },
   view = {
     adaptive_size = true,
     mappings = {
