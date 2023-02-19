@@ -103,7 +103,7 @@ require('lspconfig')['html'].setup {
 --Vim Server
 require('lspconfig')['vimls'].setup{}
 
-require('lspconfig')['sumneko_lua'].setup{}
+require('lspconfig')['lua_ls'].setup{}
 
 --ESLINT Server Config
 require("lspconfig").eslint.setup({
