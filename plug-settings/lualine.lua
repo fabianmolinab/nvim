@@ -17,10 +17,8 @@ options = {
     lualine_b = {'branch', 'filename'},
     lualine_c = {'diff','diagnostics'},
     lualine_x = {},
-    lualine_y = {},
-    lualine_z = {
-      { 'location', separator = { left = '', right = '' }, left_padding = 1 },
-    },
+    lualine_y = {{ 'location', separator = { left = '', right = '' } },},
+    lualine_z = {'progress'},
   },
   inactive_sections = {
     lualine_a = {
