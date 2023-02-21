@@ -8,7 +8,7 @@ require("nvim-tree").setup({
   sort_by = "case_sensitive",
   --disable_netrw = true, 
   --hijack_netrw = true,
-  open_on_setup_file = true,
+  --open_on_setup_file = true,
   diagnostics = {
     enable = true,
     icons = {
