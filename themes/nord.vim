@@ -1,4 +1,4 @@
- let g:nord_italic = v:false
+ let g:nord_italic = v:true
  let g:nord_italic_comments = v:false
  let g:nord_bold = v:true
  let g:nord_underline = v:true
@@ -6,7 +6,7 @@
 
 augroup nord_customization
   autocmd!
-    "" your other autocmds...
+    " your other autocmds...
     autocmd ColorScheme nord ++nested hi Normal guibg=#242933
 augroup END
 
