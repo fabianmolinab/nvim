@@ -1,14 +1,15 @@
--- examples for your init.lua
-
--- disable netrw at the very start of your init.lua (strongly advised)
-vim.g.loaded = 1
-vim.g.loaded_netrwPlugin = 1
 
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
-  --disable_netrw = true, 
-  --hijack_netrw = true,
-  --open_on_setup_file = true,
+  disable_netrw = true,
+  hijack_cursor = true,
+  hijack_netrw = true,
+  hijack_unnamed_buffer_when_opening = false,
+  update_cwd = true,
+  update_focused_file = {
+    enable = true,
+    update_cwd = false,
+  },
   diagnostics = {
     enable = true,
     icons = {
@@ -66,6 +67,7 @@ require("nvim-tree").setup({
   actions = {
     open_file = {
       quit_on_open = true,
+      resize_window = true,
     }
   }
 })
