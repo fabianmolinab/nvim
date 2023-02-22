@@ -1,9 +1,9 @@
 require('lualine').setup {
 options = {
     icons_enabled = true,
-    theme = 'auto',
-    component_separators = '|',
-    section_separators = { left = '', right = '' },
+    theme = 'nord',
+    section_separators = '',
+    component_separators = '',
     refresh = {
       statusline = 1000,
       tabline = 1000,
@@ -12,26 +12,29 @@ options = {
   },
   sections = {
     lualine_a = {
-      { 'mode', separator = { left = '' }, right_padding = 1 },
+      {'mode'},
     },
-    lualine_b = {'branch', 'filename'},
-    lualine_c = {'diff','diagnostics'},
-    lualine_x = {},
-    lualine_y = {{ 'location', separator = { left = '', right = '' } },},
+    lualine_b = {
+      {
+       'filename',
+        path = 1,
+      },
+    },
+    lualine_c = {
+      'diff','diagnostics'
+    },
+    lualine_x = {'branch'},
+    lualine_y = { 'location'},
     lualine_z = {'progress'},
-  },
   inactive_sections = {
-    lualine_a = {
-      { 'filename', separator = { left = '' }, right_padding = 1 },
-    },
+    lualine_a = {'filename'},
     lualine_b = {},
     lualine_c = {},
     lualine_x = {},
     lualine_y = {},
-    lualine_z = {
-      { 'location', separator = { right = '' }, left_padding = 1 },
-    },
+    lualine_z = {},
   },
   tabline = {},
   extensions = {},
+  }
 }

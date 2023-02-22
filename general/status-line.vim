@@ -44,9 +44,11 @@ set laststatus=2
 set noshowmode
 set statusline=
 set statusline+=%0*\ %n\                                 " Buffer number
-"set statusline+=%1*\ %<%F%m%r%h%w\                       " File path, modified, readonly, helpfile, preview
+
+set statusline+=%1*\ %<%F%m%r%h%w\                       " File path, modified, readonly, helpfile, preview
+
 set statusline+=%#LineNr#
-set statusline+=\ %t
+"set statusline+=\ %t
 set statusline+=%=                                       " Right Side
 set statusline+=%{StatuslineGit()}
 "set statusline+=%2*\ col:\ %02v\                         " Column number
