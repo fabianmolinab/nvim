@@ -19,7 +19,7 @@ require("null-ls").setup({
 
   sources = {
     require("null-ls").builtins.diagnostics.jsonlint,
-    require("null-ls").builtins.diagnostics.markdownlint,
+    --require("null-ls").builtins.diagnostics.markdownlint,
     require("null-ls").builtins.formatting.prettierd.with({
       condition = function(utils)
         return utils.root_has_file({
