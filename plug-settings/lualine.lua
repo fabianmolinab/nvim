@@ -1,5 +1,5 @@
 require('lualine').setup {
-options = {
+  options = {
     icons_enabled = true,
     theme = 'nord',
     section_separators = '',
@@ -18,6 +18,12 @@ options = {
       {
        'filename',
         path = 1,
+        symbols = {
+          modified = '[+]',
+          readonly = '[-]',
+          unnamed = '[No Name]',
+          newfile = '[New]',
+        },
       },
     },
     lualine_c = {
@@ -26,15 +32,14 @@ options = {
     lualine_x = {'branch'},
     lualine_y = { 'location'},
     lualine_z = {'progress'},
-  inactive_sections = {
-    lualine_a = {'filename'},
-    lualine_b = {},
-    lualine_c = {},
-    lualine_x = {},
-    lualine_y = {},
-    lualine_z = {},
+
+    inactive_sections = {
+      lualine_a = {'filename'},
+      lualine_b = {},
+      lualine_c = {},
+      lualine_x = {},
+      lualine_y = {},
+      lualine_z = {},
+    },
   },
-  tabline = {},
-  extensions = {},
-  }
 }
