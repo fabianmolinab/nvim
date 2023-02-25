@@ -7,14 +7,11 @@ source ~/.config/nvim/general/settings.vim
 source ~/.config/nvim/general/keys.vim
 
 "Theme
-source ~/.config/nvim/themes/mellow.lua
+source ~/.config/nvim/themes/zenbones.lua
 source ~/.config/nvim/general/colors.vim
 
 "Import plugin settings
-"source ~/.config/nvim/plug-settings/ale.vim
 source ~/.config/nvim/plug-settings/easy-motion.vim
-source ~/.config/nvim/plug-settings/emmet.vim
-source ~/.config/nvim/plug-settings/telescope.vim
 source ~/.config/nvim/plug-settings/web-devicons.vim
 
 "LSP
@@ -25,13 +22,14 @@ source ~/.config/nvim/plug-settings/lspkind.lua
 
 "Lua Configs Plugins
 source ~/.config/nvim/plug-settings/nvim-tree.lua
-"source ~/.config/nvim/plug-settings/bufferline.lua
+source ~/.config/nvim/plug-settings/bufferline.lua
 source ~/.config/nvim/plug-settings/lualine.lua
 source ~/.config/nvim/plug-settings/autopairs.lua
 source ~/.config/nvim/plug-settings/treesitter.lua
+source ~/.config/nvim/plug-settings/telescope.lua
 
 source ~/.config/nvim/plug-settings/gitsigns.lua
-source ~/.config/nvim/plug-settings/indent.lua
+source ~/.config/nvim/plug-settings/black-indent.lua
 source ~/.config/nvim/plug-settings/todo-comments.lua
 source ~/.config/nvim/plug-settings/null-ls.lua
 source ~/.config/nvim/plug-settings/dap.lua
