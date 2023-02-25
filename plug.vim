@@ -18,7 +18,6 @@ Plug 'rktjmp/lush.nvim'"require zenbones
 "---- Visual
 Plug 'kyazdani42/nvim-web-devicons' "Iconos modernos
 Plug 'lilydjwg/colorizer' "Coloreado de codigos exadecimales de colores
-
 "---
 "Sintaxis de Lenguajes 
 "Plug 'cakebaker/scss-syntax.vim'
@@ -29,13 +28,11 @@ Plug 'lilydjwg/colorizer' "Coloreado de codigos exadecimales de colores
 "Plug 'wuelnerdotexe/vim-astro'
 
 "------Git integracion
+  "Marcado de los cambios al costado 
+  Plug 'lewis6991/gitsigns.nvim'
 
-"Marcado de los cambios al costado 
-Plug 'lewis6991/gitsigns.nvim'
-
-" Menu de cambios y de commits ':G'
-Plug 'tpope/vim-fugitive'
-
+  " Menu de cambios y de commits ':G'
+  Plug 'tpope/vim-fugitive'
 "--------
 
 "------ Funcionalidades
@@ -72,7 +69,7 @@ if has("nvim")
   Plug 'neovim/nvim-lspconfig'
   Plug 'williamboman/mason.nvim'
   Plug 'williamboman/mason-lspconfig.nvim' "Instalador de servidores de LSP
-  Plug 'hrsh7th/cmp-nvim-lsp' "AutoSugerencias
+  Plug 'hrsh7th/cmp-nvim-lsp'
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/nvim-cmp'
   Plug 'hrsh7th/cmp-path'
@@ -98,11 +95,14 @@ if has("nvim")
     Plug 'nvim-tree/nvim-tree.lua'
 
     "Marcado de indentación
-    Plug 'lukas-reineke/indent-blankline.nvim' "Indentacion
+    Plug 'lukas-reineke/indent-blankline.nvim'
 
+    "Auto parentesis y corchetes
+    Plug 'windwp/nvim-autopairs'
 
-    Plug 'windwp/nvim-autopairs' "auto parentesis y corchetes
-    Plug 'windwp/nvim-ts-autotag' "auto tag para html
+    "auto tag para html
+    Plug 'windwp/nvim-ts-autotag'
+
     Plug 'mrjones2014/nvim-ts-rainbow'
 
     "Inspirado en Git Lens de VS Code
@@ -111,17 +111,17 @@ if has("nvim")
     "Colorea los comentarios en forma de TODO:
     Plug 'folke/todo-comments.nvim' 
   "------------
-  "Sintaxis
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "Sintaxis de arbol para los lenguajes 
+  
+  "Sintaxis de arboles de lenguajes
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-  "Debuger
-  Plug 'mfussenegger/nvim-dap'
-  Plug 'rcarriga/nvim-dap-ui' 
-  "debuger go 
+  "-------Debuger
+    Plug 'mfussenegger/nvim-dap'
+    Plug 'rcarriga/nvim-dap-ui' 
+  "-----
+  
+  "debuger go
   Plug 'leoluz/nvim-dap-go'
-
 endif
-
-"Terminal 
 
 call plug#end()
