@@ -11,9 +11,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'shaunsingh/nord.nvim'
 "Plug 'lunarvim/horizon.nvim' #1
 "Plug 'EdenEast/nightfox.nvim' "#2 
-Plug 'mcchrish/zenbones.nvim'
-Plug 'rktjmp/lush.nvim'"require zenbones
-"Plug 'kvrohit/mellow.nvim'
+"Plug 'mcchrish/zenbones.nvim'
+"Plug 'rktjmp/lush.nvim'"require zenbones
+Plug 'kvrohit/mellow.nvim'
 
 "---- Visual
 Plug 'kyazdani42/nvim-web-devicons' "Iconos modernos
@@ -90,9 +90,6 @@ if has("nvim")
 
   "----- Funcionalidades de editor
     Plug 'nvim-lua/plenary.nvim'
-
-    "Menu de estructura de carpetas y directorios
-    Plug 'nvim-tree/nvim-tree.lua'
 
     "Marcado de indentación
     Plug 'lukas-reineke/indent-blankline.nvim'
