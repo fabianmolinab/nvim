@@ -31,10 +31,6 @@ tmap <c-t> <Plug>(NERDTermToggle)
 " Easy Motion
 noremap f <Plug>(easymotion-s2)
 
-"Plugs
-map <Leader>nt :NvimTreeOpen<CR>
-map <Leader>nc :NvimTreeClose<CR>
-
 " tmux navigator
 nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
 nnoremap <silent> <C-j> :TmuxNavigateDown<CR>
@@ -99,3 +95,6 @@ nmap <leader>ds :DapTerminate<CR> "Detener debuger
 "Lanzar y cierra interfaz debugger
 nmap <leader>du :lua require("dapui").toggle()<CR>
 
+"Neotree
+nnoremap <leader>p :NeoTreeFocusToggle<CR>
+nnoremap <leader>g :NeoTreeFocusToggle git_status<CR>
