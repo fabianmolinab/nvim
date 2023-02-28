@@ -97,6 +97,10 @@ if has("nvim")
     "Auto parentesis y corchetes
     Plug 'windwp/nvim-autopairs'
 
+    "
+    Plug 'MunifTanjim/nui.nvim' "Require neo-tree
+    Plug 'nvim-neo-tree/neo-tree.nvim'
+
     "auto tag para html
     Plug 'windwp/nvim-ts-autotag'
 
