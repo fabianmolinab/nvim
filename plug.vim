@@ -2,10 +2,11 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 "Temas
 "Plug 'kjwon15/vim-transparent'
+"Plug  'Shatur/neovim-ayu'
 "Plug 'morhetz/gruvbox'
 "Plug 'joshdick/onedark.vim'
 "Plug 'sainnhe/sonokai'
-"Plug 'sainnhe/gruvbox-material'
+Plug 'sainnhe/gruvbox-material'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 "Plug 'wuelnerdotexe/vim-enfocado'
 "Plug 'shaunsingh/nord.nvim'
@@ -13,7 +14,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'EdenEast/nightfox.nvim' "#2 
 "Plug 'mcchrish/zenbones.nvim'
 "Plug 'rktjmp/lush.nvim'"require zenbones
-Plug 'kvrohit/mellow.nvim'
+"Plug 'kvrohit/mellow.nvim'
+"Plug 'Everblush/nvim'
 
 "---- Visual
 Plug 'kyazdani42/nvim-web-devicons' "Iconos modernos
@@ -97,7 +99,6 @@ if has("nvim")
     "Auto parentesis y corchetes
     Plug 'windwp/nvim-autopairs'
 
-    "
     Plug 'MunifTanjim/nui.nvim' "Require neo-tree
     Plug 'nvim-neo-tree/neo-tree.nvim'
 
