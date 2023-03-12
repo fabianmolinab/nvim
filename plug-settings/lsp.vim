@@ -47,11 +47,11 @@ require('lspconfig')['tsserver'].setup{
 }
 
 --Go Server
--- require'lspconfig'.gopls.setup{
-  --on_attach = on_attach,
-  --capabilities = capabilities,
-  --flags = lsp_flags
---}
+ require'lspconfig'.gopls.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = lsp_flags
+}
 
 --Astro server
 require('lspconfig')['astro'].setup {

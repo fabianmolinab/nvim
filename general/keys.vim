@@ -85,10 +85,10 @@ vnoremap <leader>hs :Gitsigns stage_hunk<CR>
 nnoremap <leader>hu :Gitsigns undo_stage_hunk<CR>
 
 "GitSigns Preview: "Muestra una previsualización de los cambios entre lineas
-nnoremap <leader>hp :Gitsigns preview_hunk<CR> 
+nnoremap <leader>hj :Gitsigns preview_hunk<CR> 
 
 "Debuger
-nmap <leader>db :DapToggleBreakpoint<CR>    "breakpoint
+nmap <leader>db :DapToggleBreakpoint<CR>    "Punto de espera
 nmap <leader>dc :DapContinue<CR>  "Lanzar debugger
 nmap <leader>ds :DapTerminate<CR> "Detener debuger
 
