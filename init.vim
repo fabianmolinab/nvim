@@ -28,6 +28,7 @@ source ~/.config/nvim/plug-settings/neo-tree.lua
 source ~/.config/nvim/plug-settings/treesitter.lua
 source ~/.config/nvim/plug-settings/telescope.lua
 
+source ~/.config/nvim/plug-settings/glow.lua
 source ~/.config/nvim/plug-settings/gitsigns.lua
 source ~/.config/nvim/plug-settings/black-indent.lua
 source ~/.config/nvim/plug-settings/todo-comments.lua

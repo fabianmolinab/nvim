@@ -112,6 +112,9 @@ if has("nvim")
 
     "Colorea los comentarios en forma de TODO:
     Plug 'folke/todo-comments.nvim' 
+
+    "Plugin de Markdown
+    Plug 'ellisonleao/glow.nvim'
   "------------
   
   "Sintaxis de arboles de lenguajes
