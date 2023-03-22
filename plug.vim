@@ -28,6 +28,7 @@ Plug 'lilydjwg/colorizer' "Coloreado de codigos exadecimales de colores
 "Plug 'maxmellon/vim-jsx-pretty'
 "Plug 'styled-components/vim-styled-components'
 "Plug 'wuelnerdotexe/vim-astro'
+Plug  'fatih/vim-go'
 
 "------Git integracion
   "Marcado de los cambios al costado 

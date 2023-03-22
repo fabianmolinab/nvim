@@ -51,5 +51,10 @@ autocmd BufRead,BufNewFile *.astro set filetype=astro
 
 autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.astro EslintFixAll
 
+augroup go
+    autocmd!
+    autocmd BufWritePre *.go :silent! GoFmt
+augroup END
+
 " Configure pum/win height.
 set pumheight=6 cmdwinheight=6
