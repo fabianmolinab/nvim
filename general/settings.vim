@@ -54,7 +54,20 @@ autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.astro EslintFixAll
 augroup go
     autocmd!
     autocmd BufWritePre *.go :silent! GoFmt
+    "Esta linea formatea los archivos de go con una identacion de 4 espacios
+    "autocmd FileType go setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
 augroup END
+
+lua <<EOF
+  local format_sync_grp = vim.api.nvim_create_augroup("GoImport", {})
+  vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*.go",
+    callback = function()
+     require('go.format').goimport()
+    end,
+    group = format_sync_grp,
+  })
+EOF
 
 " Configure pum/win height.
 set pumheight=6 cmdwinheight=6

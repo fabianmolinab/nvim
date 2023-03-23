@@ -45,4 +45,4 @@ end
 
 require("dapui").setup()
 --Debugger Go
-require("dap-go").setup()
+--require("dap-go").setup()

@@ -28,7 +28,6 @@ Plug 'lilydjwg/colorizer' "Coloreado de codigos exadecimales de colores
 "Plug 'maxmellon/vim-jsx-pretty'
 "Plug 'styled-components/vim-styled-components'
 "Plug 'wuelnerdotexe/vim-astro'
-Plug  'fatih/vim-go'
 
 "------Git integracion
   "Marcado de los cambios al costado 
@@ -126,8 +125,12 @@ if has("nvim")
     Plug 'rcarriga/nvim-dap-ui' 
   "-----
   
+  " Configuracion de lenguaje go para nvim
+  Plug 'ray-x/go.nvim'
+  Plug 'ray-x/guihua.lua'
+  
   "debuger go
-  Plug 'leoluz/nvim-dap-go'
+  "Plug 'leoluz/nvim-dap-go'
 endif
 
 call plug#end()
