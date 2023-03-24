@@ -4,7 +4,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'kjwon15/vim-transparent'
 "Plug  'Shatur/neovim-ayu'
 "Plug 'morhetz/gruvbox'
-"Plug 'joshdick/onedark.vim'
 "Plug 'sainnhe/sonokai'
 Plug 'sainnhe/gruvbox-material'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
@@ -59,12 +58,12 @@ Plug 'lilydjwg/colorizer' "Coloreado de codigos exadecimales de colores
   Plug 'scrooloose/nerdcommenter'
 "--------
 
-"Tmux
+"------Tmux
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
-
+"------
+"
 Plug 'godlygeek/tabular'
-Plug 'jose-elias-alvarez/null-ls.nvim' "Config Prettier 
 
 "---- Plugins de nvim
 if has("nvim")
@@ -119,6 +118,9 @@ if has("nvim")
   
   "Sintaxis de arboles de lenguajes
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+  "Config Prettier 
+  Plug 'jose-elias-alvarez/null-ls.nvim' 
 
   "-------Debuger
     Plug 'mfussenegger/nvim-dap'
