@@ -42,8 +42,13 @@ require("neo-tree").setup({
     },
   },
   window = {
-    position = "left",
-    width = 30,
+    position = "float",
+    popup = {
+      size = { height = "20", width = "50"},
+      position = "50%"
+    },
+    --width = 30,
+    --height = 50,
     mapping_options = {
       noremap = true,
       nowait = true,
