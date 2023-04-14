@@ -1,9 +1,8 @@
 "Use F5 to refresh your editor with the config file that you specify here
 nmap <F5> :source ~/.config/nvim/init.vim<CR>
 vmap <F5> :source ~/.config/nvim/init.vim<CR>
- 
-"disable the arrow keys to navigate. This is very useful when you want to
-"adapt to 'hjkl'
+
+"Desabilita la navegación con las flechas 
 noremap <up> <nop>
 noremap <down> <nop>
 noremap <left> <nop>
@@ -31,19 +30,16 @@ tmap <c-t> <Plug>(NERDTermToggle)
 " Easy Motion
 noremap f <Plug>(easymotion-s2)
 
-" tmux navigator
+" Navegación con Tmux
 nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
 nnoremap <silent> <C-j> :TmuxNavigateDown<CR>
 nnoremap <silent> <C-k> :TmuxNavigateUp<CR>
 nnoremap <silent> <C-l> :TmuxNavigateRight<CR>
 
-" Move to the next buffer
-" Move to the prevoius buffer
 nnoremap <tab> :bnext<CR>
 nnoremap <s-tab> :bprevious<CR>
 
-" Close the current buffer
-"create a new tab
+"Cerra buffer y cerrar buffer sin guardar
 nnoremap <leader>qq :bdelete<CR>
 nnoremap <leader>qb :bdelete!<CR>
 nnoremap <leader>t :tabe<CR>
@@ -56,15 +52,22 @@ nnoremap <leader>sp :sp<CR>
 " Limpiar los resultados de busqueda
 nnoremap <silent> // :noh<CR>
 
-"Telescope
-nnoremap <Leader>f <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <Leader>a <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <Leader>mf <cmd>lua require('telescope.builtin').marks()<cr>
-nnoremap <Leader>ls <cmd>lua require('telescope.builtin').git_commits()<cr>
-nnoremap <Leader>ag <cmd>lua require('telescope.builtin').git_files()<cr>
-nnoremap <Leader>of <cmd>lua require('telescope.builtin').oldfiles()<cr>
-nnoremap <Leader>b <cmd>lua require('telescope.builtin').buffers()<cr>
+"----Telescope
+"Buscar archivos
+  nnoremap <Leader>f <cmd>lua require('telescope.builtin').find_files()<cr>
+  "Buscar dentro del projecto cualquier palabra
+  nnoremap <Leader>a <cmd>lua require('telescope.builtin').live_grep()<cr>
 
+  nnoremap <Leader>mf <cmd>lua require('telescope.builtin').marks()<cr>
+  "Lista de commits
+  nnoremap <Leader>ls <cmd>lua require('telescope.builtin').git_commits()<cr>
+  "Buscar archivos de git
+  nnoremap <Leader>ag <cmd>lua require('telescope.builtin').git_files()<cr>
+  "Lista los archivos o ventanas cerradas
+  nnoremap <Leader>of <cmd>lua require('telescope.builtin').oldfiles()<cr>
+  "Lista buffers o pestañas abiertos
+  nnoremap <Leader>b <cmd>lua require('telescope.builtin').buffers()<cr>
+"----------
 "Todo Busqueda telescope
 nmap <leader>td :TodoTelescope<CR>
 
@@ -76,7 +79,7 @@ vmap <silent> > >gv
 nnoremap <leader>df :DiffviewOpen<CR>
 nnoremap <leader>dx :DiffviewClose<CR>
 
-"Git Stage hunk 
+"Git Stage hunk: Para agregar a stage lineas de cambios individuales o al contrario
 nnoremap <leader>hs :Gitsigns stage_hunk<CR>
 nnoremap <leader>hu :Gitsigns undo_stage_hunk<CR>
 

@@ -2,61 +2,49 @@
 let mapleader = " "
 
 set encoding=utf-8
-set mouse= "this enable the mouse compatibility
-set clipboard=unnamedplus "to set the main clipboard to vim. It needs xclip o xcel. Other value is unnamed
+set mouse= 
+set clipboard=unnamedplus 
 "set clipboard=unnamedplus 
-set noerrorbells "this disable the error bells because is very annoying
+set noerrorbells 
 set nolist
 set cmdheight=1
-
-"to set the tabs
-set sw=2 "this se the tabs are 2 spaces
+set sw=2 
 set expandtab
-set smartindent "this saves work to you to indent your code
+set smartindent 
 set breakindent 
-
-"Shoe line numbers. When you enable the number line it have space at the left.
-"I want the less space as possible.
 set number
 set rnu
 set numberwidth=2
-"I don't like the wrapped lines :v
-
-"I HATE the f*cking swap files and I don't want the backup files
 set noswapfile
 set nobackup
 set undodir=~/.config/nvim/.undodir/
 set undofile
-
-"set incremental search and ignore capital words
 set incsearch
 set ignorecase
-
-"set the cursorline and a column
 set cursorline
-
-"this sets the directions of the splits
 set splitbelow
 set splitright
-
 set noshowmode
 
 "Habilita el Buffer para archivos grandes de JSX
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
-" set filetypes as typescriptreact
 "autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
-autocmd BufRead,BufNewFile *.astro set filetype=astro
 
-autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.astro EslintFixAll
+"---formatear con Eslint
+  autocmd BufRead,BufNewFile *.astro set filetype=astro
+  autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.astro EslintFixAll
+"-----
 
-augroup go
-    autocmd!
-    autocmd BufWritePre *.go :silent! GoFmt
-    "Esta linea formatea los archivos de go con una identacion de 4 espacios
-    "autocmd FileType go setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
-augroup END
+"---formatear archivos de go con GoFmt al guardar
+  augroup go
+      autocmd!
+      autocmd BufWritePre *.go :silent! GoFmt
+      "Esta linea formatea los archivos de go con una identacion de 4 espacios
+      "autocmd FileType go setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
+  augroup END
+"------
 
 lua <<EOF
   local format_sync_grp = vim.api.nvim_create_augroup("GoImport", {})
