@@ -7,7 +7,7 @@ source ~/.config/nvim/general/settings.vim
 source ~/.config/nvim/general/keys.vim
 
 "Theme
-source ~/.config/nvim/themes/gruvboxMaterial.vim
+source ~/.config/nvim/themes/mellow.lua
 source ~/.config/nvim/general/colors.vim
 
 "Import plugin settings
@@ -34,7 +34,6 @@ source ~/.config/nvim/plug-settings/todo-comments.lua
 source ~/.config/nvim/plug-settings/null-ls.lua
 source ~/.config/nvim/plug-settings/dap.lua
 source ~/.config/nvim/plug-settings/go.lua
-"source ~/.config/nvim/plug-settings/presence.lua
 source ~/.config/nvim/plug-settings/tab-nine.lua
 
 source ~/.config/nvim/plug-settings/luaSnips.lua

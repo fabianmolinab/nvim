@@ -1,16 +1,26 @@
-let g:enfocado_style = 'neon'
+"let g:enfocado_style = 'neon'
 let g:enfocado_plugins = [
-  \ 'bufferline',
-  \ 'cmp',
-  \ 'gitsigns',
-  \ 'lsp',
-  \ 'telescope',
-  \ 'neerdtree',
-  \ 'plug',
-  "\ 'treesitter',
-  \ 'todo-commets',
-  \ 'tree',
-  \ 'indent-blankline',
+  \   'aerial',
+  \   'bufferline',
+  \   'cmp',
+  \   'dap-ui',
+  \   'gitsigns',
+  \   'illuminate',
+  \   'indent-blankline',
+  \   'lazy',
+  \   'lspconfig',
+  \   'matchup',
+  \   'neo-tree',
+  \   'noice',
+  \   'null-ls',
+  \   'smoothcursor',
+  \   'substitute',
+  \   'surround',
+  \   'telescope',
+  \   'treesitter',
+  \   'ts-rainbow2',
+  \   'visual-multi',
+  \   'yanky'
   \ ]
 augroup enfocado_customization
   autocmd!

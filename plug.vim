@@ -5,7 +5,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug  'Shatur/neovim-ayu'
 "Plug 'morhetz/gruvbox'
 "Plug 'sainnhe/sonokai'
-Plug 'sainnhe/gruvbox-material'
+"Plug 'sainnhe/gruvbox-material'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 "Plug 'wuelnerdotexe/vim-enfocado'
 "Plug 'shaunsingh/nord.nvim'
@@ -13,7 +13,7 @@ Plug 'sainnhe/gruvbox-material'
 "Plug 'EdenEast/nightfox.nvim' "#2 
 "Plug 'mcchrish/zenbones.nvim'
 "Plug 'rktjmp/lush.nvim'"require zenbones
-"Plug 'kvrohit/mellow.nvim'
+Plug 'kvrohit/mellow.nvim'
 "Plug 'Everblush/nvim'
 
 "---- Visual
@@ -111,13 +111,12 @@ if has("nvim")
 
     "Colorea los comentarios en forma de TODO:
     Plug 'folke/todo-comments.nvim' 
-
   "------------
   
   "Sintaxis de arboles de lenguajes
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-  "Config Prettier 
+  "Config Prettier y Eslint
   Plug 'jose-elias-alvarez/null-ls.nvim' 
 
   "-------Debuger
