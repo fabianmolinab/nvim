@@ -35,6 +35,6 @@ source ~/.config/nvim/plug-settings/null-ls.lua
 source ~/.config/nvim/plug-settings/dap.lua
 source ~/.config/nvim/plug-settings/go.lua
 "source ~/.config/nvim/plug-settings/presence.lua
-"source ~/.config/nvim/plug-settings/tab-nine.lua
+source ~/.config/nvim/plug-settings/tab-nine.lua
 
 source ~/.config/nvim/plug-settings/luaSnips.lua

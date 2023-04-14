@@ -77,7 +77,7 @@ if has("nvim")
   Plug 'hrsh7th/cmp-cmdline'
   Plug 'onsails/lspkind-nvim' "Iconos del CMP
   Plug 'folke/lsp-colors.nvim' "Colores para LSP
-  "Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' } "AutoCompletado Tabnine
+  Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' } "AutoCompletado Tabnine
   
   "---- Barras de estado y pestañas
     Plug 'akinsho/bufferline.nvim', {'tags': 'v3.*'}
