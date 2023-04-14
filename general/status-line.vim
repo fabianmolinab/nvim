@@ -1,7 +1,8 @@
 " status bar colors
-au InsertEnter * hi statusline guifg=white guibg=#BF616A ctermfg=black ctermbg=magenta
-au InsertLeave * hi statusline guifg=black guibg=#88C0D0 ctermfg=black ctermbg=cyan
-hi statusline guifg=black guibg=#88C0D0 ctermfg=black ctermbg=cyan
+au InsertEnter * hi statusline guifg=#878787 guibg=#474747
+au InsertLeave * hi statusline guifg=#878787 guibg=#282828
+
+hi statusline guifg=black guibg=#282828
 
 " Status line
 " default: set statusline=%f\ %h%w%m%r\ %=%(%l,%c%V\ %=\ %P%)
@@ -43,9 +44,11 @@ set laststatus=2
 set noshowmode
 set statusline=
 set statusline+=%0*\ %n\                                 " Buffer number
-"set statusline+=%1*\ %<%F%m%r%h%w\                       " File path, modified, readonly, helpfile, preview
+
+set statusline+=%1*\ %<%F%m%r%h%w\                       " File path, modified, readonly, helpfile, preview
+
 set statusline+=%#LineNr#
-set statusline+=\ %t
+"set statusline+=\ %t
 set statusline+=%=                                       " Right Side
 set statusline+=%{StatuslineGit()}
 "set statusline+=%2*\ col:\ %02v\                         " Column number

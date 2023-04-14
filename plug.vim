@@ -1,67 +1,135 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
-"themes
-Plug 'kjwon15/vim-transparent'
-"Plug 'ayu-theme/ayu-vim'
-"Plug 'markvincze/panda-vim'
-"Plug 'sonph/onehalf', { 'rtp': 'vim' }
-Plug 'arcticicestudio/nord-vim' , { 'on':  'NERDTreeToggle' }
-"Plug 'drewtempelmeyer/palenight.vim'
+"Temas
+"Plug 'kjwon15/vim-transparent'
+"Plug  'Shatur/neovim-ayu'
 "Plug 'morhetz/gruvbox'
-"Plug 'joshdick/onedark.vim'
-"Plug 'franbach/miramare'
 "Plug 'sainnhe/sonokai'
 "Plug 'sainnhe/gruvbox-material'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+"Plug 'wuelnerdotexe/vim-enfocado'
+"Plug 'shaunsingh/nord.nvim'
+"Plug 'lunarvim/horizon.nvim' #1
+"Plug 'EdenEast/nightfox.nvim' "#2 
+"Plug 'mcchrish/zenbones.nvim'
+"Plug 'rktjmp/lush.nvim'"require zenbones
+Plug 'kvrohit/mellow.nvim'
+"Plug 'Everblush/nvim'
 
-"visual
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
-Plug 'ryanoasis/vim-devicons'
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'lilydjwg/colorizer'
-Plug 'sheerun/vim-polyglot' "Paquetes de coloración de sintaxis de lenguajes
+"---- Visual
+Plug 'kyazdani42/nvim-web-devicons' "Iconos modernos
+Plug 'lilydjwg/colorizer' "Coloreado de codigos exadecimales de colores
+"---
+"Sintaxis de Lenguajes 
+"Plug 'cakebaker/scss-syntax.vim'
+"Plug 'pangloss/vim-javascript'
+"Plug 'HerringtonDarkholme/yats.vim'
+"Plug 'maxmellon/vim-jsx-pretty'
+"Plug 'styled-components/vim-styled-components'
+"Plug 'wuelnerdotexe/vim-astro'
 
-" Web developer sintax
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'maxmellon/vim-jsx-pretty'
-"Plug 'heavenshell/vim-jsdoc', {
-"      \'for':['javascript','javascript.jsx','typescript'],
-"      \'do':'make install'
-"\}
-Plug 'styled-components/vim-styled-components'
+"------Git integracion
+  "Marcado de los cambios al costado 
+  Plug 'lewis6991/gitsigns.nvim'
 
-"Git integration
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-Plug 'nvim-lua/plenary.nvim'
-"Plug 'APZelos/blamer.nvim'
-Plug 'rbong/vim-flog'  "Git Log 
+  " Menu de cambios y de commits ':G'
+  Plug 'tpope/vim-fugitive'
+"--------
 
-"Functionality
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ap/vim-buftabline'
-Plug 'preservim/tagbar'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'easymotion/vim-easymotion'
-Plug 'alvan/vim-closetag'
-Plug 'tpope/vim-surround'
-Plug 'jbgutierrez/vim-better-comments' "Resaltado de better comments
+"------ Funcionalidades
+  "Busqueda keys en modo NORMAL, se usa pulsando 'f'
+  Plug 'easymotion/vim-easymotion'
 
-"tmux
+  "Plugin de busqueda
+  Plug 'nvim-telescope/telescope.nvim'
+
+  Plug 'tpope/vim-surround'
+
+  "Plugin para mover lineas en modo Normal o Visual, se usa con "ALT +{j,k}  
+  Plug 'matze/vim-move'
+
+  "Terminal integrada con 'CRTL + T'
+  Plug 'wuelnerdotexe/nerdterm'
+
+  "visual multiples lineas
+  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
+  "Comentar lineas de codigo en modo NORMAL
+  Plug 'scrooloose/nerdcommenter'
+"--------
+
+"------Tmux
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
-
-"code modification
-Plug 'scrooloose/nerdcommenter'
+"------
+"
 Plug 'godlygeek/tabular'
-Plug 'jiangmiao/auto-pairs'
-Plug 'mattn/emmet-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'dense-analysis/ale' "Configuración de ESLINT
+
+"---- Plugins de nvim
+if has("nvim")
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'williamboman/mason.nvim'
+  Plug 'williamboman/mason-lspconfig.nvim' "Instalador de servidores de LSP
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'hrsh7th/cmp-buffer'
+  Plug 'hrsh7th/nvim-cmp'
+  Plug 'hrsh7th/cmp-path'
+  Plug 'hrsh7th/cmp-cmdline'
+  Plug 'onsails/lspkind-nvim' "Iconos del CMP
+  Plug 'folke/lsp-colors.nvim' "Colores para LSP
+  Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' } "AutoCompletado Tabnine
+  
+  "---- Barras de estado y pestañas
+    Plug 'akinsho/bufferline.nvim', {'tags': 'v3.*'}
+    Plug 'nvim-lualine/lualine.nvim'
+  "----
+
+  "Snipets con LuaSnip
+  Plug 'L3MON4D3/LuaSnip' 
+  Plug 'saadparwaiz1/cmp_luasnip'
+  Plug 'rafamadriz/friendly-snippets'
+
+  "----- Funcionalidades de editor
+    Plug 'nvim-lua/plenary.nvim'
+
+    "Marcado de indentación
+    Plug 'lukas-reineke/indent-blankline.nvim'
+
+    "Auto parentesis y corchetes
+    Plug 'windwp/nvim-autopairs'
+
+    Plug 'MunifTanjim/nui.nvim' "Require neo-tree
+    Plug 'nvim-neo-tree/neo-tree.nvim'
+
+    "auto tag para html
+    Plug 'windwp/nvim-ts-autotag'
+
+    Plug 'mrjones2014/nvim-ts-rainbow'
+
+    "Inspirado en Git Lens de VS Code
+    "Plug "APZelos/blamer.nvim"
+
+    "Colorea los comentarios en forma de TODO:
+    Plug 'folke/todo-comments.nvim' 
+  "------------
+  
+  "Sintaxis de arboles de lenguajes
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+  "Config Prettier y Eslint
+  Plug 'jose-elias-alvarez/null-ls.nvim' 
+
+  "-------Debuger
+    Plug 'mfussenegger/nvim-dap'
+    Plug 'rcarriga/nvim-dap-ui' 
+  "-----
+  
+  " Configuracion de lenguaje go para nvim
+  Plug 'ray-x/go.nvim'
+  Plug 'ray-x/guihua.lua'
+  
+  "debuger go
+  "Plug 'leoluz/nvim-dap-go'
+endif
 
 call plug#end()

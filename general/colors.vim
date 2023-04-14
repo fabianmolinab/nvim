@@ -1,32 +1,29 @@
 "the most basic configurations
 syntax on
-"adjust java highlight to change the syntax highlighter
-highlight link JavaIdentifier NONE
-"adjust python highlight
-"let g:python_highlight_all = 1
+
 set termguicolors
 set background=dark
 
-    hi SignColumn guibg=none
-    hi CursorLineNR guibg=None
+    "hi SignColumn guibg=none
+    "hi CursorLineNR guibg=none
     "highlight Normal guibg=none
-    highlight LineNr guifg=#677693
-    highlight netrwDir guifg=#677693
-    highlight qfFileName guifg=#aed75f
-hi CursorLineNR guifg=#F99575
+    "highlight LineNr guifg=#677693
+    "highlight netrwDir guifg=#677693
+    "highlight qfFileName guifg=#aed75f
+"hi CursorLineNR guifg=#F99575
 set cursorline
 set cursorlineopt=number
-
+ 
 "Menu autocompletado
 highlight Pmenu guifg=#dee1e4 guibg=none
-"highlight PmenuSel guibg=#C14A4A guifg=#dee1e4
+"highlight PmenuSel guibg=#FAB795 guifg=black
 
 "Coc Error Color
-hi! CocErrorSign guifg=#F66B0E
+"hi! CocErrorSign guifg=#9D2B25
 
 " TSX sintax
 " dark red
-"hi tsxTagName guifg=#84EEA2
+"hi tsxTagName guifg=#FAB795
 "hi tsxComponentName guifg=#2DC3DA cterm=italic
 "hi tsxCloseComponentName guifg=#84EEA2 cterm=italic
 
@@ -45,11 +42,11 @@ hi! CocErrorSign guifg=#F66B0E
 " dark-grey
 "hi tsxTypes guifg=#2DC3DA cterm=italic
 
-hi ReactState guifg=#C14A4A cterm=italic
-hi ReactProps guifg=#D19A66 cterm=bold
-"hi ApolloGraphQL guifg=#CB886B
-hi Events ctermfg=204 guifg=#2DC3DA
-hi ReduxKeywords ctermfg=204 guifg=#C678DD
-hi ReduxHooksKeywords ctermfg=204 guifg=#C176A7
-hi WebBrowser ctermfg=204 guifg=#2DC3DA
-hi ReactLifeCycleMethods ctermfg=204 guifg=#D19A66
+"hi ReactState guifg=#C14A4A cterm=italic
+"hi ReactProps guifg=#FAB795 
+""hi ApolloGraphQL guifg=#CB886B
+"hi Events ctermfg=204 guifg=#2DC3DA
+"hi ReduxKeywords ctermfg=204 guifg=#C678DD
+"hi ReduxHooksKeywords ctermfg=204 guifg=#C176A7
+"hi WebBrowser ctermfg=204 guifg=#2DC3DA
+"hi ReactLifeCycleMethods ctermfg=204 guifg=#D19A66
