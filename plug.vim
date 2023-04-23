@@ -10,10 +10,11 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'wuelnerdotexe/vim-enfocado'
 "Plug 'shaunsingh/nord.nvim'
 "Plug 'EdenEast/nightfox.nvim' "#2 
-"Plug 'mcchrish/zenbones.nvim'
-"Plug 'rktjmp/lush.nvim'"require zenbones
-Plug 'kvrohit/mellow.nvim'
+Plug 'mcchrish/zenbones.nvim'
+Plug 'rktjmp/lush.nvim'"require zenbones
+"Plug 'kvrohit/mellow.nvim'
 "Plug 'Everblush/nvim'
+"Plug 'ishan9299/nvim-solarized-lua'
 
 "---- Visual
 Plug 'kyazdani42/nvim-web-devicons' "Iconos modernos
@@ -79,7 +80,7 @@ if has("nvim")
   Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' } "AutoCompletado Tabnine
   
   "---- Barras de estado y pestañas
-    Plug 'akinsho/bufferline.nvim', {'tags': 'v3.*'}
+    "Plug 'akinsho/bufferline.nvim', {'tags': 'v3.*'}
     Plug 'nvim-lualine/lualine.nvim'
   "----
 

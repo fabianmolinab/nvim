@@ -19,17 +19,17 @@ require'nvim-treesitter.configs'.setup {
     }
   },
   rainbow = {
-    enable = true,
-    colors = {
-      "#90b99f",
-      "#e6b99d",
-      "#ea83a5",
-      "#aca1cf",
-      "#f5a191",
-      "#c1c0d4",
-      "#f591b2"
-      },
-    extended_mode = true,
-    max_file_line = nil
+    --enable = true,
+    --colors = {
+      --"#90b99f",
+      --"#e6b99d",
+      --"#ea83a5",
+      --"#aca1cf",
+      --"#f5a191",
+      --"#c1c0d4",
+      --"#f591b2"
+      --},
+    --extended_mode = true,
+    --max_file_line = nil
   }
 }
