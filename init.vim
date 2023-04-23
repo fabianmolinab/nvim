@@ -1,26 +1,24 @@
 " First list plugins to install
 source ~/.config/nvim/plug.vim
-"source ~/.config/nvim/general/status-line.vim
 
 "Import the general settings
-source ~/.config/nvim/general/settings.vim
-source ~/.config/nvim/general/keys.vim
+source ~/.config/nvim/general/settings.lua
+source ~/.config/nvim/general/keys.lua
 
 "Theme
 source ~/.config/nvim/themes/zenbones.lua
-source ~/.config/nvim/general/colors.vim
+source ~/.config/nvim/general/colors.lua
 
 "Import plugin settings
-source ~/.config/nvim/plug-settings/easy-motion.vim
-source ~/.config/nvim/plug-settings/web-devicons.vim
+source ~/.config/nvim/plug-settings/easy-motion.lua
+source ~/.config/nvim/plug-settings/web-devicons.lua
 
 "LSP
 source ~/.config/nvim/plug-settings/mason.lua
-source ~/.config/nvim/plug-settings/lsp.vim
-source ~/.config/nvim/plug-settings/nvim-cmp.vim
+source ~/.config/nvim/plug-settings/lsp.lua
+source ~/.config/nvim/plug-settings/cmp.lua
 source ~/.config/nvim/plug-settings/lspkind.lua
 
-"Lua Configs Plugins
 "source ~/.config/nvim/plug-settings/bufferline.lua
 source ~/.config/nvim/plug-settings/lualine.lua
 source ~/.config/nvim/plug-settings/autopairs.lua

@@ -1,6 +1,7 @@
-if !exists('g:loaded_devicons') | finish | endif
+if vim.g.loaded_devicons == nil then
+    return
+end
 
-lua << EOF
 require'nvim-web-devicons'.setup {
  -- your personnal icons can go here (to override)
  -- DevIcon will be appended to `name`
@@ -10,4 +11,3 @@ require'nvim-web-devicons'.setup {
  -- will get overriden by `get_icons` option
  default = true;
 }
-EOF

@@ -106,9 +106,6 @@ if has("nvim")
 
     Plug 'mrjones2014/nvim-ts-rainbow'
 
-    "Inspirado en Git Lens de VS Code
-    "Plug "APZelos/blamer.nvim"
-
     "Colorea los comentarios en forma de TODO:
     Plug 'folke/todo-comments.nvim' 
   "------------

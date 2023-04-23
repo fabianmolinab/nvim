@@ -1,10 +1,9 @@
-lua << EOF
 --LSP Instaler
 local nvim_lsp = require('lspconfig')
 
 -- Set up completion using nvim_cmp with LSP source
 local capabilities = require('cmp_nvim_lsp').default_capabilities(
-  vim.lsp.protocol.make_client_capabilities()
+vim.lsp.protocol.make_client_capabilities()
 )
 
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -25,12 +24,12 @@ local on_attach = function(client, bufnr)
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
-    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-    vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
-    vim.keymap.set('n', '<leader>el', vim.diagnostic.setloclist, bufopts)
-    vim.keymap.set('n', '<leader>er', vim.diagnostic.open_float, bufopts)
-  end
+  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
+  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+  vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
+  vim.keymap.set('n', '<leader>el', vim.diagnostic.setloclist, bufopts)
+  vim.keymap.set('n', '<leader>er', vim.diagnostic.open_float, bufopts)
+end
 
 local lsp_flags = {
   -- This is the default in Nvim 0.7+
@@ -41,13 +40,13 @@ local lsp_flags = {
 
 --Typescript, Javascript, JSX, TSX 
 require('lspconfig')['tsserver'].setup{
-   capabilities = capabilities,
-   on_attach = on_attach,
-   flags = lsp_flags,
+  capabilities = capabilities,
+  on_attach = on_attach,
+  flags = lsp_flags,
 }
 
 --Go Server
- require'lspconfig'.gopls.setup{
+require'lspconfig'.gopls.setup{
   on_attach = on_attach,
   capabilities = capabilities,
   flags = lsp_flags,
@@ -79,13 +78,13 @@ require('lspconfig')['cssls'].setup {
   },
   settings = {
     css = {
-    validate = true
-  },
+      validate = true
+    },
     less = {
       validate = true
     },
     scss = {
-     validate = true
+      validate = true
     }
   },
   single_file_support = true, 
@@ -109,9 +108,9 @@ require('lspconfig')['lua_ls'].setup{}
 
 --ESLINT Server Config
 require("lspconfig").eslint.setup({
-    on_attach = on_attach,
-    flags = lsp_flags,
-    settings = { format = false },
+  on_attach = on_attach,
+  flags = lsp_flags,
+  settings = { format = false },
 })
 
 --- StyleLint Config
@@ -122,11 +121,11 @@ require('lspconfig')['stylelint_lsp'].setup{
   handlers = handlers,
   on_attach = on_attach, 
   settings = {
-      autoFixOnSave = true,
-      autoFixOnFormat = true,
-      validateOnType = true      
-      -- other settings...
-    }
+    autoFixOnSave = true,
+    autoFixOnFormat = true,
+    validateOnType = true      
+    -- other settings...
+  }
 }
 
 --JSON Lenguaje
@@ -137,27 +136,25 @@ require('lspconfig')['jsonls'].setup{
 
 -- Tailwind 
 -- require("lspconfig").tailwindcss.setup({
- --   on_attach = on_attach,
+  --   on_attach = on_attach,
   --  flags = lsp_flags,
-   -- capabilities = capabilities,
- --})
+  -- capabilities = capabilities,
+  --})
 
---LSP Colors
-require("lsp-colors").setup({
-  Error = "#db4b4b",
-  Warning = "#e0af68",
-  Information = "#0db9d7",
-  Hint = "#10B981"
-})
+  --LSP Colors
+  require("lsp-colors").setup({
+    Error = "#db4b4b",
+    Warning = "#e0af68",
+    Information = "#0db9d7",
+    Hint = "#10B981"
+  })
 
--- Errors hover LSP
-vim.diagnostic.config({
-  underline = true,
-  virtual_text = false,
-  update_in_insert = false
-})
+  -- Errors hover LSP
+  vim.diagnostic.config({
+    underline = true,
+    virtual_text = false,
+    update_in_insert = false
+  })
 
--- Show line diagnostics automatically in hover window
-vim.o.updatetime = 250
-
-EOF
+  -- Show line diagnostics automatically in hover window
+  vim.o.updatetime = 250
