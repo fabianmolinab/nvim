@@ -7,7 +7,7 @@ source ~/.config/nvim/general/settings.vim
 source ~/.config/nvim/general/keys.vim
 
 "Theme
-source ~/.config/nvim/themes/mellow.lua
+source ~/.config/nvim/themes/zenbones.lua
 source ~/.config/nvim/general/colors.vim
 
 "Import plugin settings
@@ -21,7 +21,7 @@ source ~/.config/nvim/plug-settings/nvim-cmp.vim
 source ~/.config/nvim/plug-settings/lspkind.lua
 
 "Lua Configs Plugins
-source ~/.config/nvim/plug-settings/bufferline.lua
+"source ~/.config/nvim/plug-settings/bufferline.lua
 source ~/.config/nvim/plug-settings/lualine.lua
 source ~/.config/nvim/plug-settings/autopairs.lua
 source ~/.config/nvim/plug-settings/neo-tree.lua
