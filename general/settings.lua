@@ -1,39 +1,45 @@
+local opt = vim.opt
+local g = vim.g
+local a = vim.api
+
 -- Establece el map leader
-vim.g.mapleader = " "
+g.mapleader = " "
 
 -- Configuraciones generales
-vim.o.encoding = "utf-8"
-vim.o.mouse = ""
-vim.o.clipboard = "unnamedplus"
-vim.o.errorbells = false
-vim.o.list = false
-vim.o.cmdheight = 1
-vim.o.sw = 2
-vim.o.expandtab = true
-vim.o.smartindent = true
-vim.o.breakindent = true
-vim.o.number = true
-vim.o.rnu = true
-vim.o.numberwidth = 2
-vim.o.swapfile = false
-vim.o.backup = false
-vim.o.undodir = "~/.config/nvim/.undodir/"
-vim.o.undofile = true
-vim.o.incsearch = true
-vim.o.ignorecase = true
-vim.o.cursorline = true
-vim.o.splitbelow = true
-vim.o.splitright = true
-vim.o.showmode = false
+opt.encoding = "utf-8"
+opt.mouse = ""
+opt.clipboard = "unnamedplus"
+opt.errorbells = false
+opt.list = false
+opt.cmdheight = 1
+opt.sw = 2
+opt.expandtab = true
+opt.smartindent = true
+opt.breakindent = true
+opt.number = true
+opt.rnu = true
+opt.numberwidth = 2
+opt.swapfile = false
+opt.backup = false
+--vim.o.undodir = "~/.config/nvim/.undodir/"
+opt.undofile = true
+opt.incsearch = true
+opt.ignorecase = true
+opt.cursorline = true
+opt.splitbelow = true
+opt.splitright = true
+opt.showmode = false
+
+--TODO: Cambiar las siguientes configuraciones a un nuevo archivo
 
 -- Configuración para archivos JSX grandes
-vim.api.nvim_command('autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart')
-vim.api.nvim_command('autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear')
+a.nvim_command('autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart')
+a.nvim_command('autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear')
 
 -- Configuración para formatear con Eslint
-vim.api.nvim_command('autocmd BufRead,BufNewFile *.astro set filetype=astro')
-vim.api.nvim_command('autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.astro EslintFixAll')
+a.nvim_command('autocmd BufRead,BufNewFile *.astro set filetype=astro')
+a.nvim_command('autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.astro EslintFixAll')
 
 -- Configuración de altura de ventanas flotantes
-vim.o.pumheight = 6
-vim.o.cmdwinheight = 6
+opt.pumheight = 6
+opt.cmdwinheight = 6

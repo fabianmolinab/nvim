@@ -1,13 +1,11 @@
--- Habilitar syntax highlighting
-vim.cmd('syntax on')
+local opt = vim.opt
 
 -- Configurar termguicolors y background
-vim.opt.termguicolors = true
-vim.opt.background = 'dark'
+opt.termguicolors = true
 
 -- Configurar cursorline y cursorlineopt
-vim.opt.cursorline = true
-vim.opt.cursorlineopt = 'number'
+opt.cursorline = true
+opt.cursorlineopt = 'number'
 
--- Configurar menú de autocompletado
+-- Configurar menú de autocompletado a trasparente
 vim.cmd('highlight Pmenu guifg=#dee1e4 guibg=none')
