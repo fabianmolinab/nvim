@@ -10,9 +10,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'wuelnerdotexe/vim-enfocado'
 "Plug 'shaunsingh/nord.nvim'
 "Plug 'EdenEast/nightfox.nvim' "#2 
-Plug 'mcchrish/zenbones.nvim'
-Plug 'rktjmp/lush.nvim'"require zenbones
-"Plug 'kvrohit/mellow.nvim'
+"Plug 'mcchrish/zenbones.nvim'
+"Plug 'rktjmp/lush.nvim'"require zenbones
+Plug 'kvrohit/mellow.nvim'
 "Plug 'Everblush/nvim'
 "Plug 'ishan9299/nvim-solarized-lua'
 
@@ -104,7 +104,7 @@ if has("nvim")
     "auto tag para html
     Plug 'windwp/nvim-ts-autotag'
 
-    Plug 'mrjones2014/nvim-ts-rainbow'
+    "Plug 'mrjones2014/nvim-ts-rainbow'
 
     "Colorea los comentarios en forma de TODO:
     Plug 'folke/todo-comments.nvim' 
