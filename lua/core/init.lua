@@ -1,13 +1,10 @@
--- core/init.lua
-
 local M = {}
 
 -- Importar el módulo general y todos sus archivos
 M.general = {
-  settings = require('core.general.settings'),
-  colors = require('core.general.colors'),
-  keys = require('core.general.keys')
+  settings = require('core.settings'),
+  colors = require('core.colors'),
+  keys = require('core.keys')
 }
 
--- Exportar el módulo
 return M
