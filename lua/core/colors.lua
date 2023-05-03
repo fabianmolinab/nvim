@@ -2,6 +2,7 @@ local opt = vim.opt
 
 -- Configurar termguicolors y background
 opt.termguicolors = true
+opt.background = "dark"
 
 -- Configurar cursorline y cursorlineopt
 opt.cursorline = true
