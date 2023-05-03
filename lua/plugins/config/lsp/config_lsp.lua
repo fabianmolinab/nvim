@@ -150,9 +150,14 @@ require('lspconfig')['jsonls'].setup {
 
 -- Errors hover LSP
 vim.diagnostic.config({
-  underline = true,
+  --underline = true,
   virtual_text = false,
-  update_in_insert = false
+  update_in_insert = false,
+  severity_sort = false,
+  float = {
+    border = 'rounded',
+    source = 'always',
+  }
 })
 
 -- Show line diagnostics automatically in hover window
