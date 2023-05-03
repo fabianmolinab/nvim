@@ -26,17 +26,19 @@ return {
       cmp.setup({
         performance = { debounce = 300, throttle = 40 },
         mapping = {
-          ['<C-b>'] = cmp.mapping.scroll_docs( -4),
+          ["<C-k>"] = cmp.mapping.select_prev_item(),
+          ["<C-j>"] = cmp.mapping.select_next_item(),
+          ['<C-d>'] = cmp.mapping.scroll_docs(-4),
           ['<C-f>'] = cmp.mapping.scroll_docs(4),
-          ['<C-e>'] = cmp.mapping.abort(),
-          ['<CR>'] = cmp.mapping.confirm({ select = false }),
+
+          ['<CR>'] = cmp.mapping.confirm({ select = true}),
 
           --- Tab tigger seleccion
           ['<Tab>'] = cmp.mapping(function(fallback)
-            if cmp.visible() then
-              cmp.select_next_item()
-            elseif luasnip.expand_or_jumpable() then
+            if luasnip.expand_or_jumpable() then
               luasnip.expand_or_jump()
+            elseif cmp.visible() then
+              cmp.confirm({select = true})
             elseif has_words_before() then
               cmp.complete()
             else
@@ -47,8 +49,8 @@ return {
           ['<S-Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_prev_item()
-            elseif luasnip.jumpable( -1) then
-              luasnip.jump( -1)
+            elseif luasnip.jumpable(-1) then
+              luasnip.jump(-1)
             else
               fallback()
             end
@@ -63,7 +65,6 @@ return {
             end
           end,
         },
-        completion = { keyword_length = 1 },
         formatting = {
           fields = { "abbr", "kind" },
           format = lspkind.cmp_format({
@@ -71,12 +72,11 @@ return {
           }),
         },
         sources = {
-          { name = 'path',     keyword_length = 1, priority = 6 },
-          { name = 'nvim_lsp', keyword_length = 3, priority = 3 },
+          { name = 'path', },
+          { name = 'nvim_lsp', keyword_length = 1 },
           {
             name = 'buffer',
-            keyword_length = 3,
-            priority = 1,
+            keyword_length = 2,
             option = {
               get_bufnrs = function()
                 local bufs = {}
@@ -90,13 +90,14 @@ return {
               end,
             },
           },
-          { name = 'luasnip',     keyword_length = 3, priority = 4 },
-          { name = 'cmp_tabnine', keyword_length = 3, priority = 2 },
+          { name = 'luasnip',     keyword_length = 1, priority = 1 },
+          { name = 'cmp_tabnine', keyword_length = 1, },
+          { name = 'emoji' },
         },
         window = {
           documentation = cmp.config.window.bordered(),
         },
-        experimental = { ghost_text = true },
+        experimental = { ghost_text = false},
       })
 
       -- Set configuration for specific filetype.
@@ -132,12 +133,17 @@ return {
         'confirm_done',
         cmp_autopairs.on_confirm_done()
       )
+      -- Configuración de altura de ventanas flotantes
+      vim.opt.pumheight = 10
+      vim.opt.cmdwinheight = 10
 
       vim.cmd [[highlight! default link CmpItemKind CmpItemMenuDefault]]
     end,
   },
   { "hrsh7th/cmp-buffer", event = "InsertEnter", dependencies = "hrsh7th/nvim-cmp" },
   { "hrsh7th/cmp-path",   event = "InsertEnter", dependencies = "hrsh7th/nvim-cmp" },
+  { "hrsh7th/cmp-emoji",   event = "InsertEnter", dependencies = "hrsh7th/nvim-cmp" },
+
   {
     "hrsh7th/cmp-cmdline",
     event = "CmdlineEnter",

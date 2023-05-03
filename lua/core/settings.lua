@@ -36,10 +36,3 @@ opt.showmode = false
 a.nvim_command('autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart')
 a.nvim_command('autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear')
 
--- Configuración para formatear con Eslint
-a.nvim_command('autocmd BufRead,BufNewFile *.astro set filetype=astro')
-a.nvim_command('autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.astro EslintFixAll')
-
--- Configuración de altura de ventanas flotantes
-opt.pumheight = 6
-opt.cmdwinheight = 6
