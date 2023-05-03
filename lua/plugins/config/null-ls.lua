@@ -26,6 +26,8 @@ return {
       sources = {
         null_ls.builtins.diagnostics.jsonlint,
         null_ls.builtins.diagnostics.selene,
+        null_ls.builtins.formatting.gofumpt,
+        null_ls.builtins.formatting.goimports,
         --require("null-ls").builtins.diagnostics.markdownlint,
         null_ls.builtins.formatting.prettierd.with({
           condition = function(utils)
