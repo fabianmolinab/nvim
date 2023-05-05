@@ -91,7 +91,8 @@ return {
             },
           },
           { name = 'luasnip',     keyword_length = 1, priority = 1 },
-          { name = 'cmp_tabnine', keyword_length = 1, },
+          { name = 'cmp_tabnine', keyword_length = 1, priority = 2 },
+          { name = 'emmet', keyword_length = 1, priority = 5 },
           { name = 'emoji' },
         },
         window = {
@@ -109,25 +110,6 @@ return {
           { max_item_count = 10 },
         })
       })
-
-      -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
-      cmp.setup.cmdline('/', {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = {
-          { name = 'buffer' }
-        }
-      })
-
-      -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-      cmp.setup.cmdline(':', {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = cmp.config.sources({
-          { name = 'path' }
-        }, {
-          { name = 'cmdline' }
-        })
-      })
-
       --Autopairs
       cmp.event:on(
         'confirm_done',

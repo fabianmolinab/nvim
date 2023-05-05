@@ -15,10 +15,10 @@ return {
     --vim.cmd "colorscheme rosebones"
     --vim.g.rosebones = { transparent_background = true }
 
-    vim.cmd "colorscheme nordbones"
-    vim.g.nordbones = { transparent_background = true }
+    --vim.cmd "colorscheme nordbones"
+    --vim.g.nordbones = { transparent_background = true }
 
-    --vim.cmd "colorscheme neobones"
+    vim.cmd "colorscheme neobones"
     --vim.cmd "colorscheme tokyobones"
     --vim.cmd "colorscheme kanagawabones"
     --vim.cmd "colorscheme randombones"
