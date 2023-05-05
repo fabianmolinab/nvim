@@ -5,13 +5,9 @@ return {
     lazy = true,
     dependencies = "hrsh7th/nvim-cmp",
     build = "./install.sh",
-    init = function()
-      vim.api.nvim_create_autocmd("BufRead", {
-        callback = function() require("cmp_tabnine"):prefetch(vim.api.nvim_call_function("expand", { "%:p" })) end,
-      })
-    end,
     config = function()
-      require("cmp_tabnine.config").setup({
+      local tabnine = require('cmp_tabnine.config')
+      tabnine.setup({
         ignored_file_types = {
           ["aerial"] = true,
           ["checkhealth"] = true,
@@ -28,7 +24,6 @@ return {
           ["noice"] = true,
           ["notify"] = true,
           ["null-ls-info"] = true,
-          ["packer"] = true,
           ["qf"] = true,
           ["TelescopePrompt"] = true,
         },
