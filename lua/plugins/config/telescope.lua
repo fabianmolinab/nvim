@@ -2,7 +2,7 @@ return {
   "nvim-telescope/telescope.nvim",
   dependencies = {
     { "nvim-lua/plenary.nvim" },
-    { "kyazdani42/nvim-web-devicons" },
+    { "nvim-tree/nvim-web-devicons" },
   },
   keys = {
     { "<leader>f",  function() require("telescope.builtin").find_files() end },

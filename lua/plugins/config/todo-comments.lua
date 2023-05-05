@@ -3,9 +3,9 @@ return {
   dependencies = {
     "nvim-telescope/telescope.nvim", 
     "nvim-lua/plenary.nvim",
-    {    
+    {
       "folke/trouble.nvim",
-      dependencies = "kyazdani42/nvim-web-devicons",
+      dependencies = "nvim-tree/nvim-web-devicons",
     }
   },
   keys = {

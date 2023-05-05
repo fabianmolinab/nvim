@@ -1,5 +1,5 @@
 return {
-    "kyazdani42/nvim-web-devicons",
+    'nvim-tree/nvim-web-devicons',
     config = function()
         if vim.g.loaded_devicons == nil then
             return
