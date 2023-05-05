@@ -1,6 +1,5 @@
 {
   "LuaSnip": { "branch": "master", "commit": "e77fa9ad0b1f4fc6cddf54e51047e17e90c7d7ed" },
-  "bufferline.nvim": { "branch": "main", "commit": "41660189da6951d14436147dff30ed7f0d12ed01" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-cmdline": { "branch": "main", "commit": "5af1bb7d722ef8a96658f01d6eb219c4cf746b32" },
   "cmp-dap": { "branch": "master", "commit": "d16f14a210cd28988b97ca8339d504533b7e09a4" },
@@ -25,7 +24,6 @@
   "neogen": { "branch": "main", "commit": "9c17225aac94bdbf93baf16e1b2d2c6dcffb0901" },
   "nerdcommenter": { "branch": "master", "commit": "1fe9e1cfea9bb0dbc77174d776759ed67899ee50" },
   "nerdterm": { "branch": "main", "commit": "5fa91afa32acbcc58a492d3dd59a8aef8d71295a" },
-  "nightfox.nvim": { "branch": "main", "commit": "a53ff3f99c3cf4e598c5febad367fd3cad341b90" },
   "npairs-integrate-upair": { "branch": "main", "commit": "9e898dcb1d648796663791b78ae348161c4031f8" },
   "nui.nvim": { "branch": "main", "commit": "698e75814cd7c56b0dd8af4936bcef2d13807f3c" },
   "null-ls.nvim": { "branch": "main", "commit": "33b853a3933eed3137cd055aac4e539e69832ad0" },
@@ -47,6 +45,7 @@
   "ultimate-autopair.nvim": { "branch": "main", "commit": "28592a9fb36473fff5467feb5d728701e6291e3a" },
   "vim-easymotion": { "branch": "master", "commit": "b3cfab2a6302b3b39f53d9fd2cd997e1127d7878" },
   "vim-fugitive": { "branch": "master", "commit": "5f0d280b517cacb16f59316659966c7ca5e2bea2" },
+  "vim-horizon": { "branch": "master", "commit": "3864f6281b0b852712d8e9ef86edde512f94c1d2" },
   "vim-move": { "branch": "master", "commit": "a4bbedda7ef516b4a1b74d145cd642297e82e800" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "vim-visual-multi": { "branch": "master", "commit": "724bd53adfbaf32e129b001658b45d4c5c29ca1a" }
