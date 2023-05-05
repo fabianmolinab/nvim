@@ -1,7 +1,7 @@
 return {
   "wuelnerdotexe/vim-enfocado",
-  lazy = true,
-  enabled = false,
+  lazy = false,
+  enabled = true,
   priority = 1000,
   init = function()
     vim.api.nvim_set_var("enfocado_plugins", {
