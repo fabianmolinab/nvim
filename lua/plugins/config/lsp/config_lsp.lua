@@ -148,7 +148,7 @@ require('lspconfig')['jsonls'].setup {
 --})
 
 
--- Errors hover LSP
+-- Diagnosticos de LSP
 vim.diagnostic.config({
   --underline = true,
   virtual_text = false,
@@ -159,6 +159,18 @@ vim.diagnostic.config({
     source = 'always',
   }
 })
+
+local signs = {
+  Hint = "",
+  Info = "",
+  Warn = "",
+  Error = "",
+}
+
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+end
 
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250
