@@ -93,7 +93,6 @@ return {
           { name = 'luasnip',     keyword_length = 1, priority = 1 },
           { name = 'cmp_tabnine', keyword_length = 1, priority = 2 },
           { name = 'emmet', keyword_length = 1, priority = 5 },
-          { name = 'emoji' },
         },
         window = {
           documentation = cmp.config.window.bordered(),
@@ -124,7 +123,6 @@ return {
   },
   { "hrsh7th/cmp-buffer", event = "InsertEnter", dependencies = "hrsh7th/nvim-cmp" },
   { "hrsh7th/cmp-path",   event = "InsertEnter", dependencies = "hrsh7th/nvim-cmp" },
-  { "hrsh7th/cmp-emoji",   event = "InsertEnter", dependencies = "hrsh7th/nvim-cmp" },
 
   {
     "hrsh7th/cmp-cmdline",
