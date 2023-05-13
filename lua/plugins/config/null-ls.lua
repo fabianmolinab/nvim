@@ -2,6 +2,19 @@
 -- FIX: Comprobar cuando cargar el plugin si al iniciar o con un key
 return {
   "jose-elias-alvarez/null-ls.nvim",
+  event = { "BufNewFile", "BufRead", "BufAdd" },
+ dependencies = {
+      "nvim-lua/plenary.nvim",
+      {
+        "jay-babu/mason-null-ls.nvim",
+        dependencies = "williamboman/mason.nvim",
+        config = function()
+          require("mason-null-ls").setup({
+            ensure_installed = { "jsonlint",  "prettierd", "gofumpt", "goimports", "selene"  },
+          })
+        end,
+      },
+    },
   config = function()
     local null_ls = require("null-ls")
 
