@@ -3,17 +3,10 @@ return {
   dependencies = {
     { "nvim-lua/plenary.nvim" },
     { "nvim-tree/nvim-web-devicons" },
-  },
-  keys = {
-    { "<leader>f",  function() require("telescope.builtin").find_files() end },
-    { "<leader>a",  function() require("telescope.builtin").live_grep() end },
-    { "<leader>mf", function() require("telescope.builtin").marks() end },
-    { "<leader>ls", function() require("telescope.builtin").git_commits() end },
-    { "<leader>ag", function() require("telescope.builtin").git_files() end },
-    { "<leader>of", function() require("telescope.builtin").oldfiles() end },
-    { "<leader>b",  function() require("telescope.builtin").buffers() end },
+    {"nvim-telescope/telescope-file-browser.nvim"}
   },
   config = function()
+    local fb_actions = require("telescope._extensions.file_browser.actions")
     require('telescope').setup {
       initial_mode = "insert",
       defaults = {
@@ -36,13 +29,39 @@ return {
           theme = "ivy"
         },
         buffers = {
+          initial_mode = "normal",
           ignore_current_buffer = true,
           sort_mru = true,
           theme = "dropdown"
         }
       },
       extensions = {
+        file_browser = {
+          initial_mode = "normal",
+          defaults = {
+            layout_config = {
+              vertical = { width = 0.5 }
+            },
+            file_ignore_patterns = { "node_modules", ".git" }
+          },
+          theme = "dropdown",
+          cwd_to_path = true,
+          grouped = true,
+          hidden = true,
+          display_stat = {
+            date = false, mode = false
+          },
+          mappings = {
+            ["n"] = {
+              ["a"] = fb_actions.create,
+              ["c"] = fb_actions.copy,
+              ["x"] = fb_actions.remove,
+            }
+          }
+        },
       }
     }
+    require("telescope").load_extension "file_browser"
+    vim.cmd("autocmd VimEnter * :Telescope file_browser")
   end
 }
