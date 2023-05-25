@@ -28,6 +28,17 @@ return {
         git_commits = {
           theme = "ivy"
         },
+        git_status = {
+          git_icons = {
+            added = "A",
+            deleted = "D",
+            changed = "M",
+            renamed = "R",
+            copied = "C",
+            untracked = "U",
+            unmerged = "?",
+          },
+        },
         buffers = {
           initial_mode = "normal",
           ignore_current_buffer = true,
@@ -50,6 +61,15 @@ return {
           hidden = true,
           display_stat = {
             date = false, mode = false
+          },
+          git_icons = {
+            added = "A",
+            deleted = "D",
+            changed = "M",
+            renamed = "R",
+            copied = "C",
+            untracked = "u",
+            unmerged = "?",
           },
           mappings = {
             ["n"] = {

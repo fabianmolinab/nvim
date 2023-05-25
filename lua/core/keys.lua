@@ -60,7 +60,7 @@ a.nvim_set_keymap('n', '<Leader>f', '<cmd>lua require(\'telescope.builtin\').fin
 a.nvim_set_keymap('n', '<Leader>a', '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>', { noremap = true })
 a.nvim_set_keymap('n', '<Leader>mf', '<cmd>lua require(\'telescope.builtin\').marks()<cr>', { noremap = true })
 -- Lista de commits
-a.nvim_set_keymap('n', '<Leader>ls', '<cmd>lua require(\'telescope.builtin\').git_commits()<cr>', { noremap = true })
+a.nvim_set_keymap('n', '<Leader>co', '<cmd>lua require(\'telescope.builtin\').git_commits()<cr>', { noremap = true })
 -- Buscar archivos de git
 a.nvim_set_keymap('n', '<Leader>ag', '<cmd>lua require(\'telescope.builtin\').git_files()<cr>', { noremap = true })
 -- Lista los archivos o ventanas cerradas

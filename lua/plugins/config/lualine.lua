@@ -4,8 +4,8 @@ return {
   config = function()
     require('lualine').setup {
       options = {
-        { icons_enabled = true },
-        { theme = "auto" },
+        icons_enabled = true ,
+        theme = "enfocado",
         section_separators = '',
         component_separators = '',
         refresh = {
