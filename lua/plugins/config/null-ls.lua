@@ -1,5 +1,4 @@
 -- Este plugin permite el auto save con Prettier y Eslint
--- FIX: Comprobar cuando cargar el plugin si al iniciar o con un key
 return {
   "jose-elias-alvarez/null-ls.nvim",
   event = { "BufNewFile", "BufRead", "BufAdd" },
