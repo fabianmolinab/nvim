@@ -9,7 +9,7 @@ return {
         dependencies = "williamboman/mason.nvim",
         config = function()
           require("mason-null-ls").setup({
-            ensure_installed = { "jsonlint",  "prettierd", "gofumpt", "goimports", "selene"  },
+            ensure_installed = { "jsonlint", "prettierd", "selene" },
           })
         end,
       },
@@ -38,8 +38,8 @@ return {
       sources = {
         null_ls.builtins.diagnostics.jsonlint,
         null_ls.builtins.diagnostics.selene,
-        null_ls.builtins.formatting.gofumpt,
-        null_ls.builtins.formatting.goimports,
+        --null_ls.builtins.formatting.gofumpt,
+        --null_ls.builtins.formatting.goimports,
         --require("null-ls").builtins.diagnostics.markdownlint,
         null_ls.builtins.formatting.prettierd.with({
           condition = function(utils)
