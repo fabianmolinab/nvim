@@ -68,7 +68,7 @@ a.nvim_set_keymap('n', '<Leader>of', '<cmd>lua require(\'telescope.builtin\').ol
 -- Lista buffers o pestañas abiertos
 a.nvim_set_keymap('n', '<Leader>b', '<cmd>lua require(\'telescope.builtin\').buffers()<cr>', { noremap = true })
 
-a.nvim_set_keymap('n', '<Leader>p', "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>", {noremap = true})
+--a.nvim_set_keymap('n', '<Leader>p', "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>", {noremap = true})
 ------
 -- Todo Busqueda telescope
 a.nvim_set_keymap('n', '<leader>td', ':TodoTelescope<CR>', {})
@@ -101,5 +101,5 @@ a.nvim_set_keymap('n', '<leader>ds', ':DapTerminate<CR>', { noremap = true })   
 a.nvim_set_keymap('n', '<leader>du', ':lua require("dapui").toggle()<CR>', { noremap = true })
 
 -- Neotree
---a.nvim_set_keymap('n', '<leader>p', ':NeoTreeFocusToggle<CR>', { noremap = true })
---a.nvim_set_keymap('n', '<leader>g', ':NeoTreeFocusToggle git_status<CR>', { noremap = true })
+a.nvim_set_keymap('n', '<leader>p', ':NeoTreeFocusToggle<CR>', { noremap = true })
+a.nvim_set_keymap('n', '<leader>g', ':NeoTreeFocusToggle git_status<CR>', { noremap = true })

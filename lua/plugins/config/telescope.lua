@@ -3,10 +3,10 @@ return {
   dependencies = {
     { "nvim-lua/plenary.nvim" },
     { "nvim-tree/nvim-web-devicons" },
-    {"nvim-telescope/telescope-file-browser.nvim"}
+    --{"nvim-telescope/telescope-file-browser.nvim"}
   },
   config = function()
-    local fb_actions = require("telescope._extensions.file_browser.actions")
+    --local fb_actions = require("telescope._extensions.file_browser.actions")
     require('telescope').setup {
       initial_mode = "insert",
       defaults = {
@@ -47,6 +47,7 @@ return {
         }
       },
       extensions = {
+--[[
         file_browser = {
           initial_mode = "normal",
           defaults = {
@@ -79,9 +80,12 @@ return {
             }
           }
         },
+        ]]
       }
     }
+    --[[
     require("telescope").load_extension "file_browser"
     vim.cmd("autocmd VimEnter * :Telescope file_browser")
+    ]]
   end
 }
