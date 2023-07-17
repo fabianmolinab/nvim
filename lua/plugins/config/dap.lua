@@ -19,14 +19,6 @@ return {
       "rcarriga/nvim-dap-ui",
       config = function()
         require("dapui").setup({
-          layouts = {
-            {
-              elements = { "scopes", "watches", "stacks", "breakpoints" },
-              size = require("wuelnerdotexe.plugin.util").get_sidebar_width(),
-              position = "left",
-            },
-            { elements = { "console", "repl" }, size = 0.25, position = "bottom" },
-          },
         })
       end,
     },
