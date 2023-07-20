@@ -1,3 +1,4 @@
+local globals = require('globals')
 return {
   {
     "hrsh7th/nvim-cmp",
@@ -8,12 +9,12 @@ return {
     },
 
     config = function()
-      vim.o.completeopt = "menu,menuone,noselect"
+      globals.opt.completeopt = "menu,menuone,noselect"
 
       local has_words_before = function()
         unpack = unpack or table.unpack
-        local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-        return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+        local line, col = unpack(globals.a.nvim_win_get_cursor(0))
+        return col ~= 0 and globals.a.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
       end
 
       local cmp = require 'cmp'
@@ -80,9 +81,9 @@ return {
             option = {
               get_bufnrs = function()
                 local bufs = {}
-                for _, win in ipairs(vim.api.nvim_list_wins()) do
-                  local bufnr = vim.api.nvim_win_get_buf(win)
-                  if vim.api.nvim_buf_get_option(bufnr, 'buftype') ~= 'terminal' then
+                for _, win in ipairs(globals.a.nvim_list_wins()) do
+                  local bufnr = globals.a.nvim_win_get_buf(win)
+                  if globals.a.nvim_buf_get_option(bufnr, 'buftype') ~= 'terminal' then
                     bufs[bufnr] = true
                   end
                 end
@@ -115,10 +116,10 @@ return {
         cmp_autopairs.on_confirm_done()
       )
       -- Configuración de altura de ventanas flotantes
-      vim.opt.pumheight = 10
-      vim.opt.cmdwinheight = 10
+      globals.opt.pumheight = 10
+      globals.opt.cmdwinheight = 10
 
-      vim.cmd [[highlight! default link CmpItemKind CmpItemMenuDefault]]
+      globals.cmd [[highlight! default link CmpItemKind CmpItemMenuDefault]]
     end,
   },
   { "hrsh7th/cmp-buffer", event = "InsertEnter", dependencies = "hrsh7th/nvim-cmp" },

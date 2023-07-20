@@ -1,6 +1,4 @@
-
 local nvim_lsp = require('lspconfig')
-
 local capabilities, on_attach, lsp_flags = require('plugins.config.lsp.capabilities_lsp')
 
 nvim_lsp['tsserver'].setup {

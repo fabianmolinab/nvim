@@ -1,4 +1,5 @@
 local mode = { "i", "c" }
+local globals = require('globals')
 
 return {
   "altermo/npairs-integrate-upair",
@@ -23,7 +24,7 @@ return {
     { "altermo/ultimate-autopair.nvim", dependencies = "nvim-treesitter/nvim-treesitter" },
   },
   init = function()
-    vim.api.nvim_create_autocmd("User", {
+    globals.a.nvim_create_autocmd("User", {
       pattern = "IntPairsComp",
       callback = function()
         if not package.loaded["npairs-int-upair"] then

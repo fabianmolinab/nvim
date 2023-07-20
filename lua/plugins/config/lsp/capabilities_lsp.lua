@@ -1,17 +1,19 @@
 local M = {}
+  local globals = require('globals')
   M.capabilities = require('cmp_nvim_lsp').default_capabilities(
-    vim.lsp.protocol.make_client_capabilities()
+    globals.lsp.protocol.make_client_capabilities()
   )
   M.on_attach = function(bufnr)
-    vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+    globals.a.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
     -- Mappings.
     local bufopts = { noremap = true, silent = true, buffer = bufnr }
-    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-    vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
-    vim.keymap.set('n', '<leader>el', vim.diagnostic.setloclist, bufopts)
-    vim.keymap.set('n', '<leader>er', vim.diagnostic.open_float, bufopts)
+    globals.key.set('n', 'gD', globals.v.lsp.buf.declaration, bufopts)
+    globals.key.set('n', 'gd', globals.lsp.buf.definition, bufopts)
+    globals.keymap.set('n', 'K', globals.lsp.buf.hover, bufopts)
+    globals.keymap.set('n', '<leader>el', globals.v.diagnostic.setloclist, bufopts)
+    globals.keymap.set('n', '<leader>er', globals.v.diagnostic.open_float, bufopts)
   end
 
   M.lsp_flags = {

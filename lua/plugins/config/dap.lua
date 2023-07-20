@@ -1,3 +1,5 @@
+local globals = require('globals')
+local vim = globals.vim
 return {
   "mfussenegger/nvim-dap",
   keys = {

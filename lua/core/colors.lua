@@ -1,12 +1,11 @@
-local opt = vim.opt
-
+local globals = require('globals')
 -- Configurar termguicolors y background
-opt.termguicolors = true
-opt.background = "dark"
+globals.opt.termguicolors = true
+globals.opt.background = 'dark'
 
 -- Configurar cursorline y cursorlineopt
-opt.cursorline = true
-opt.cursorlineopt = 'number'
+globals.opt.cursorline = true
+globals.opt.cursorlineopt = 'number'
 
 -- Configurar menú de autocompletado a trasparente
-vim.cmd('highlight Pmenu guifg=#dee1e4 guibg=none')
+globals.cmd('highlight Pmenu guifg=#dee1e4 guibg=none')

@@ -1,6 +1,7 @@
 --Permite Copiar y pegar por fuera y por dentro en WSL2
-local g = vim.g
-g.clipboard = {
+local globals = require('globals')
+
+globals.g.clipboard = {
     name = 'WslClipboard',
      copy = {
         ['+'] = 'clip.exe',

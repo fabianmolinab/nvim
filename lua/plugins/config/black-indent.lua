@@ -1,11 +1,12 @@
 local open_file_event = { "BufNewFile", "BufRead", "BufAdd", "SessionLoadPost" }
+local globals = require('globals')
 return {
   "lukas-reineke/indent-blankline.nvim",
   depedencies = "nvim-treesitter/nvim-treesitter",
   event = open_file_event,
   config = function()
     --vim.cmd [[highlight IndentBlanklineIndent guifg=#22262F ]]
-    vim.opt.list = true
+    globals.opt.list = true
     --vim.opt.listchars:append "trail:●"
     --vim.opt.listchars:append "space:·"
     --vim.opt.listchars:append "eol:↓"

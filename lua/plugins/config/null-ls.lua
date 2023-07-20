@@ -1,4 +1,7 @@
 -- Este plugin permite el auto save con Prettier y Eslint
+local globals = require('globals')
+local vim = globals.vim
+
 return {
   "jose-elias-alvarez/null-ls.nvim",
   event = { "BufNewFile", "BufRead", "BufAdd" },
@@ -17,19 +20,19 @@ return {
   config = function()
     local null_ls = require("null-ls")
 
-    local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+    local augroup = globals.a.nvim_create_augroup("LspFormatting", {})
 
     null_ls.setup({
       update_in_insert = vim.diagnostic.config().update_in_insert,
       debounce = 300,
       on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then
-          vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-          vim.api.nvim_create_autocmd("BufWritePre", {
+          globals.a.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+          globals.a.nvim_create_autocmd("BufWritePre", {
             group = augroup,
             buffer = bufnr,
             callback = function()
-              vim.lsp.buf.format({ bufnr = bufnr })
+              globals.lsp.buf.format({ bufnr = bufnr })
               require("luasnip").session.current_nodes[bufnr] = nil
             end,
           })
