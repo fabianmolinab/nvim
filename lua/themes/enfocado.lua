@@ -2,7 +2,7 @@ local globals = require('globals')
 return {
   "wuelnerdotexe/vim-enfocado",
   lazy = false,
-  enabled = true,
+  enabled = false,
   priority = 1000,
   init = function()
     globals.a.nvim_set_var("enfocado_plugins", {

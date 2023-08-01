@@ -2,7 +2,7 @@ return {
     'Everblush/nvim',
     name = "everblush",
     lazy = false,
-    enabled = false,
+    enabled = true,
     priority = 1000,
     config = function()
         require('everblush').setup({
