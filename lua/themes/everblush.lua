@@ -8,7 +8,7 @@ return {
         require('everblush').setup({
             -- Default options
             override = {},
-            transparent_background = true,
+            transparent_background = false,
             nvim_tree = {
                 contrast = false,
             },
