@@ -2,6 +2,7 @@
 -- Set up completion using nvim_cmp with LSP source
 --
 local globals = require('globals')
+local vim = globals.vim
 local capabilities = require('cmp_nvim_lsp').default_capabilities(
   globals.lsp.protocol.make_client_capabilities()
 )
