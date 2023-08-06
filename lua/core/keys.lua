@@ -102,5 +102,5 @@ a.nvim_set_keymap('n', '<leader>ds', ':DapTerminate<CR>', { noremap = true })   
 a.nvim_set_keymap('n', '<leader>du', ':lua require("dapui").toggle()<CR>', { noremap = true })
 
 -- Neotree
-a.nvim_set_keymap('n', '<leader>p', ':NeoTreeFocusToggle<CR>', { noremap = true })
-a.nvim_set_keymap('n', '<leader>g', ':NeoTreeFocusToggle git_status<CR>', { noremap = true })
+a.nvim_set_keymap('n', '<leader>p', ':Neotree toggle focus<CR>', { noremap = true })
+a.nvim_set_keymap('n', '<leader>g', ':Neotree toggle focus git_status<CR>', { noremap = true })
