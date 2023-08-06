@@ -2,7 +2,7 @@ return {
   "nvim-neo-tree/neo-tree.nvim",
   branch = "v3.x",
   dependencies = { "nvim-lua/plenary.nvim",  "MunifTanjim/nui.nvim" },
-  --deactivate = function() vim.api.nvim_command("Neotree close") end,
+  deactivate = function() require("neo-tree.command").execute({action = "close"}) end,
   config = function()
     require("neo-tree").setup({
       enable_diagnostics = true,
@@ -93,9 +93,9 @@ return {
       event_handlers = {
         {
           event = "file_opened",
-          handler = function(file_path)
+          handler = function()
             --auto close
-            require("neo-tree").close_all()
+            require("neo-tree.command").execute({action = "close"})
           end
         },
       },
