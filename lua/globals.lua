@@ -7,6 +7,7 @@ local a   = vim.api
 local key = vim.keymap
 local lsp = vim.lsp
 local vim   = vim
+local diagnostics = vim.diagnostics
 
 return {
   opt = opt,
@@ -15,5 +16,6 @@ return {
   a   = a,
   key = key,
   lsp = lsp,
-  vim   = vim
+  vim   = vim,
+  diagnostics = diagnostics
 }
