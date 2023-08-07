@@ -1,17 +1,14 @@
 return {
-   "williamboman/mason.nvim",
-   lazy = true,
-   config = function()
-      require("mason").setup()
-      require("mason-lspconfig").setup({
-         automatic_installation = true,
-         ensure_installed = {
-            "cssls",
-            "eslint",
-            "html",
-            "jsonls",
-            "tsserver",
-         },
-      })
-   end,
+  {
+    "williamboman/mason.nvim",
+    build = ":MasonUpdate",
+    cmd = { "Mason", "MasonInstall", "MasonLog", "MasonUninstall", "MasonUninstallAll", "MasonUpdate" },
+    lazy = true,
+    config = function() require("mason").setup({ ui = { border = "rounded" } }) end,
+  },
+  {
+    "mrjones2014/smart-splits.nvim",
+    optional = true,
+    opts = function(_, opts) opts.ignored_filetypes = vim.list_extend(opts.ignored_filetypes or {}, { "mason" }) end,
+  },
 }
