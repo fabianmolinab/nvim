@@ -1,4 +1,6 @@
 local globals = require('globals')
+local vim = globals.vim
+
 return {
   {
     "hrsh7th/nvim-cmp",
@@ -7,7 +9,6 @@ return {
       "nvim-treesitter/nvim-treesitter",
       "onsails/lspkind.nvim"
     },
-
     config = function()
       globals.opt.completeopt = "menu,menuone,noselect"
 
@@ -21,25 +22,24 @@ return {
       local lspkind = require 'lspkind'
       local luasnip = require 'luasnip'
       local cmp_buffer = require 'cmp_buffer'
-
       local cmp_autopairs = require 'nvim-autopairs.completion.cmp'
 
       cmp.setup({
-        performance = { debounce = 300, throttle = 40 },
+        performance = { debounce = 42, throttle = 42, fetching_time = 300 },
         mapping = {
           ["<C-k>"] = cmp.mapping.select_prev_item(),
           ["<C-j>"] = cmp.mapping.select_next_item(),
           ['<C-d>'] = cmp.mapping.scroll_docs(-4),
           ['<C-f>'] = cmp.mapping.scroll_docs(4),
 
-          ['<CR>'] = cmp.mapping.confirm({ select = true}),
+          ['<CR>'] = cmp.mapping.confirm({ select = true }),
 
           --- Tab tigger seleccion
           ['<Tab>'] = cmp.mapping(function(fallback)
             if luasnip.expand_or_jumpable() then
               luasnip.expand_or_jump()
             elseif cmp.visible() then
-              cmp.confirm({select = true})
+              cmp.confirm({ select = true })
             elseif has_words_before() then
               cmp.complete()
             else
@@ -73,7 +73,7 @@ return {
           }),
         },
         sources = {
-          { name = 'path', },
+          { name = 'path' },
           { name = 'nvim_lsp', keyword_length = 1 },
           {
             name = 'buffer',
@@ -93,12 +93,12 @@ return {
           },
           { name = 'luasnip',     keyword_length = 1, priority = 1 },
           { name = 'cmp_tabnine', keyword_length = 1, priority = 2 },
-          { name = 'emmet', keyword_length = 1, priority = 5 },
+          { name = 'emmet',       keyword_length = 1, priority = 5 },
         },
         window = {
           documentation = cmp.config.window.bordered(),
         },
-        experimental = { ghost_text = false},
+        experimental = { ghost_text = false },
       })
 
       -- Set configuration for specific filetype.
@@ -122,19 +122,50 @@ return {
       globals.cmd [[highlight! default link CmpItemKind CmpItemMenuDefault]]
     end,
   },
-  { "hrsh7th/cmp-buffer", event = "InsertEnter", dependencies = "hrsh7th/nvim-cmp" },
-  { "hrsh7th/cmp-path",   event = "InsertEnter", dependencies = "hrsh7th/nvim-cmp" },
+  {
+    "hrsh7th/cmp-buffer",
+    event = "InsertEnter",
+    dependencies = "hrsh7th/nvim-cmp"
+  },
+  {
+    "jackieaskins/cmp-emmet",
+    build = "npm run release",
+    dependencies = { "hrsh7th/nvim-cmp", dependencies = "L3MON4D3/LuaSnip" },
+    lazy = true,
+    init = function()
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = "css,sass,scss,less,xml,html,javascriptreact,typescriptreact",
+        callback = function(ev)
+          vim.api.nvim_buf_set_keymap(ev.buf, "i", "<M-e>", "", {
+            callback = function()
+              if not package.loaded["cmp-emmet"] then require("lazy").load({ plugins = { "cmp-emmet" } }) end
 
+              require("cmp").complete({ config = { sources = { { name = "emmet" } } } })
+            end,
+          })
+        end,
+      })
+    end,
+  },
+  {
+    "hrsh7th/cmp-path",
+    event = "InsertEnter",
+    dependencies = "hrsh7th/nvim-cmp"
+  },
   {
     "hrsh7th/cmp-cmdline",
     event = "CmdlineEnter",
-    dependencies = { "hrsh7th/nvim-cmp", "hrsh7th/cmp-buffer", "hrsh7th/cmp-path" },
+    dependencies = "hrsh7th/nvim-cmp",
     config = function()
       require("cmp").setup.cmdline({ "/", "?" }, {
         mapping = require("cmp").mapping.preset.cmdline(),
-        sources = require("cmp").config.sources({
-          { name = "buffer", option = { indexing_interval = 284 }, keyword_length = 1, priority = 1 },
-        }),
+        sources = {
+          {
+            name = "buffer",
+            option = { indexing_interval = 171 },
+            keyword_length = 1
+          },
+        },
       })
 
       require("cmp").setup.cmdline(":", {
@@ -149,28 +180,48 @@ return {
   },
   {
     "hrsh7th/cmp-nvim-lsp",
-    event = "LspAttach",
-    dependencies = { "hrsh7th/nvim-cmp", "L3MON4D3/LuaSnip" }
+    dependencies = { "hrsh7th/nvim-cmp", dependencies = "L3MON4D3/LuaSnip" },
+    lazy = true,
+    init = function()
+      vim.api.nvim_create_autocmd("LspAttach", {
+        group = vim.api.nvim_create_augroup("load_cmp_nvim_lsp", { clear = false }),
+        callback = function(ev)
+          if package.loaded["cmp_nvim_lsp"] then
+            vim.api.nvim_clear_autocmds({ group = ev.group })
+            return true
+          end
+
+          vim.api.nvim_create_autocmd("InsertEnter", {
+            buffer = ev.buf,
+            group = ev.group,
+            callback = function()
+              vim.api.nvim_clear_autocmds({ group = ev.group })
+              require("lazy").load({ plugins = { "cmp-nvim-lsp" } })
+            end,
+          })
+        end,
+      })
+    end,
   },
   {
     "saadparwaiz1/cmp_luasnip",
     event = "InsertEnter",
-    dependencies = { "hrsh7th/nvim-cmp", "L3MON4D3/LuaSnip" }
-  },
-  {
-    "jackieaskins/cmp-emmet",
-    build = "npm run release",
-    event = "InsertEnter",
-    dependencies = "hrsh7th/nvim-cmp"
+    dependencies = {
+      {
+        "hrsh7th/nvim-cmp",
+        dependencies = "L3MON4D3/LuaSnip"
+      },
+      "L3MON4D3/LuaSnip"
+    }
   },
   {
     "rcarriga/cmp-dap",
-    ft = { "dap-repl", "dapui_watches", "dapui_hover" },
     dependencies = "hrsh7th/nvim-cmp",
+    event = [[InsertEnter *dap-repl*,DAP\ Watches,DAP\ Hover]],
     config = function()
       require("cmp").setup.filetype(
         { "dap-repl", "dapui_watches", "dapui_hover" },
-        { sources = require("cmp").config.sources({ { name = "dap", keyword_lenght = 1 } }) }
+        { sources = { name = "dap" } }
       )
     end,
   },
