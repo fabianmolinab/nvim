@@ -1,11 +1,11 @@
 local nvim_lsp = require('lspconfig')
 local capabilities, on_attach, lsp_flags = require('plugins.config.lsp.capabilities_lsp')
 
-nvim_lsp['tsserver'].setup {
-  capabilities = capabilities,
-  on_attach = on_attach,
-  flags = lsp_flags,
-}
+--nvim_lsp['tsserver'].setup {
+--capabilities = capabilities,
+--on_attach = on_attach,
+--flags = lsp_flags,
+--}
 
 --Go Server
 --nvim_lsp.gopls.setup {
@@ -22,7 +22,6 @@ nvim_lsp['jdtls'].setup {
   on_attach = on_attach,
   cmd = { 'jdtls' }
 }
-
 
 --Astro server
 nvim_lsp['astro'].setup {
@@ -78,7 +77,7 @@ nvim_lsp['vimls'].setup {}
 nvim_lsp['lua_ls'].setup {
   on_attach = on_attach,
   flags = lsp_flags,
-  format = {enable = true}
+  format = { enable = true }
 }
 
 --ESLINT Server Config
@@ -89,29 +88,20 @@ nvim_lsp.eslint.setup({
 })
 
 --- StyleLint Config
-nvim_lsp['stylelint_lsp'].setup {
-  filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'css', 'scss', 'less', 'astro' },
-  capabilities = capabilities,
-  on_attach = on_attach,
-  settings = {
-    autoFixOnSave = true,
-    autoFixOnFormat = true,
-    validateOnType = true
-    -- other settings...
-  }
-}
+--nvim_lsp['stylelint_lsp'].setup {
+--filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'css', 'scss', 'less', 'astro' },
+--capabilities = capabilities,
+--on_attach = on_attach,
+--settings = {
+--autoFixOnSave = true,
+--autoFixOnFormat = true,
+--validateOnType = true
+---- other settings...
+--}
+--}
 
 --JSON Lenguaje
 nvim_lsp['jsonls'].setup {
   on_attach = on_attach,
   flags = lsp_flags,
 }
-
--- Tailwind
--- require("lspconfig").tailwindcss.setup({
---   on_attach = on_attach,
---  flags = lsp_flags,
--- capabilities = capabilities,
---})
-
-

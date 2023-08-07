@@ -4,9 +4,7 @@ local M = {}
     globals.lsp.protocol.make_client_capabilities()
   )
   M.on_attach = function(bufnr)
-
     globals.a.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-
     -- Mappings.
     local bufopts = { noremap = true, silent = true, buffer = bufnr }
     globals.key.set('n', 'gD', globals.v.lsp.buf.declaration, bufopts)

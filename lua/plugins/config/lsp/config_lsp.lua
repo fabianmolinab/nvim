@@ -8,6 +8,9 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(
 )
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+--Config Servers
+require('plugins.config.lsp.servers_lsp')
+
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap = true, silent = true }
@@ -15,8 +18,6 @@ vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 
---Config Servers
-require('plugins.config.lsp.servers_lsp')
 
 -- Diagnosticos de LSP
 vim.diagnostic.config({
