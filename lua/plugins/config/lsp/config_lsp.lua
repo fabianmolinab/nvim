@@ -39,7 +39,6 @@ local lsp_flags = {
 
 --Config Servers
 --Typescript, Javascript, JSX, TSX
-
 nvim_lsp.tsserver.setup {
   capabilities = capabilities,
   on_attach = on_attach,
@@ -53,6 +52,12 @@ nvim_lsp.gopls.setup {
   flags = lsp_flags,
   dap_debug = true,
   dap_debug_gui = true
+}
+--Java Server
+nvim_lsp.jdtls.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  cmd = { "jdtls", "-configuration", "/home/user/.cache/jdtls/config", "-data", "/home/user/.cache/jdtls/workspace" }
 }
 
 --Astro server

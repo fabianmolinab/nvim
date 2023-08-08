@@ -1,7 +1,7 @@
 return {
-    "mfussenegger/nvim-jdtls",
+   "mfussenegger/nvim-jdtls",
     dependencies = { "mfussenegger/nvim-dap", "neovim/nvim-lspconfig" },
-    event = "VeryLazy",
+    --event = "VeryLazy",
     config = function()
-              end
+    end
 }
