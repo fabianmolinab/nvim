@@ -56,8 +56,7 @@ nvim_lsp.gopls.setup {
 --Java Server
 nvim_lsp.jdtls.setup {
   capabilities = capabilities,
-  on_attach = on_attach,
-  cmd = { "jdtls", "-configuration", "/home/user/.cache/jdtls/config", "-data", "/home/user/.cache/jdtls/workspace" }
+  on_attach = on_attach
 }
 
 --Astro server
