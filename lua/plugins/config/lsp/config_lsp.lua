@@ -1,4 +1,6 @@
---NOTA: Este archivo debe ir en otra parte
+--Variables globales
+local globals = require('globals')
+local vim = globals.vim
 
 --LSP Instaler
 local nvim_lsp = require('lspconfig')
@@ -7,7 +9,6 @@ local nvim_lsp = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
-
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- Mappings.
@@ -33,14 +34,11 @@ local on_attach = function(client, bufnr)
 end
 
 local lsp_flags = {
-  -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
 }
 
 --Config Servers
-
 --Typescript, Javascript, JSX, TSX
-
 nvim_lsp.tsserver.setup {
   capabilities = capabilities,
   on_attach = on_attach,
@@ -55,16 +53,21 @@ nvim_lsp.gopls.setup {
   dap_debug = true,
   dap_debug_gui = true
 }
+--Java Server
+nvim_lsp.jdtls.setup {
+  capabilities = capabilities,
+  on_attach = on_attach
+}
 
 --Astro server
-nvim_lsp['astro'].setup {
+nvim_lsp.astro.setup {
   capabilities = capabilities,
   on_attach = on_attach,
   flags = lsp_flags,
 }
 
 ---CSS Modules
-require('lspconfig')['cssmodules_ls'].setup {
+nvim_lsp.cssmodules_ls.setup {
   on_attach = on_attach,
   flags = lsp_flags,
   filetypes = {
@@ -72,7 +75,7 @@ require('lspconfig')['cssmodules_ls'].setup {
   }
 }
 
-require('lspconfig')['cssls'].setup {
+nvim_lsp.cssls.setup {
   on_attach = on_attach,
   flags = lsp_flags,
   filetypes = {
@@ -93,7 +96,7 @@ require('lspconfig')['cssls'].setup {
 }
 
 -- Html Server
-require('lspconfig')['html'].setup {
+nvim_lsp.html.setup {
   on_attach = on_attach,
   flags = lsp_flags,
   embeddedLanguages = {
@@ -105,23 +108,23 @@ require('lspconfig')['html'].setup {
 }
 
 --Vim Server
-require('lspconfig')['vimls'].setup {}
+nvim_lsp.vimls.setup {}
 
-require('lspconfig')['lua_ls'].setup {
+nvim_lsp.lua_ls.setup {
   on_attach = on_attach,
   flags = lsp_flags,
   format = {enable = true}
 }
 
 --ESLINT Server Config
-require("lspconfig").eslint.setup({
+nvim_lsp.eslint.setup({
   on_attach = on_attach,
   flags = lsp_flags,
   settings = { format = false },
 })
 
 --- StyleLint Config
-require('lspconfig')['stylelint_lsp'].setup {
+nvim_lsp.stylelint_lsp.setup {
   filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'css', 'scss', 'less', 'astro' },
   capabilities = capabilities,
   handlers = handlers,
@@ -135,42 +138,39 @@ require('lspconfig')['stylelint_lsp'].setup {
 }
 
 --JSON Lenguaje
-require('lspconfig')['jsonls'].setup {
+nvim_lsp.jsonls.setup {
   on_attach = on_attach,
   flags = lsp_flags,
 }
 
 -- Tailwind
--- require("lspconfig").tailwindcss.setup({
---   on_attach = on_attach,
---  flags = lsp_flags,
--- capabilities = capabilities,
---})
+ nvim_lsp.tailwindcss.setup({
+  on_attach = on_attach,
+  flags = lsp_flags,
+  capabilities = capabilities,
+})
 
-
--- Diagnosticos de LSP
+--Diagnostics
 vim.diagnostic.config({
   --underline = true,
-  virtual_text = false,
+  virtual_text     = false,
   update_in_insert = false,
-  severity_sort = false,
+  severity_sort    = false,
   float = {
     border = 'rounded',
     source = 'always',
   }
 })
+--local signs = {
+  --Hint = "",
+  --Info = "",
+  --Warn = "",
+  --Error = "",
+--}
 
-local signs = {
-  Hint = "",
-  Info = "",
-  Warn = "",
-  Error = "",
-}
-
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-end
-
+--for type, icon in pairs() do
+  --local hl = "DiagnosticSign" .. type
+  --vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+--end
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250

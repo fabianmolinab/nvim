@@ -1,4 +1,5 @@
-local a = vim.api
+local globals = require('globals')
+local a = globals.a
 
 -- Deshabilita la navegación con las flechas
 a.nvim_set_keymap('n', '<up>', '<nop>', { noremap = true })
@@ -53,14 +54,14 @@ a.nvim_set_keymap('n', '<leader>sp', ':sp<CR>', { noremap = true })
 -- Limpiar los resultados de búsqueda
 a.nvim_set_keymap('n', '//', ':noh<CR>', { silent = true })
 
--- Telescope
+------ Telescope
 -- Buscar archivos
 a.nvim_set_keymap('n', '<Leader>f', '<cmd>lua require(\'telescope.builtin\').find_files()<cr>', { noremap = true })
 -- Buscar dentro del proyecto cualquier palabra
 a.nvim_set_keymap('n', '<Leader>a', '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>', { noremap = true })
 a.nvim_set_keymap('n', '<Leader>mf', '<cmd>lua require(\'telescope.builtin\').marks()<cr>', { noremap = true })
 -- Lista de commits
-a.nvim_set_keymap('n', '<Leader>ls', '<cmd>lua require(\'telescope.builtin\').git_commits()<cr>', { noremap = true })
+a.nvim_set_keymap('n', '<Leader>co', '<cmd>lua require(\'telescope.builtin\').git_commits()<cr>', { noremap = true })
 -- Buscar archivos de git
 a.nvim_set_keymap('n', '<Leader>ag', '<cmd>lua require(\'telescope.builtin\').git_files()<cr>', { noremap = true })
 -- Lista los archivos o ventanas cerradas
@@ -68,6 +69,8 @@ a.nvim_set_keymap('n', '<Leader>of', '<cmd>lua require(\'telescope.builtin\').ol
 -- Lista buffers o pestañas abiertos
 a.nvim_set_keymap('n', '<Leader>b', '<cmd>lua require(\'telescope.builtin\').buffers()<cr>', { noremap = true })
 
+--a.nvim_set_keymap('n', '<Leader>p', "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>", {noremap = true})
+------
 -- Todo Busqueda telescope
 a.nvim_set_keymap('n', '<leader>td', ':TodoTelescope<CR>', {})
 
@@ -99,5 +102,5 @@ a.nvim_set_keymap('n', '<leader>ds', ':DapTerminate<CR>', { noremap = true })   
 a.nvim_set_keymap('n', '<leader>du', ':lua require("dapui").toggle()<CR>', { noremap = true })
 
 -- Neotree
-a.nvim_set_keymap('n', '<leader>p', ':NeoTreeFocusToggle<CR>', { noremap = true })
-a.nvim_set_keymap('n', '<leader>g', ':NeoTreeFocusToggle git_status<CR>', { noremap = true })
+a.nvim_set_keymap('n', '<leader>p', ':Neotree toggle focus<CR>', { noremap = true })
+a.nvim_set_keymap('n', '<leader>g', ':Neotree toggle focus git_status<CR>', { noremap = true })

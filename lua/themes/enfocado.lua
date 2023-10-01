@@ -1,10 +1,11 @@
+local globals = require('globals')
 return {
   "wuelnerdotexe/vim-enfocado",
   lazy = false,
-  enabled = true,
+  enabled = false,
   priority = 1000,
   init = function()
-    vim.api.nvim_set_var("enfocado_plugins", {
+    globals.a.nvim_set_var("enfocado_plugins", {
       "aerial",
       "bufferline",
       "cmp",
@@ -27,11 +28,16 @@ return {
       "visual-multi",
       "yanky",
     })
-
-    vim.api.nvim_create_autocmd("ColorScheme", {
+    globals.a.nvim_create_autocmd("ColorScheme", {
       pattern = "enfocado",
-      callback = function() vim.api.nvim_command("highlight NormalNC guibg=#1e1e1e") end,
+      callback = function()
+          globals.a.nvim_command("highlight Type cterm=NONE gui=NONE")
+          globals.a.nvim_command("highlight TypeBuiltin cterm=NONE gui=NONE")
+      end,
     })
   end,
-          config = function() vim.api.nvim_command("colorscheme enfocado") end,
+  config = function()
+    globals.g.enfocado_style = 'neon'
+    globals.a.nvim_command("colorscheme enfocado") 
+  end,
 }

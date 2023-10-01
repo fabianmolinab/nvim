@@ -9,6 +9,9 @@ g.mapleader = " "
 opt.encoding = "utf-8"
 opt.mouse = ""
 opt.clipboard = "unnamedplus"
+-- Copiar y pegar en WSL 
+require('core.settings.clipwsl')
+
 opt.errorbells = false
 opt.list = false
 opt.cmdheight = 1

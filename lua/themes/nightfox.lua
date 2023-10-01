@@ -8,7 +8,7 @@ return {
       options = {
         compile_path = vim.fn.stdpath("cache") .. "/nightfox",
         compile_file_suffix = "_compiled",
-        --transparent = true,    -- Disable setting background
+        transparent = true,    -- Disable setting background
         terminal_colors = true,
         dim_inactive = false,  -- Non focused panes set to alternative background
         module_default = true, -- Default enable value for modules
@@ -16,10 +16,10 @@ return {
           comments = "italic",
           conditionals = "NONE",
           constants = "NONE",
-          functions = "bold",
+          functions = "NONE",
           keywords = "NONE",
           numbers = "NONE",
-          operators = "bold",
+          operators = "NONE",
           strings = "NONE",
           types = "italic",
           variables = "NONE",

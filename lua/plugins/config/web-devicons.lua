@@ -1,7 +1,9 @@
+local globals = require('globals')
+
 return {
     'nvim-tree/nvim-web-devicons',
     config = function()
-        if vim.g.loaded_devicons == nil then
+        if globals.g.loaded_devicons == nil then
             return
         end
 

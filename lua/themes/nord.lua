@@ -4,7 +4,7 @@ return {
   enabled = false,
   priority = 1000,
   config = function()
-    vim.g.nord_italic = true
+    vim.g.nord_italic = false
     vim.g.nord_italic_comments = false
     vim.g.nord_bold = false
     vim.g.nord_underline = true

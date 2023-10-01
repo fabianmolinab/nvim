@@ -1,16 +1,18 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
-  dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim" },
-  --deactivate = function() vim.api.nvim_command("Neotree close") end,
+  branch = "v3.x",
+  dependencies = { "nvim-lua/plenary.nvim",  "MunifTanjim/nui.nvim" },
   config = function()
     require("neo-tree").setup({
       enable_diagnostics = true,
       hide_root_node = true,
       resize_timer_interval = 42,
+      auto_clean_after_session_restore = true,
+      popup_bourder_style = "rounded",
       use_default_mappings = false,
       source_selector = {
         winbar = true,
-        source = { { source = "filesystem",  display_name = " 󰉓 Folders "},{ source = "git_status", display_name = "  Git "} },
+        --source = { { source = "filesystem",  display_name = " 󰉓 Folders "},{ source = "git_status", display_name = "  Git "} },
         content_layout = "center",
         separator = "",
         separator_active = { left = "▎", right = "" },
@@ -92,9 +94,9 @@ return {
       event_handlers = {
         {
           event = "file_opened",
-          handler = function(file_path)
+          handler = function()
             --auto close
-            require("neo-tree").close_all()
+            require("neo-tree.command").execute({action = "close"})
           end
         },
       },

@@ -1,3 +1,4 @@
+local globals = require('globals')
 return {
   "easymotion/vim-easymotion",
   lazy = true,
@@ -5,6 +6,6 @@ return {
     { "f", "<Plug>(easymotion-s2)", desc = "easymotion" }
   },
   config = function()
-    vim.g.EasyMotion_smartcase = 1
+    globals.g.EasyMotion_smartcase = 1
   end
 }

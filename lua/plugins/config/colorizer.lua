@@ -1,5 +1,4 @@
 --Plugin para colorear Hexadecimales
-
 return {
   "norcalli/nvim-colorizer.lua",
 
