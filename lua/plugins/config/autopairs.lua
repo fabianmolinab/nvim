@@ -2,85 +2,72 @@ local mode = { "i", "c" }
 local globals = require('globals')
 
 return {
-  "altermo/npairs-integrate-upair",
-  lazy = true,
-  keys = {
-    { "{", mode = mode },
-    { "[", mode = mode },
-    { "(", mode = mode },
-    { '"', mode = mode },
-    { "'", mode = mode },
-    { "`", mode = mode },
-    { "<CR>", mode = "i" },
-    { "<BS>", mode = "i" },
-    { "<A-e>", mode = "i" },
-    { "<A-E>", mode = "i" },
-    { "<A-]>", mode = "i" },
-    { "<A-C-e>", mode = "i" },
-    { "<Space>", mode = "i" },
-  },
-  dependencies = {
-    { "windwp/nvim-autopairs", dependencies = "nvim-treesitter/nvim-treesitter" },
-    { "altermo/ultimate-autopair.nvim", dependencies = "nvim-treesitter/nvim-treesitter" },
-  },
-  init = function()
-    globals.a.nvim_create_autocmd("User", {
-      pattern = "IntPairsComp",
-      callback = function()
-        if not package.loaded["npairs-int-upair"] then
-          require("lazy").load({ plugins = { "npairs-integrate-upair" } })
-        end
-
-        require("cmp").event:on("confirm_done", require("nvim-autopairs.completion.cmp").on_confirm_done())
+  {
+    {
+      "windwp/nvim-autopairs",
+      keys = {
+        { "<M-e>", mode = "i" },
+        { "<CR>", mode = "i" },
+        { "{", mode = "i" },
+        { "[", mode = "i" },
+        { "(", mode = "i" },
+        { '"', mode = "i" },
+        { "'", mode = "i" },
+        { "`", mode = "i" },
+        { "<", mode = "i" },
+      },
+      lazy = true,
+      init = function()
+        globals.a.nvim_create_autocmd("User", {
+          pattern = "IntPairsComp",
+          callback = function()
+            require("cmp").event:on("confirm_done", require("nvim-autopairs.completion.cmp").on_confirm_done())
+          end,
+          once = true,
+        })
       end,
-      once = true,
-    })
-  end,
-  config = function()
-    require("npairs-int-upair").setup({
-      bs = "u",
-      npairs_conf = {
-        disable_filetype = {
-          "aerial",
-          "checkhealth",
-          "dapui_breakpoints",
-          "dapui_console",
-          "dapui_scopes",
-          "dapui_stacks",
-          "DressingSelect",
-          "help",
-          "lazy",
-          "lspinfo",
-          "man",
-          "mason",
-          "null-ls-info",
-          "qf",
-        },
-        check_ts = true,
-        fast_wrap = { highlight = "Question", highlight_grey = "Dimmed" },
-      },
-      upair_conf = {
-        extensions = {
-          filetype = {
-            nft = {
-              "aerial",
-              "checkhealth",
-              "dapui_breakpoints",
-              "dapui_console",
-              "dapui_scopes",
-              "dapui_stacks",
-              "DressingSelect",
-              "help",
-              "lazy",
-              "lspinfo",
-              "man",
-              "mason",
-              "null-ls-info",
-              "qf",
-            },
-          },
-        },
-      },
-    })
-  end,
+      config = function()
+        require("nvim-autopairs").setup({
+          map_bs = false,
+          disable_filetype = {"checkhealth", "help", "lazy", "man", "netrw", "qf" },
+          check_ts = true,
+          fast_wrap = { highlight = "Question", highlight_grey = "LspCodeLens" },
+        })
+      end,
+    },
+    {
+      "hrsh7th/nvim-cmp",
+      optional = true,
+      opts = function()
+        require("cmp").event:on("menu_opened", function()
+          if globals.a.nvim_get_mode().mode:sub(1, 1) ~= "c" then
+            globals.a.nvim_exec_autocmds("User", { pattern = "IntPairsComp", modeline = false })
+          end
+        end)
+      end,
+    },
+  },
+  {
+    "altermo/ultimate-autopair.nvim",
+    keys = {
+      { "<A-)>", mode = mode },
+      { "<BS>", mode = mode },
+      { "<Space>", mode = mode },
+      { "{", mode = "c" },
+      { "[", mode = "c" },
+      { "(", mode = "c" },
+      { '"', mode = "c" },
+      { "'", mode = "c" },
+      { "`", mode = "c" },
+    },
+    lazy = true,
+    config = function()
+      require("ultimate-autopair").setup({
+        pair_map = false,
+        cr = { enable = false },
+        space2 = { enable = true },
+        fastwarp = { enable = false },
+      })
+    end,
+  },
 }

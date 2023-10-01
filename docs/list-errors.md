@@ -1,1 +1,1 @@
-[] error plugins autopairs not install
+[x] error plugins autopairs not install

@@ -22,7 +22,6 @@ return {
       local lspkind = require 'lspkind'
       local luasnip = require 'luasnip'
       local cmp_buffer = require 'cmp_buffer'
-      local cmp_autopairs = require 'nvim-autopairs.completion.cmp'
 
       cmp.setup({
         performance = { debounce = 42, throttle = 42, fetching_time = 300 },
@@ -110,11 +109,6 @@ return {
           { max_item_count = 10 },
         })
       })
-      --Autopairs
-      cmp.event:on(
-        'confirm_done',
-        cmp_autopairs.on_confirm_done()
-      )
       -- Configuración de altura de ventanas flotantes
       globals.opt.pumheight = 10
       globals.opt.cmdwinheight = 10
