@@ -2,12 +2,13 @@ return {
   "nvim-neo-tree/neo-tree.nvim",
   branch = "v3.x",
   dependencies = { "nvim-lua/plenary.nvim",  "MunifTanjim/nui.nvim" },
-  deactivate = function() require("neo-tree.command").execute({action = "close"}) end,
   config = function()
     require("neo-tree").setup({
       enable_diagnostics = true,
       hide_root_node = true,
       resize_timer_interval = 42,
+      auto_clean_after_session_restore = true,
+      popup_bourder_style = "rounded",
       use_default_mappings = false,
       source_selector = {
         winbar = true,

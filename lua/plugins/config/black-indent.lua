@@ -2,6 +2,7 @@ local open_file_event = { "BufNewFile", "BufRead", "BufAdd", "SessionLoadPost" }
 local globals = require('globals')
 return {
   "lukas-reineke/indent-blankline.nvim",
+  main = "ibl", opts = {},
   depedencies = "nvim-treesitter/nvim-treesitter",
   event = open_file_event,
   config = function()
@@ -11,7 +12,7 @@ return {
     --vim.opt.listchars:append "space:·"
     --vim.opt.listchars:append "eol:↓"
 
-    require("indent_blankline").setup({
+    require("ibl").setup({
       use_treesitter = true,
       show_current_context = true,
       show_current_context_start = true,
