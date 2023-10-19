@@ -67,13 +67,13 @@ nvim_lsp.astro.setup {
 }
 
 ---CSS Modules
-nvim_lsp.cssmodules_ls.setup {
-  on_attach = on_attach,
-  flags = lsp_flags,
-  filetypes = {
-    "javascript", "javascriptreact", "typescript", "typescriptreact"
-  }
-}
+--nvim_lsp.cssmodules_ls.setup {
+  --on_attach = on_attach,
+  --flags = lsp_flags,
+  --filetypes = {
+    --"javascript", "javascriptreact", "typescript", "typescriptreact"
+  --}
+--}
 
 nvim_lsp.cssls.setup {
   on_attach = on_attach,
