@@ -10,7 +10,7 @@ opt.encoding = "utf-8"
 opt.mouse = ""
 opt.clipboard = "unnamedplus"
 -- Copiar y pegar en WSL 
-require('core.settings.clipwsl')
+--require('core.settings.clipwsl')
 
 opt.errorbells = false
 opt.list = false
@@ -24,7 +24,6 @@ opt.rnu = true
 opt.numberwidth = 2
 opt.swapfile = false
 opt.backup = false
---vim.o.undodir = "~/.config/nvim/.undodir/"
 opt.undofile = true
 opt.incsearch = true
 opt.ignorecase = true
