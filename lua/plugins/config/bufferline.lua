@@ -1,18 +1,19 @@
+local globals = require('globals')
 return {
   'akinsho/bufferline.nvim',
   dependencies = 'nvim-tree/nvim-web-devicons',
   config = function ()
-      local globals = require('globals')
       globals.opt.termguicolors = true
 
       require("bufferline").setup({
         options = {
           buffer_close_icon = '',
-          indicator = { icon = '', style = 'icon' },
-          --separator_style = 'padded',
-          max_name_length = 13,
-          max_prefix_length = 13,
-          tab_size = 15,
+          indicator = { icon = '▎', style = 'icon' },
+          show_close_icon = false,
+          separator_style = { "", "▎" },
+          max_name_length = 16,
+          max_prefix_length = 16,
+          tab_size = 14,
           diagnostics = 'nvim_lsp',
           diagnostics_update_in_insert = false,
           diagnostics_indicator = function(count, level, diagnostics_dict, context)
