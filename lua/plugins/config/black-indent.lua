@@ -9,7 +9,6 @@ return {
     globals.opt.list = true
     require("ibl").setup({
         debounce = globals.a.nvim_get_option_value("updatetime", { scope = "global" }),
-        indent = { char = "▏", priority = 11 },
         scope = { enabled = false },
         exclude = {
           filetypes = { "list", "netrw", "" },
