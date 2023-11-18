@@ -2,7 +2,7 @@ return {
   "mcchrish/zenbones.nvim",
   dependencies = "rktjmp/lush.nvim",
   lazy = false,
-  enabled = false,
+  enabled = true,
   priority = 1000,
   config = function()
     vim.cmd 'set background=dark'
@@ -15,8 +15,11 @@ return {
     --vim.cmd "colorscheme rosebones"
     --vim.g.rosebones = { transparent_background = true }
 
-    --vim.g.nordbones = { transparent_background = true }
-    --vim.cmd "colorscheme nordbones"
+    vim.g.nordbones = {
+      transparent_background = true,
+      italic_comments = false
+    }
+    vim.cmd "colorscheme nordbones"
 
     --vim.cmd "colorscheme neobones"
     --vim.cmd "colorscheme tokyobones"

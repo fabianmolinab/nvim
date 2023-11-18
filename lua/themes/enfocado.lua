@@ -2,7 +2,7 @@ local globals = require('globals')
 return {
   "wuelnerdotexe/vim-enfocado",
   lazy = false,
-  enabled = true,
+  enabled = false,
   priority = 1000,
   init = function()
     globals.a.nvim_set_var("enfocado_plugins", {
@@ -31,13 +31,13 @@ return {
     globals.a.nvim_create_autocmd("ColorScheme", {
       pattern = "enfocado",
       callback = function()
-          globals.a.nvim_command("highlight Type cterm=NONE gui=NONE")
-          globals.a.nvim_command("highlight TypeBuiltin cterm=NONE gui=NONE")
+        globals.a.nvim_command("highlight Normal ctermbg=NONE guibg=NONE")
+        globals.a.nvim_command("highlight TypeBuiltin cterm=NONE gui=NONE")
       end,
     })
   end,
   config = function()
     globals.g.enfocado_style = 'nature'
-    globals.a.nvim_command("colorscheme enfocado") 
+    globals.a.nvim_command("colorscheme enfocado")
   end,
 }
