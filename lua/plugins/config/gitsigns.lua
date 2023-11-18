@@ -1,6 +1,6 @@
 return {
   "lewis6991/gitsigns.nvim",
-  --lazy = true,
+  -- lazy = true,
   depedencies = "nvim-lua/plenary.nvim",
   config = function()
     require('gitsigns').setup({
@@ -11,7 +11,7 @@ return {
         relative = 'cursor',
         row = 0,
         col = 1
-      },
+      }
     })
   end
 }

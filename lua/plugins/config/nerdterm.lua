@@ -1,6 +1,4 @@
 return {
   "wuelnerdotexe/nerdterm",
-  keys = {
-    { "<C-t>", "<Plug>(NERDTermToggle)", desc = "NerdTerm" },
-  },
+  keys = { { "<C-t>", "<Plug>(NERDTermToggle)", desc = "NerdTerm" } }
 }

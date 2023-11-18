@@ -6,38 +6,23 @@ return {
   priority = 1000,
   init = function()
     globals.a.nvim_set_var("enfocado_plugins", {
-      "aerial",
-      "bufferline",
-      "cmp",
-      "dap-ui",
-      "gitsigns",
-      "illuminate",
-      "indent-blankline",
-      "lazy",
-      "lspconfig",
-      "matchup",
-      "neo-tree",
-      "noice",
-      "null-ls",
-      "smoothcursor",
-      "substitute",
-      "surround",
-      "telescope",
-      "treesitter",
-      "ts-rainbow2",
-      "visual-multi",
-      "yanky",
+      "aerial", "bufferline", "cmp", "dap-ui", "gitsigns", "illuminate",
+      "indent-blankline", "lazy", "lspconfig", "matchup", "neo-tree",
+      "noice", "null-ls", "smoothcursor", "substitute", "surround",
+      "telescope", "treesitter", "ts-rainbow2", "visual-multi", "yanky"
     })
     globals.a.nvim_create_autocmd("ColorScheme", {
       pattern = "enfocado",
       callback = function()
-        globals.a.nvim_command("highlight Normal ctermbg=NONE guibg=NONE")
-        globals.a.nvim_command("highlight TypeBuiltin cterm=NONE gui=NONE")
-      end,
+        globals.a.nvim_command(
+          "highlight Normal ctermbg=NONE guibg=NONE")
+        globals.a.nvim_command(
+          "highlight TypeBuiltin cterm=NONE gui=NONE")
+      end
     })
   end,
   config = function()
     globals.g.enfocado_style = 'nature'
     globals.a.nvim_command("colorscheme enfocado")
-  end,
+  end
 }

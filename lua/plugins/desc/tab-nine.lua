@@ -1,4 +1,4 @@
---Plugin de CMP para tabnine
+-- Plugin de CMP para tabnine
 return {
   {
     "tzachar/cmp-tabnine",
@@ -25,9 +25,9 @@ return {
           ["notify"] = true,
           ["null-ls-info"] = true,
           ["qf"] = true,
-          ["TelescopePrompt"] = true,
-        },
+          ["TelescopePrompt"] = true
+        }
       })
     end
-  },
+  }
 }

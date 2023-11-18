@@ -1,5 +1,5 @@
 local globals = require('globals')
---vim.api
+-- vim.api
 local vim = globals.a
 return {
   "iamcco/markdown-preview.nvim",
@@ -11,5 +11,5 @@ return {
     vim.nvim_set_var("mkdp_browser", "firefox")
     vim.nvim_set_var("mkdp_echo_preview_url", 1)
     vim.nvim_set_var("mkdp_theme", "dark")
-  end,
+  end
 }

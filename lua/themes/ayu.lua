@@ -11,8 +11,8 @@ return {
         else
           return { NormalNC = { bg = "#f0f0f0", fg = "#808080" } }
         end
-      end,
+      end
     })
     require("ayu").colorscheme()
-  end,
+  end
 }

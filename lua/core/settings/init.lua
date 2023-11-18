@@ -9,8 +9,8 @@ g.mapleader = " "
 opt.encoding = "utf-8"
 opt.mouse = ""
 opt.clipboard = "unnamedplus"
--- Copiar y pegar en WSL 
---require('core.settings.clipwsl')
+-- Copiar y pegar en WSL
+-- require('core.settings.clipwsl')
 
 opt.errorbells = false
 opt.list = false
@@ -32,9 +32,8 @@ opt.splitbelow = true
 opt.splitright = true
 opt.showmode = false
 
---TODO: Cambiar las siguientes configuraciones a un nuevo archivo
+-- TODO: Cambiar las siguientes configuraciones a un nuevo archivo
 
 -- Configuración para archivos JSX grandes
 a.nvim_command('autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart')
 a.nvim_command('autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear')
-

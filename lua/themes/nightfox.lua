@@ -8,10 +8,10 @@ return {
       options = {
         compile_path = vim.fn.stdpath("cache") .. "/nightfox",
         compile_file_suffix = "_compiled",
-        transparent = true,    -- Disable setting background
+        transparent = true,            -- Disable setting background
         terminal_colors = true,
-        dim_inactive = false,  -- Non focused panes set to alternative background
-        module_default = true, -- Default enable value for modules
+        dim_inactive = false,          -- Non focused panes set to alternative background
+        module_default = true,         -- Default enable value for modules
         styles = {
           comments = "italic",
           conditionals = "NONE",
@@ -22,21 +22,21 @@ return {
           operators = "NONE",
           strings = "NONE",
           types = "italic",
-          variables = "NONE",
+          variables = "NONE"
         },
         inverse = {
           -- Inverse highlight for different types
           match_paren = false,
           visual = false,
-          search = false,
+          search = false
         },
-        modules = { -- List of various plugins and additional options
+        modules = {         -- List of various plugins and additional options
           -- ...
-        },
+        }
       },
       palettes = {},
       specs = {},
-      groups = {},
+      groups = {}
     })
 
     -- setup must be called before loading

@@ -7,13 +7,13 @@ return {
   config = function()
     vim.cmd 'set background=dark'
 
-    --vim.g.zenbones = { transparent_background = true }
-    --vim.cmd "colorscheme zenbones"
-    --vim.g.zenwritten = { transparent_background = true }
-    --vim.cmd "colorscheme zenwritten"
+    -- vim.g.zenbones = { transparent_background = true }
+    -- vim.cmd "colorscheme zenbones"
+    -- vim.g.zenwritten = { transparent_background = true }
+    -- vim.cmd "colorscheme zenwritten"
 
-    --vim.cmd "colorscheme rosebones"
-    --vim.g.rosebones = { transparent_background = true }
+    -- vim.cmd "colorscheme rosebones"
+    -- vim.g.rosebones = { transparent_background = true }
 
     vim.g.nordbones = {
       transparent_background = true,
@@ -21,9 +21,9 @@ return {
     }
     vim.cmd "colorscheme nordbones"
 
-    --vim.cmd "colorscheme neobones"
-    --vim.cmd "colorscheme tokyobones"
-    --vim.cmd "colorscheme kanagawabones"
-    --vim.cmd "colorscheme randombones"
+    -- vim.cmd "colorscheme neobones"
+    -- vim.cmd "colorscheme tokyobones"
+    -- vim.cmd "colorscheme kanagawabones"
+    -- vim.cmd "colorscheme randombones"
   end
 }

@@ -1,33 +1,22 @@
 return {
   "nvim-telescope/telescope.nvim",
   dependencies = {
-    { "nvim-lua/plenary.nvim" },
-    { "nvim-tree/nvim-web-devicons" },
-    --{"nvim-telescope/telescope-file-browser.nvim"}
+    { "nvim-lua/plenary.nvim" }, { "nvim-tree/nvim-web-devicons" }
+    -- {"nvim-telescope/telescope-file-browser.nvim"}
   },
   config = function()
-    --local fb_actions = require("telescope._extensions.file_browser.actions")
+    -- local fb_actions = require("telescope._extensions.file_browser.actions")
     require('telescope').setup {
       initial_mode = "insert",
       defaults = {
-        layout_config = {
-          vertical = { width = 0.5 }
-        },
+        layout_config = { vertical = { width = 0.5 } },
         file_ignore_patterns = { "node_modules", ".git" }
       },
       pickers = {
-        find_files = {
-          theme = "dropdown",
-          hidden = true
-        },
-        oldfiles = {
-          theme = "ivy"
-        },
-        live_grep = {
-        },
-        git_commits = {
-          theme = "ivy"
-        },
+        find_files = { theme = "dropdown", hidden = true },
+        oldfiles = { theme = "ivy" },
+        live_grep = {},
+        git_commits = { theme = "ivy" },
         git_status = {
           git_icons = {
             added = "A",
@@ -36,8 +25,8 @@ return {
             renamed = "R",
             copied = "C",
             untracked = "U",
-            unmerged = "?",
-          },
+            unmerged = "?"
+          }
         },
         buffers = {
           initial_mode = "normal",
@@ -47,7 +36,7 @@ return {
         }
       },
       extensions = {
---[[
+        --[[
         file_browser = {
           initial_mode = "normal",
           defaults = {

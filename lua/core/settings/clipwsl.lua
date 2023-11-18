@@ -1,15 +1,12 @@
---Permite Copiar y pegar por fuera y por dentro en WSL2
+-- Permite Copiar y pegar por fuera y por dentro en WSL2
 local globals = require('globals')
 
 globals.g.clipboard = {
-    name = 'WslClipboard',
-     copy = {
-        ['+'] = 'clip.exe',
-        ['*'] = 'clip.exe',
-    },
-    paste = {
-        ['+'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-        ['*'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-    },
-    cache_enabled = 0,
+  name = 'WslClipboard',
+  copy = { ['+'] = 'clip.exe', ['*'] = 'clip.exe' },
+  paste = {
+    ['+'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+    ['*'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))'
+  },
+  cache_enabled = 0
 }

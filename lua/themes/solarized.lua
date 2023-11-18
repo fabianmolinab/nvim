@@ -3,7 +3,5 @@ return {
   lazy = false,
   enabled = false,
   priority = 1000,
-  config = function()
-    vim.cmd('colorscheme solarized-flat')
-  end
+  config = function() vim.cmd('colorscheme solarized-flat') end
 }

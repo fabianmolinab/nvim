@@ -1,7 +1,7 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
   branch = "v3.x",
-  dependencies = { "nvim-lua/plenary.nvim",  "MunifTanjim/nui.nvim" },
+  dependencies = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" },
   config = function()
     require("neo-tree").setup({
       enable_diagnostics = true,
@@ -12,11 +12,11 @@ return {
       use_default_mappings = false,
       source_selector = {
         winbar = true,
-        --source = { { source = "filesystem",  display_name = " 󰉓 Folders "},{ source = "git_status", display_name = "  Git "} },
+        -- source = { { source = "filesystem",  display_name = " 󰉓 Folders "},{ source = "git_status", display_name = "  Git "} },
         content_layout = "center",
         separator = "",
         separator_active = { left = "▎", right = "" },
-        show_separator_on_edge = true,
+        show_separator_on_edge = true
       },
       default_component_configs = {
         container = { right_padding = 1 },
@@ -25,7 +25,7 @@ return {
           folder_open = "",
           folder_empty = "",
           folder_empty_open = "",
-          default = "",
+          default = ""
         },
         modified = { symbol = "●" },
         git_status = {
@@ -36,30 +36,24 @@ return {
             renamed = "R",
             untracked = "U",
             ignored = "!",
-            conflict = "C",
-          },
+            conflict = "C"
+          }
         },
         diagnostics = {
           symbols = {
             hint = "",
             info = "",
             warn = "",
-            error = "",
-          },
-        },
+            error = ""
+          }
+        }
       },
       window = {
         position = "float",
-        popup = {
-          size = { height = "20", width = "50" },
-          position = "50%"
-        },
-        --width = 30,
-        --height = 50,
-        mapping_options = {
-          noremap = true,
-          nowait = true,
-        },
+        popup = { size = { height = "20", width = "50" }, position = "50%" },
+        -- width = 30,
+        -- height = 50,
+        mapping_options = { noremap = true, nowait = true },
         mappings = {
           ["<CR>"] = "open",
           ["<2-LeftMouse>"] = "open",
@@ -81,13 +75,13 @@ return {
           ["gb"] = "next_source",
           ["<S-PageDown>"] = "next_source",
           ["gB"] = "prev_source",
-          ["<S-PageUp>"] = "prev_source",
+          ["<S-PageUp>"] = "prev_source"
         }
       },
       filesystem = {
         filtered_items = {
           hide_dotfiles = false,
-          hide_gitignored = false,
+          hide_gitignored = false
         }
       },
       -- Cerra el archivo al abrirlo
@@ -95,10 +89,10 @@ return {
         {
           event = "file_opened",
           handler = function()
-            --auto close
-            require("neo-tree.command").execute({action = "close"})
+            -- auto close
+            require("neo-tree.command").execute({ action = "close" })
           end
-        },
+        }
       },
       git_status = {
         window = {
@@ -108,10 +102,10 @@ return {
             ["a"] = "git_add_file",
             ["r"] = "git_revert_file",
             ["c"] = "git_commit",
-            ["p"] = "git_push",
-          },
-        },
-      },
+            ["p"] = "git_push"
+          }
+        }
+      }
     })
   end
 }

@@ -5,7 +5,7 @@ return {
   name = "catppuccin",
   priority = 1000,
   config = function()
-    vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
+    vim.g.catppuccin_flavour = "mocha"     -- latte, frappe, macchiato, mocha
 
     require("catppuccin").setup({
       flavour = "mocha",
@@ -23,7 +23,7 @@ return {
         booleans = {},
         properties = {},
         types = { "italic" },
-        operators = {},
+        operators = {}
       },
       color_overrides = {
         mocha = {
@@ -40,10 +40,10 @@ return {
         treesitter = true,
         indent_blankline = {
           enabled = true,
-          colored_indent_levels = true,
-        },
-      },
+          colored_indent_levels = true
+        }
+      }
     })
     vim.cmd.colorscheme "catppuccin"
-  end,
+  end
 }
