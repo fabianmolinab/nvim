@@ -50,6 +50,8 @@ nvim_lsp.gopls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   flags = lsp_flags,
+  cmd = {"gopls"},
+  filetypes = {"go", "gomod", "gowork", "gotmpl"},
   dap_debug = true,
   dap_debug_gui = true
 }

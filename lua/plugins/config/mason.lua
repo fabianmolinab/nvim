@@ -4,7 +4,14 @@ return {
     build = ":MasonUpdate",
     cmd = { "Mason", "MasonInstall", "MasonLog", "MasonUninstall", "MasonUninstallAll", "MasonUpdate" },
     lazy = true,
-    config = function() require("mason").setup({ ui = { border = "rounded" } }) end,
+    opts = {
+      ensure_installed = {
+        "gopls"
+      },
+    },
+    config = function()
+      require("mason").setup({ ui = { border = "rounded" } })
+    end,
   },
   {
     "mrjones2014/smart-splits.nvim",
