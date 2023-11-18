@@ -1,7 +1,7 @@
 --plugins/config/init => Carga los plugins que no necesitan configuración
 
 return {
-  "lilydjwg/colorizer",
+  --"lilydjwg/colorizer",
   "tpope/vim-fugitive",
   "tpope/vim-surround",
   "matze/vim-move",
