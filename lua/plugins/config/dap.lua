@@ -3,8 +3,9 @@ local vim = globals.vim
 return {
   "mfussenegger/nvim-dap",
   keys = {
-    { "<F9>", function() require("dap").toggle_breakpoint() end },
-    { "<F5>", function() require("dap").continue() end }
+    { "<leader>db", function() require("dap").toggle_breakpoint() end },
+    { "<leader>dc", function() require("dap").continue() end },
+    { "<leader>du", function() require("dapui").toggle() end }
   },
   dependencies = {
     {
@@ -110,7 +111,7 @@ return {
       "DapBreakpointRejected",
       { linehl = "", text = "", texthl = "", numhl = "" }
     })
-
+    --[[
     require("dap").listeners.after.event_initialized.dapui_config =
         function()
           require("dapui").open()
@@ -176,5 +177,7 @@ return {
           vim.api.nvim_del_keymap("n", "<F23>")       -- S-F11
           vim.api.nvim_del_keymap("n", "<F35>")       -- C-F11
         end
+        ]]
+    --
   end
 }
