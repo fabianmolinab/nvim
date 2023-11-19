@@ -7,7 +7,11 @@ return {
       "MasonUninstallAll", "MasonUpdate"
     },
     lazy = true,
-    opts = { ensure_installed = { "gopls" } },
+    opts = {
+      ensure_installed = {
+        "gopls", "delve", "gofumpt", "goimports_reviser", "selene"
+      }
+    },
     config = function()
       require("mason").setup({ ui = { border = "rounded" } })
     end
