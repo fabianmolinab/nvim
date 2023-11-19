@@ -1,4 +1,4 @@
-vim.bo.shiftwidth = 6
-vim.bo.tabstop = 6
+vim.bo.shiftwidth = 4
+vim.bo.tabstop = 4
 vim.bo.expandtab = true
-vim.bo.softtabstop = 6
+vim.bo.softtabstop = 4
