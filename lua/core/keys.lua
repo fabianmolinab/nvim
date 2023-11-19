@@ -1,5 +1,5 @@
 local globals = require('globals')
-local a = globals.a
+local a = globals.a -- Vim API
 
 -- Deshabilita la navegación con las flechas
 a.nvim_set_keymap('n', '<up>', '<nop>', { noremap = true })
