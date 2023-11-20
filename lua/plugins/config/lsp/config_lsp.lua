@@ -1,14 +1,14 @@
---Variables globales
+-- Variables globales
 local globals = require('globals')
 local vim = globals.vim
 
---LSP Instaler
+-- LSP Instaler
 local nvim_lsp = require('lspconfig')
 
 -- Set up completion using nvim_cmp with LSP source
-local capabilities = require('cmp_nvim_lsp').default_capabilities(
-  vim.lsp.protocol.make_client_capabilities()
-)
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp
+  .protocol
+  .make_client_capabilities())
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- Mappings.
@@ -33,39 +33,34 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<leader>er', vim.diagnostic.open_float, bufopts)
 end
 
-local lsp_flags = {
-  debounce_text_changes = 150,
-}
+local lsp_flags = { debounce_text_changes = 150 }
 
---Config Servers
---Typescript, Javascript, JSX, TSX
+-- Config Servers
+-- Typescript, Javascript, JSX, TSX
 nvim_lsp.tsserver.setup {
   capabilities = capabilities,
   on_attach = on_attach,
-  flags = lsp_flags,
+  flags = lsp_flags
 }
 
---Go Server
+-- Go Server
 nvim_lsp.gopls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   flags = lsp_flags,
-  cmd = {"gopls"},
-  filetypes = {"go", "gomod", "gowork", "gotmpl"},
+  cmd = { "gopls" },
+  filetypes = { "go", "gomod", "gowork", "gotmpl" },
   dap_debug = true,
   dap_debug_gui = true
 }
---Java Server
-nvim_lsp.jdtls.setup {
-  capabilities = capabilities,
-  on_attach = on_attach
-}
+-- Java Server
+nvim_lsp.jdtls.setup { capabilities = capabilities, on_attach = on_attach }
 
---Astro server
+-- Astro server
 nvim_lsp.astro.setup {
   capabilities = capabilities,
   on_attach = on_attach,
-  flags = lsp_flags,
+  flags = lsp_flags
 }
 
 ---CSS Modules
@@ -80,54 +75,46 @@ nvim_lsp.cssmodules_ls.setup {
 nvim_lsp.cssls.setup {
   on_attach = on_attach,
   flags = lsp_flags,
-  filetypes = {
-    "css", "scss", "less"
-  },
+  filetypes = { "css", "scss", "less" },
   settings = {
-    css = {
-      validate = true
-    },
-    less = {
-      validate = true
-    },
-    scss = {
-      validate = true
-    }
+    css = { validate = true },
+    less = { validate = true },
+    scss = { validate = true }
   },
-  single_file_support = true,
+  single_file_support = true
 }
 
 -- Html Server
 nvim_lsp.html.setup {
   on_attach = on_attach,
   flags = lsp_flags,
-  embeddedLanguages = {
-    css = true,
-    javascript = true
-  },
+  embeddedLanguages = { css = true, javascript = true },
   providerFormatter = true,
-  single_file_support = true,
+  single_file_support = true
 }
 
---Vim Server
+-- Vim Server
 nvim_lsp.vimls.setup {}
 
 nvim_lsp.lua_ls.setup {
   on_attach = on_attach,
   flags = lsp_flags,
-  format = {enable = true}
+  format = { enable = true }
 }
 
---ESLINT Server Config
+-- ESLINT Server Config
 nvim_lsp.eslint.setup({
   on_attach = on_attach,
   flags = lsp_flags,
-  settings = { format = false },
+  settings = { format = false }
 })
 
 --- StyleLint Config
 nvim_lsp.stylelint_lsp.setup {
-  filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'css', 'scss', 'less', 'astro' },
+  filetypes = {
+    'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'css',
+    'scss', 'less', 'astro'
+  },
   capabilities = capabilities,
   handlers = handlers,
   on_attach = on_attach,
@@ -139,40 +126,29 @@ nvim_lsp.stylelint_lsp.setup {
   }
 }
 
---JSON Lenguaje
-nvim_lsp.jsonls.setup {
-  on_attach = on_attach,
-  flags = lsp_flags,
-}
+-- JSON Lenguaje
+nvim_lsp.jsonls.setup { on_attach = on_attach, flags = lsp_flags }
 
 -- Tailwind
- nvim_lsp.tailwindcss.setup({
+nvim_lsp.tailwindcss.setup({
   on_attach = on_attach,
   flags = lsp_flags,
-  capabilities = capabilities,
+  capabilities = capabilities
 })
 
---Diagnostics
+local signs = { Error = "", Warn = "", Hint = "", Info = "" }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
+
 vim.diagnostic.config({
-  --underline = true,
-  virtual_text     = false,
+  underline = true,
+  virtual_text = false,
   update_in_insert = false,
-  severity_sort    = false,
-  float = {
-    border = 'rounded',
-    source = 'always',
-  }
+  severity_sort = false,
+  float = { border = 'rounded', source = 'always' }
 })
---local signs = {
-  --Hint = "",
-  --Info = "",
-  --Warn = "",
-  --Error = "",
---}
 
---for type, icon in pairs() do
-  --local hl = "DiagnosticSign" .. type
-  --vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
---end
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250
