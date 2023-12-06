@@ -2,12 +2,28 @@ return {
   "nvim-neo-tree/neo-tree.nvim",
   branch = "v3.x",
   dependencies = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" },
+  cmd = "Neotree",
+  deactivate = function()
+    require("neo-tree.command").execute({ action = "close" })
+  end,
+  lazy = true,
+  init = function()
+    vim.opt.listchars:append({ precedes = "…", extends = "…" })
+    vim.api.nvim_set_var("loaded_netrw", 1)
+    vim.api.nvim_set_var("loaded_netrwPlugin", 1)
+    vim.api.nvim_set_var("loaded_netrwSettings", 1)
+    vim.api.nvim_set_var("loaded_netrwFileHandlers", 1)
+
+    if not stat or stat.type ~= "directory" then return end
+
+    require("lazy").load({ plugins = { "neo-tree.nvim" } })
+  end,
   config = function()
     require("neo-tree").setup({
       enable_diagnostics = true,
       hide_root_node = true,
       resize_timer_interval = 42,
-      auto_clean_after_session_restore = true,
+      -- auto_clean_after_session_restore = true,
       popup_bourder_style = "rounded",
       use_default_mappings = false,
       source_selector = {
@@ -49,10 +65,10 @@ return {
         }
       },
       window = {
-        position = "float",
-        popup = { size = { height = "20", width = "50" }, position = "50%" },
-        -- width = 30,
-        -- height = 50,
+        position = "right",
+        -- popup = { size = { height = "20", width = "50" }, position = "50%" },
+        width = 30,
+        height = 50,
         mapping_options = { noremap = true, nowait = true },
         mappings = {
           ["<CR>"] = "open",
