@@ -56,7 +56,7 @@ a.nvim_set_keymap('n', '<leader>t', ':tabe<CR>', {noremap = true})
 -- Vertical split
 a.nvim_set_keymap('n', '<leader>vs', ':vsp<CR>', {noremap = true})
 -- Horizontal split
-a.nvim_set_keymap('n', '<leader>sp', ':sp<CR>', {noremap = true})
+a.nvim_set_keymap('n', '<leader>ls', ':sp<CR>', {noremap = true})
 
 -- Limpiar los resultados de búsqueda
 a.nvim_set_keymap('n', '//', ':noh<CR>', {silent = true})
