@@ -90,7 +90,7 @@ nvim_lsp.vimls.setup {}
 nvim_lsp.lua_ls.setup {
     on_attach = on_attach,
     flags = lsp_flags,
-    format = {enable = true}
+    format = {enable = false}
 }
 
 -- ESLINT Server Config
@@ -99,6 +99,8 @@ nvim_lsp.eslint.setup({
     flags = lsp_flags,
     settings = {format = false}
 })
+
+nvim_lsp.biome.setup({on_attach = on_attach, flags = lsp_flags})
 
 -- JSON Lenguaje
 nvim_lsp.jsonls.setup {on_attach = on_attach, flags = lsp_flags}
