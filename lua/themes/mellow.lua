@@ -1,7 +1,7 @@
 return {
     "kvrohit/mellow.nvim",
     lazy = false,
-    enabled = true,
+    enabled = false,
     priority = 1000,
     config = function()
         -- vim.g.mellow_italic_functions = true
