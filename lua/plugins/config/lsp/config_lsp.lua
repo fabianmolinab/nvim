@@ -100,7 +100,16 @@ nvim_lsp.eslint.setup({
     settings = {format = false}
 })
 
-nvim_lsp.biome.setup({on_attach = on_attach, flags = lsp_flags})
+nvim_lsp.biome.setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+    flags = lsp_flags,
+    filetypes = {
+        "javascript", "javascriptreact", "typescript", "typescript.tsx",
+        "typescriptreact"
+    },
+    single_file_support = false
+})
 
 -- JSON Lenguaje
 nvim_lsp.jsonls.setup {on_attach = on_attach, flags = lsp_flags}

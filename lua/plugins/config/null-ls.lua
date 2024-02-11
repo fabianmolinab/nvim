@@ -51,10 +51,13 @@ return {
                 null_ls.builtins.formatting.goimports_reviser,
                 null_ls.builtins.formatting.lua_format,
                 -- require("null-ls").builtins.diagnostics.markdownlint,
-                -- null_ls.builtins.diagnostics.eslint,
-                -- null_ls.builtins.diagnostics.biome,
-                null_ls.builtins.formatting.biome,
-                null_ls.builtins.formatting.prettierd.with({
+                -- null_ls.builtins.diagnostics.eslint_d,
+                null_ls.builtins.formatting.biome.with({
+                    filetypes = {
+                        "javascript", "javascriptreact", "typescript",
+                        "typescript.tsx", "typescriptreact"
+                    }
+                }), null_ls.builtins.formatting.prettierd.with({
                     condition = function(utils)
                         return utils.root_has_file({
                             ".prettierrc", ".prettierrc.json",
