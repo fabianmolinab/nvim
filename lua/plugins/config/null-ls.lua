@@ -56,7 +56,11 @@ return {
                     filetypes = {
                         "javascript", "javascriptreact", "typescript",
                         "typescript.tsx", "typescriptreact"
-                    }
+                    },
+                    condition = function(utils)
+                        return utils.root_has_file({"biome.json"})
+                    end
+
                 }), null_ls.builtins.formatting.prettierd.with({
                     condition = function(utils)
                         return utils.root_has_file({
