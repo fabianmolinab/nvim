@@ -45,11 +45,11 @@ return {
                 end
             end,
             sources = {
-                null_ls.builtins.diagnostics.jsonlint,
+                --null_ls.builtins.diagnostics.jsonlint,
                 -- null_ls.builtins.diagnostics.selene,
                 null_ls.builtins.formatting.gofumpt,
                 null_ls.builtins.formatting.goimports_reviser,
-                null_ls.builtins.formatting.lua_format,
+                --null_ls.builtins.formatting.lua_format,
                 -- require("null-ls").builtins.diagnostics.markdownlint,
                 -- null_ls.builtins.diagnostics.eslint_d,
                 null_ls.builtins.formatting.biome.with({
