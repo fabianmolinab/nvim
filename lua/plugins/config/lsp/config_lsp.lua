@@ -6,9 +6,7 @@ local vim = globals.vim
 local nvim_lsp = require('lspconfig')
 
 -- Set up completion using nvim_cmp with LSP source
-local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp
-                                                                      .protocol
-                                                                      .make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- Mappings.
@@ -42,6 +40,14 @@ nvim_lsp.tsserver.setup {
     on_attach = on_attach,
     flags = lsp_flags
 }
+
+--Vue config
+nvim_lsp.volar.setup {
+    capabilities = capabilities,
+    on_attach = on_attach,
+    filetypes = {'typescript', 'javascript', 'vue', 'json'}
+}
+
 
 -- Go Server
 nvim_lsp.gopls.setup {
@@ -83,9 +89,6 @@ nvim_lsp.html.setup {
     providerFormatter = true,
     single_file_support = true
 }
-
--- Vim Server
-nvim_lsp.vimls.setup {}
 
 nvim_lsp.lua_ls.setup {
     on_attach = on_attach,
