@@ -1,21 +1,44 @@
 return {
-    "neovim/nvim-lspconfig",
+    "williamboman/mason.nvim",
     dependencies = {
-        {
-            "williamboman/mason-lspconfig.nvim",
-            dependencies = "williamboman/mason.nvim",
-            cmd = {"LspInstall", "LspUninstall"},
-            config = function()
-                require("mason-lspconfig").setup({
-                    ensure_installed = {
-                        "cssls", "eslint", "jsonls", "tsserver", "gopls"
-                    },
-                    automatic_installation = true
-                })
-            end
-        }, "hrsh7th/cmp-nvim-lsp"
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
+        "folke/neoconf.nvim",
+        'folke/neodev.nvim',
+        'hrsh7th/cmp-nvim-lsp',
+        "pmizio/typescript-tools.nvim"
     },
-    cmd = {"LspInfo", "LspLog", "LspRestart", "LspStart", "LspStop"},
-    event = {"BufReadPost", "FileType"},
-    config = function() require("plugins.config.lsp.config_lsp") end
+
+    config = function ()
+        require("neoconf").setup({})
+        require("neodev").setup({})
+        require("mason").setup({})
+        local server_settings = require("plugins.config.lsp.servers")
+
+        require("mason-lspconfig").setup({
+            ensure_installed = server_settings.default_servers
+        })
+        local lspconfig = require("lspconfig")
+        server_settings.setup()
+
+        require("mason-lspconfig").setup_handlers({
+            function (sever_name)
+                if server_settings.is_disabled(sever_name)then
+                    return
+                end
+                lspconfig[sever_name].setup(
+                server_settings.get_config(sever_name)
+                )
+            end
+        })
+
+        -- since we're using typescript-tools.nvim instead of the plain tsserver
+        -- it can't be installed by mason and thus needs special handling
+        if not server_settings.is_disabled("tsserver") then
+            require("typescript-tools").setup(
+            server_settings.get_config("tsserver")
+            )
+        end
+        require("plugins.config.lsp.diagnostics").setup()
+    end,
 }
