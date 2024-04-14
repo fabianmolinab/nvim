@@ -5,15 +5,16 @@ M.default_servers = {
     "html",
     "cssls",
     "tsserver",
+    --"vuels",
     "eslint",
     "biome",
     "lua_ls",
     "volar",
-    "jsonls",
     "gopls"
 }
 
 local server_settings = {
+    --vuels = require("plugins.config.lsp.servers.vuels"),
     tsserver = require("plugins.config.lsp.servers.tsserver"),
     eslint = require("plugins.config.lsp.servers.eslint"),
     volar = require("plugins.config.lsp.servers.volar"),
