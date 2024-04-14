@@ -45,9 +45,9 @@ nvim_lsp.tsserver.setup {
 nvim_lsp.volar.setup {
     capabilities = capabilities,
     on_attach = on_attach,
-    filetypes = {'typescript', 'javascript', 'vue', 'json'}
+    filetypes = {'vue'},
+    flags = lsp_flags
 }
-
 
 -- Go Server
 nvim_lsp.gopls.setup {
