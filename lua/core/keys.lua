@@ -90,9 +90,9 @@ a.nvim_set_keymap('n', '<Leader>b',
                   '<cmd>lua require(\'telescope.builtin\').buffers()<cr>',
                   {noremap = true})
 
-a.nvim_set_keymap('n', '<Leader>p',
-                  "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>",
-                  {noremap = true})
+--a.nvim_set_keymap('n', '<Leader>p',
+                  --"<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>",
+                  --{noremap = true})
 
 ------
 -- Todo Busqueda telescope
@@ -132,10 +132,10 @@ a.nvim_set_keymap('n', '<leader>du', ':lua require("dapui").toggle()<CR>',
                   {noremap = true})
 
 -- Neotree
--- a.nvim_set_keymap('n', '<leader>p', ':Neotree toggle focus<CR>',
--- {noremap = true})
--- a.nvim_set_keymap('n', '<leader>g', ':Neotree toggle focus git_status<CR>',
--- {noremap = true})
+a.nvim_set_keymap('n', '<leader>p', ':Neotree toggle focus<CR>',
+ {noremap = true})
+a.nvim_set_keymap('n', '<leader>g', ':Neotree toggle focus git_status<CR>',
+ {noremap = true})
 
 a.nvim_set_keymap('n', '<leader>o', '<CMD>Oil<CR>',
                   {desc = "Open parent directory"}) -- Browser file OIL

@@ -109,7 +109,7 @@ nvim_lsp.biome.setup({
     flags = lsp_flags,
     filetypes = {
         "javascript", "javascriptreact", "typescript", "typescript.tsx",
-        "typescriptreact"
+        "typescriptreact", "vue"
     },
     single_file_support = false
 })

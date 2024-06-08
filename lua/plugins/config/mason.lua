@@ -1,21 +1,4 @@
 return {
-  {
-    "williamboman/mason.nvim",
-    build = ":MasonUpdate",
-    cmd = {
-      "Mason", "MasonInstall", "MasonLog", "MasonUninstall",
-      "MasonUninstallAll", "MasonUpdate"
-    },
-    lazy = true,
-    opts = {
-      ensure_installed = {
-        "gopls", "delve", "gofumpt", "goimports_reviser", "selene"
-      }
-    },
-    config = function()
-      require("mason").setup({ ui = { border = "rounded" } })
-    end
-  }, {
   "mrjones2014/smart-splits.nvim",
   optional = true,
   opts = function(_, opts)
@@ -23,4 +6,4 @@ return {
       opts.ignored_filetypes or {}, { "mason" })
   end
 }
-}
+
