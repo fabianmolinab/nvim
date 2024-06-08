@@ -55,7 +55,7 @@ return {
                 null_ls.builtins.formatting.biome.with({
                     filetypes = {
                         "javascript", "javascriptreact", "typescript",
-                        "typescript.tsx", "typescriptreact"
+                        "typescript.tsx", "typescriptreact", "vue"
                     },
                     condition = function(utils)
                         return utils.root_has_file({"biome.json"})
