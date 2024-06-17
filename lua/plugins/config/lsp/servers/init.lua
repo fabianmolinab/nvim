@@ -10,7 +10,8 @@ M.default_servers = {
     "biome",
     "lua_ls",
     "volar",
-    "gopls"
+    "gopls",
+    "tailwindcss"
 }
 
 local server_settings = {
@@ -19,7 +20,8 @@ local server_settings = {
     eslint = require("plugins.config.lsp.servers.eslint"),
     volar = require("plugins.config.lsp.servers.volar"),
     biome = require("plugins.config.lsp.servers.biome"),
-    gopls = require("plugins.config.lsp.servers.go_pls")
+    gopls = require("plugins.config.lsp.servers.go_pls"),
+    tailwindcss = require("plugins.config.lsp.servers.tailwindcss")
 }
 
 -- easily disable lsps in .neoconf.json like this
