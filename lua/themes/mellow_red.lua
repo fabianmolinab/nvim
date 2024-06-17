@@ -1,8 +1,11 @@
+local globals = require('globals')
+
 return {
     "adigitoleo/vim-mellow",
     enabled = false,
     config = function ()
-        vim.cmd [[colorscheme mellow]]
+        globals.opt.background = 'light'
+        globals.cmd [[colorscheme mellow]]
     end
 
 }
