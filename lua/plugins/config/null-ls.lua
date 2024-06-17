@@ -12,7 +12,7 @@ return {
             config = function()
                 require("mason-null-ls").setup({
                     ensure_installed = {
-                        "jsonlint", "prettierd", "selene", "biome"
+                         "prettierd", "selene", "biome"
                     },
                     automatic_installation = true
                 })
