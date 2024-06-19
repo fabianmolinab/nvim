@@ -6,48 +6,32 @@ return {
         lazy = false,
         config = function()
             require'nvim-treesitter.configs'.setup {
-                -- A list of parser names, or "all"
                 ensure_installed = {"lua", "astro", "html", "java"},
                 sync_install = true,
                 auto_install = true,
                 ignore_install = {""},
-
                 highlight = {
                     enable = true,
-                    additional_vim_regex_highlighting = false
+                    additional_vim_regex_highlighting = true
                 },
-                autotag = {
-                    enable = true,
-                    filetypes = {
-                        'html', 'markdown', 'astro', 'javascript',
-                        'javascriptreact', 'tsx', 'typescript',
-                        'typescriptreact', 'jsx'
-                    }
-                },
-                rainbow = {
-                    enable = false
-                    -- colors = {
-                    -- "#90b99f",
-                    -- "#e6b99d",
-                    -- "#ea83a5",
-                    -- "#aca1cf",
-                    -- "#f5a191",
-                    -- "#c1c0d4",
-                    -- "#f591b2"
-                    -- },
-                    -- extended_mode = true,
-                    -- max_file_line = nil
+                indent = {
+                    enable = true
                 }
             }
         end
     }, {
-        "HiPhish/nvim-ts-rainbow2",
-        event = open_file_event,
-        dependencies = "nvim-treesitter/nvim-treesitter"
+        "HiPhish/rainbow-delimiters.nvim",
+        event = "FileType",
+        dependencies = "nvim-treesitter/nvim-treesitter",
     }, {
         "windwp/nvim-ts-autotag",
-        event = "InsertEnter",
-        dependencies = "nvim-treesitter/nvim-treesitter"
+        dependencies = "nvim-treesitter/nvim-treesitter",
+        opts = {
+            autotag = {
+                enable = true,
+                filetypes = { "html", "javascript", "javascriptreact", "typescriptreact", "markdown", "astro"},
+            },
+        },
     }, {
         "danymat/neogen",
         cmd = "Neogen",
