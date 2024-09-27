@@ -2,7 +2,7 @@ local globals = require('globals')
 return {
     "lifepillar/vim-solarized8",
     lazy = false,
-    enabled = true,
+    enabled = false,
     priority = 1000,
     config = function()
         globals.cmd('colorscheme solarized8_low')

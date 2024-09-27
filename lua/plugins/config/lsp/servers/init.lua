@@ -4,24 +4,26 @@ local M = {}
 M.default_servers = {
     "html",
     "cssls",
-    "tsserver",
+    "ts_ls",
     --"vuels",
     "eslint",
     "biome",
     "lua_ls",
     "volar",
     "gopls",
-    "tailwindcss"
+    "tailwindcss",
+    "astro"
 }
 
 local server_settings = {
     --vuels = require("plugins.config.lsp.servers.vuels"),
-    tsserver = require("plugins.config.lsp.servers.tsserver"),
+    ts_ls = require("plugins.config.lsp.servers.ts_ls"),
     eslint = require("plugins.config.lsp.servers.eslint"),
     volar = require("plugins.config.lsp.servers.volar"),
     biome = require("plugins.config.lsp.servers.biome"),
     gopls = require("plugins.config.lsp.servers.go_pls"),
-    tailwindcss = require("plugins.config.lsp.servers.tailwindcss")
+    tailwindcss = require("plugins.config.lsp.servers.tailwindcss"),
+    astro = require("plugins.config.lsp.servers.astro")
 }
 
 -- easily disable lsps in .neoconf.json like this
@@ -32,7 +34,7 @@ local server_settings = {
     local get_server_settings = function(server_name)
         -- don't add ts to volar filetypes if tsserver is not explicitly disabled
         if server_name == "volar" then
-            if not M.is_disabled("tsserver") then
+            if not M.is_disabled("ts_ls") then
                 return {}
             end
         end

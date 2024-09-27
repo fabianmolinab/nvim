@@ -5,7 +5,8 @@ return {
         build = ":TSUpdate",
         lazy = false,
         config = function()
-            require'nvim-treesitter.configs'.setup {
+            local configs = require("nvim-treesitter.configs")
+            configs.setup {
                 ensure_installed = {"lua", "astro", "html", "java"},
                 sync_install = true,
                 auto_install = true,

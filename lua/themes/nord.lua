@@ -1,7 +1,7 @@
 return {
   "shaunsingh/nord.nvim",
   lazy = false,
-  enabled = false,
+  enabled = true,
   priority = 1000,
   config = function()
     vim.g.nord_italic = false
