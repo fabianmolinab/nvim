@@ -12,7 +12,8 @@ M.default_servers = {
     "volar",
     "gopls",
     "tailwindcss",
-    "astro"
+    "astro",
+    "jdtls"
 }
 
 local server_settings = {
@@ -23,7 +24,8 @@ local server_settings = {
     biome = require("plugins.config.lsp.servers.biome"),
     gopls = require("plugins.config.lsp.servers.go_pls"),
     tailwindcss = require("plugins.config.lsp.servers.tailwindcss"),
-    astro = require("plugins.config.lsp.servers.astro")
+    astro = require("plugins.config.lsp.servers.astro"),
+    jdtls = require("plugins.config.lsp.servers.jdtls")
 }
 
 -- easily disable lsps in .neoconf.json like this
