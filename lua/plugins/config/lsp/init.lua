@@ -6,7 +6,6 @@ return {
         "folke/neoconf.nvim",
         'folke/neodev.nvim',
         'hrsh7th/cmp-nvim-lsp',
-        --"pmizio/typescript-tools.nvim"
     },
 
     config = function ()
