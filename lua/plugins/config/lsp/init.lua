@@ -6,6 +6,13 @@ return {
         "folke/neoconf.nvim",
         'folke/neodev.nvim',
         'hrsh7th/cmp-nvim-lsp',
+        {
+
+            "ray-x/lsp_signature.nvim",
+            config = function()
+                require "lsp_signature".setup()
+            end
+        }
     },
 
     config = function ()
