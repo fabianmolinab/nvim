@@ -13,7 +13,6 @@ M.default_servers = {
     "gopls",
     "tailwindcss",
     "astro",
-    "jdtls"
 }
 
 local server_settings = {
@@ -25,7 +24,6 @@ local server_settings = {
     gopls = require("plugins.config.lsp.servers.go_pls"),
     tailwindcss = require("plugins.config.lsp.servers.tailwindcss"),
     astro = require("plugins.config.lsp.servers.astro"),
-    jdtls = require("plugins.config.lsp.servers.jdtls")
 }
 
 -- easily disable lsps in .neoconf.json like this

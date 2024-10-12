@@ -246,7 +246,7 @@ local function setup_jdtls()
     -- Create a table called init_options to pass the bundles with debug and testing jar, along with the extended client capablies to the start or attach function of JDTLS
     local init_options = {
         bundles = bundles,
-        --extendedClientCapabilities = extendedClientCapabilities
+         --extendedClientCapabilities = extendedClientCapabilities
     }
 
     -- Function that will be ran once the language server is attached
@@ -263,7 +263,7 @@ local function setup_jdtls()
         -- Unfortunately I have not found an elegant way to ensure this works 100%
         require('jdtls.dap').setup_dap_main_class_configs()
         -- Enable jdtls commands to be used in Neovim
-        require 'jdtls.setup'.add_commands()
+        --require 'jdtls.setup'.add_commands()
         -- Refresh the codelens
         -- Code lens enables features such as code reference counts, implemenation counts, and more.
         vim.lsp.codelens.refresh()
