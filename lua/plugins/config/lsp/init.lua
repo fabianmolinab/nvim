@@ -4,7 +4,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
         "folke/neoconf.nvim",
-        'folke/neodev.nvim',
+        'folke/lazydev.nvim',
         'hrsh7th/cmp-nvim-lsp',
         {
 
@@ -17,7 +17,7 @@ return {
 
     config = function ()
         require("neoconf").setup({})
-        require("neodev").setup({})
+        require("lazydev").setup({})
         require("mason").setup({})
         local server_settings = require("plugins.config.lsp.servers")
 
