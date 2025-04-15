@@ -15,9 +15,6 @@ return {
         vim.opt.listchars:append({ precedes = "…", extends = "…" })
         vim.g.loaded_netrw = 1
         vim.g.loaded_netrwPlugin = 1
-
-        -- Atajos mejorados para Java
-        vim.api.nvim_set_keymap("n", "<leader>jp", "<cmd>Neotree focus dir=./src/main/java<cr>", { noremap = true, silent = true, desc = "Java Packages" })
     end,
     config = function()
         local show_path = function(state)
@@ -127,7 +124,7 @@ return {
                     }
                 },
                 follow_current_file = {
-                    enabled = true,
+                    enabled = false,
                     leave_dirs_open = false
                 },
                 nest = {  -- Compacta la estructura de directorios

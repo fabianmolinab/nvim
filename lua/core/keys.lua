@@ -133,9 +133,11 @@ a.nvim_set_keymap('n', '<leader>du', ':lua require("dapui").toggle()<CR>',
 
 -- Neotree
 a.nvim_set_keymap('n', '<leader>p', ':Neotree toggle focus<CR>',
- {noremap = true})
+    {noremap = true})
 a.nvim_set_keymap('n', '<leader>g', ':Neotree toggle focus git_status<CR>',
- {noremap = true})
+    {noremap = true})
 
 a.nvim_set_keymap('n', '<leader>o', '<CMD>Oil<CR>',
-                  {desc = "Open parent directory"}) -- Browser file OIL
+    {desc = "Open parent directory"}) -- Browser file OIL
+a.nvim_set_keymap("n", "<leader>jp", "<cmd>Neotree focus dir=./src/main/java<cr>", { noremap = true, silent = true, desc = "Java Packages" })
+
