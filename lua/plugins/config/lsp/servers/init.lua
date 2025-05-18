@@ -10,18 +10,18 @@ M.default_servers = {
     "biome",
     "lua_ls",
     "volar",
-    "gopls",
+    --"gopls",
     "tailwindcss",
     "astro",
 }
 
 local server_settings = {
     --vuels = require("plugins.config.lsp.servers.vuels"),
+    --gopls = require("plugins.config.lsp.servers.go_pls"),
     ts_ls = require("plugins.config.lsp.servers.ts_ls"),
     eslint = require("plugins.config.lsp.servers.eslint"),
     volar = require("plugins.config.lsp.servers.volar"),
     biome = require("plugins.config.lsp.servers.biome"),
-    gopls = require("plugins.config.lsp.servers.go_pls"),
     tailwindcss = require("plugins.config.lsp.servers.tailwindcss"),
     astro = require("plugins.config.lsp.servers.astro"),
 }

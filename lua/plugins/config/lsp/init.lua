@@ -22,21 +22,22 @@ return {
         local server_settings = require("plugins.config.lsp.servers")
 
         require("mason-lspconfig").setup({
-            ensure_installed = server_settings.default_servers
+            ensure_installed = server_settings.default_servers,
+            automatic_enable = true,
         })
         local lspconfig = require("lspconfig")
         server_settings.setup()
 
-        require("mason-lspconfig").setup_handlers({
-            function (sever_name)
-                if server_settings.is_disabled(sever_name)then
-                    return
-                end
-                lspconfig[sever_name].setup(
-                server_settings.get_config(sever_name)
-                )
-            end
-        })
+        --require("mason-lspconfig").setup_handlers({
+            --function (sever_name)
+                --if server_settings.is_disabled(sever_name)then
+                    --return
+                --end
+                --lspconfig[sever_name].setup(
+                --server_settings.get_config(sever_name)
+                --)
+            --end
+        --})
 
         -- since we're using typescript-tools.nvim instead of the plain tsserver
         -- it can't be installed by mason and thus needs special handling
