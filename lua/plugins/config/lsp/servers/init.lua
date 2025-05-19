@@ -5,19 +5,19 @@ M.default_servers = {
     "html",
     "cssls",
     "ts_ls",
-    --"vuels",
+    "vuels",
     "eslint",
     "biome",
     "lua_ls",
     "volar",
-    --"gopls",
+    "gopls",
     "tailwindcss",
     "astro",
 }
 
 local server_settings = {
-    --vuels = require("plugins.config.lsp.servers.vuels"),
-    --gopls = require("plugins.config.lsp.servers.go_pls"),
+    vuels = require("plugins.config.lsp.servers.vuels"),
+    gopls = require("plugins.config.lsp.servers.go_pls"),
     ts_ls = require("plugins.config.lsp.servers.ts_ls"),
     eslint = require("plugins.config.lsp.servers.eslint"),
     volar = require("plugins.config.lsp.servers.volar"),
