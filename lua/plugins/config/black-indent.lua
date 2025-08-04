@@ -10,7 +10,7 @@ return {
     depedencies = "nvim-treesitter/nvim-treesitter",
     event = "FileType",
     config = function()
-        globals.opt.list = true
+        --globals.opt.list = true
         require("ibl").setup({
             debounce = globals.a.nvim_get_option_value("updatetime",
                                                        {scope = "global"}),
