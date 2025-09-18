@@ -1,3 +1,3 @@
-require("core")
 require("configs.autocmds")
+require("core")
 require("plugins.lazy")
