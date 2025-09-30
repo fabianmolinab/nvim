@@ -1,2 +1,3 @@
-local core = require("core")
-local lazy = require("plugins.lazy")
+require("configs.autocmds")
+require("core")
+require("plugins.lazy")
