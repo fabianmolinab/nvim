@@ -1,5 +1,8 @@
-#ignore all hiden files
-.*
-#but no the file .gitignore
-!.gitignore
-!.zshrc
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
