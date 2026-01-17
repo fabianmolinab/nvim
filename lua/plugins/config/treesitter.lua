@@ -3,17 +3,19 @@ return {
     {
         'nvim-treesitter/nvim-treesitter',
         build = ":TSUpdate",
-        lazy = false,
+        event = { "BufReadPre", "BufNewFile" },
+        cmd = {"TSUpdate", "TSInstall"},
         config = function()
-            local configs = require("nvim-treesitter.configs")
+
+            local configs = require("nvim-treesitter.config")
             configs.setup {
                 ensure_installed = {"lua", "astro", "html", "java"},
-                sync_install = true,
+                sync_install = false,
                 auto_install = true,
                 ignore_install = {""},
                 highlight = {
                     enable = true,
-                    additional_vim_regex_highlighting = true
+                    --additional_vim_regex_highlighting = true
                 },
                 indent = {
                     enable = true
