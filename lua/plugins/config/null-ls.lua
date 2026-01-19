@@ -28,7 +28,7 @@ return {
             update_in_insert = vim.diagnostic.config().update_in_insert,
             debounce = 300,
             on_attach = function(client, bufnr)
-                if client.supports_method("textDocument/formatting") then
+                if client:supports_method("textDocument/formatting") then
                     globals.a.nvim_clear_autocmds({
                         group = augroup,
                         buffer = bufnr
