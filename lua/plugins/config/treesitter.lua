@@ -3,19 +3,25 @@ return {
     {
         'nvim-treesitter/nvim-treesitter',
         build = ":TSUpdate",
-        event = { "BufReadPre", "BufNewFile" },
-        cmd = {"TSUpdate", "TSInstall"},
+        --event = { "BufReadPost", "BufNewFile" },
+        lazy = false,
+        priority = 1000,
         config = function()
+           local status, configs = pcall(require, "nvim-treesitter.configs")
+    
+            if not status then
+                print("Treesitter no cargo") 
+                return
+            end
 
-            local configs = require("nvim-treesitter.config")
             configs.setup {
-                ensure_installed = {"lua", "astro", "html", "java"},
+                ensure_installed = {"lua", "astro", "html", "java","go","gomod","gosum"},
                 sync_install = false,
                 auto_install = true,
                 ignore_install = {""},
                 highlight = {
                     enable = true,
-                    --additional_vim_regex_highlighting = true
+                    additional_vim_regex_highlighting = false 
                 },
                 indent = {
                     enable = true

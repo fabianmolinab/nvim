@@ -10,7 +10,7 @@ return {
     ft = {"go", 'gomod'},
     config = function()
         require('go').setup({
-            disable_defaults = false,
+            --disable_defaults = false,
             diagnostic = {
                 hdlr = false,
                 underline = true,

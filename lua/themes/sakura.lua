@@ -2,7 +2,7 @@ return {
     "anAcc22/sakura.nvim",
     dependencies = "rktjmp/lush.nvim",
     lazy = false,
-    enabled = true,
+    enabled = false,
     priority = 1000,
     config = function()
         vim.cmd('colorscheme sakura')

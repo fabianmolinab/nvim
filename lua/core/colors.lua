@@ -9,4 +9,4 @@ globals.opt.cursorline = true
 globals.opt.cursorlineopt = 'number'
 
 -- Configurar menú de autocompletado a trasparente
-globals.cmd('highlight Pmenu guifg=#dee1e4 guibg=none')
+--globals.cmd('highlight Pmenu guifg=#dee1e4 guibg=none')

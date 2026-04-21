@@ -22,7 +22,7 @@ return {
     })
   end,
   config = function()
-    globals.g.enfocado_style = 'nature'
+    --globals.g.enfocado_style = ''
     globals.a.nvim_command("colorscheme enfocado")
   end
 }
